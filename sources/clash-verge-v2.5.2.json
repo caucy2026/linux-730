@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "upstream": "https://github.com/clash-verge-rev/clash-verge-rev",
+  "tag": "v2.5.2",
+  "commit": "28f2efc504059b1dc75c793618b775c8e1b2a5f1",
+  "license": "GPL-3.0-only",
+  "pristineSource": true,
+  "archive": "clash-verge-rev-v2.5.2-pristine.tar.gz",
+  "bytes": 13005176,
+  "sha256": "a99251b06cf621c3c52ad01b9569f531a450107bf0af4f79cd167d178ec316c9",
+  "compiledFromSource": false,
+  "optimizationPassed": false,
+  "marketPublished": false
+}
