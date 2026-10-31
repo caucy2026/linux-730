@@ -1,0 +1,72 @@
+/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4; fill-column: 100 -*- */
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+#pragma once
+
+#include <memory>
+
+#include <QApplication>
+#include <QSslCertificate>
+#include <QSslKey>
+#include <QWebEngineProfile>
+#include "common/Prefs.hpp"
+#include "common/RecentFiles.hpp"
+
+#include <Poco/File.h>
+#include <Poco/Path.h>
+
+// lo_kit is an opaque COKit handle; a forward declaration is all this header needs
+// (matches kit/Kit.hpp).
+struct COKitStruct;
+using COKit = COKitStruct;
+
+extern int coolwsd_server_socket_fd;
+extern const char* user_name;
+extern COKit* lo_kit;
+
+/// Registers the QNetworkAccessManager-based HTTP transport used by the AI proxy
+/// (AIChatSession) on the desktop. Call once at startup on the GUI thread.
+void registerAIHttpTransport();
+
+class Application
+{
+private:
+    static QWebEngineProfile* globalProfile;
+    static RecentFiles recentFiles;
+    static std::unique_ptr<Prefs> prefs;
+    static QSslKey embedKey;
+    static QSslCertificate embedCert;
+
+public:
+    static void initialize();
+    static QWebEngineProfile* getProfile();
+    static RecentFiles& getRecentFiles();
+    static Prefs& getPrefs();
+    /// Self-signed cert/key for the embed-mode HTTPS server.  Both
+    /// freshly generated at process start, valid for localhost /
+    /// 127.0.0.1 / ::1.  Trusted programmatically by the picker
+    /// page's certificateError handler; never installed in any
+    /// system or browser trust store.
+    static const QSslKey& getEmbedKey();
+    static const QSslCertificate& getEmbedCert();
+};
+
+namespace
+{
+inline std::string getDataDir()
+{
+    Poco::Path dir(qApp->applicationDirPath().toStdString());
+    if (Poco::File(Poco::Path(dir, "run-from-build")).exists())
+    {
+        dir.makeParent();
+        return dir.toString();
+    }
+    return COOLWSD_DATADIR;
+}
+} // namespace
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

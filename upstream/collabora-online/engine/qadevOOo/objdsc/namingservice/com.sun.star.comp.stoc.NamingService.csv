@@ -1,0 +1,3 @@
+"NamingService";"cpo::uno::XNamingService";"getRegisteredObject()"
+"NamingService";"cpo::uno::XNamingService";"registerObject()"
+"NamingService";"cpo::uno::XNamingService";"revokeObject()"

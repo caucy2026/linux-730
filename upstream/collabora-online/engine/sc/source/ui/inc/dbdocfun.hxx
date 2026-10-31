@@ -1,0 +1,129 @@
+/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+/*
+ * This file is part of the Collabora Office project.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * This file incorporates work covered by the following license notice:
+ *
+ *   Licensed to the Apache Software Foundation (ASF) under one or more
+ *   contributor license agreements. See the NOTICE file distributed
+ *   with this work for additional information regarding copyright
+ *   ownership. The ASF licenses this file to you under the Apache
+ *   License, Version 2.0 (the "License"); you may not use this file
+ *   except in compliance with the License. You may obtain a copy of
+ *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
+ */
+
+#pragma once
+
+#include <address.hxx>
+#include <vector>
+
+struct ScImportParam;
+struct ScQueryParam;
+struct ScSortParam;
+struct ScSubTotalParam;
+
+class SfxViewFrame;
+class ScDBData;
+class ScDocShell;
+class ScDPObject;
+class ScDBCollection;
+
+namespace cpo::uno { template <typename > class Sequence; }
+namespace com::sun::star::beans { struct PropertyValue; }
+
+namespace svx {
+    class ODataAccessDescriptor;
+}
+namespace sc
+{
+    enum class OperationType;
+}
+
+class ScDBDocFunc
+{
+friend class ScDBFunc;
+friend class SortOperation;
+
+private:
+    ScDocShell&     rDocShell;
+
+public:
+                    ScDBDocFunc( ScDocShell& rDocSh ): rDocShell(rDocSh) {}
+
+    void            UpdateImport( const OUString& rTarget, const svx::ODataAccessDescriptor& rDescriptor );
+
+    bool DoImport( SCTAB nTab, const ScImportParam& rParam,
+                   const svx::ODataAccessDescriptor* pDescriptor);      // used for selection an existing ResultSet
+
+    void DoImportUno( const ScAddress& rPos,
+                      const cpo::uno::Sequence<css::beans::PropertyValue>& aArgs );
+
+    static void     ShowInBeamer( const ScImportParam& rParam, const SfxViewFrame* pFrame );
+
+    SC_DLLPUBLIC bool SortTab(SCTAB nTab, const ScSortParam& rSortParam, bool bRecord, bool bPaint, bool bApi);
+
+    SC_DLLPUBLIC bool           Query( SCTAB nTab, const ScQueryParam& rQueryParam,
+                            const ScRange* pAdvSource, bool bRecord, bool bApi );
+
+    SC_DLLPUBLIC void DoSubTotals(SCTAB nTab, const ScSubTotalParam& rParam, bool bRecord, bool bApi);
+
+    bool            DoTableSubTotals( SCTAB nTab, const ScDBData& rNewData, const ScSubTotalParam& rParam,
+                                      bool bRecord, bool bApi );
+
+    SC_DLLPUBLIC bool AddDBTable(const OUString& rName, const ScRange& rRange, bool bHeader, bool bRecord,
+                    bool bApi, const OUString& rStyleName = u""_ustr);
+    SC_DLLPUBLIC bool DeleteDBTable(const ScDBData* pDBObj, bool bRecord, bool bApi );
+
+    /** Enforce the "no empty, no duplicate" header invariant of a styled table:
+        write generated "Column#" default names into empty header cells, and
+        disambiguate any non-empty header that duplicates an earlier one in
+        place, Excel-style ("x" -> "x2"). nFirstCol/nLastCol optionally restrict
+        the writes to a column range, -1 means the whole header row. */
+    SC_DLLPUBLIC void FillEmptyHeaderColumnNames(ScDBData& rData, SCCOL nFirstCol = -1,
+                                                 SCCOL nLastCol = -1);
+
+    /** When a new column is inserted, for every styled table on nTab
+        whose header overlaps the column range [nCol1, nCol2], fill
+        default names into the (empty) header cells in that range. */
+    SC_DLLPUBLIC void FillInsertedColumnHeaders(SCTAB nTab, SCCOL nCol1, SCCOL nCol2);
+
+    /** A styled table's header row must never be empty nor contain duplicate
+        names. After the user edits the header row, restore offending cells */
+    SC_DLLPUBLIC void RestoreHeaderColumnNames(ScDBData& rData,
+                                               const std::vector<OUString>& rPrevNames);
+
+    SC_DLLPUBLIC bool AddDBRange( const OUString& rName, const ScRange& rRange );
+    bool DeleteDBRange( const OUString& rName );
+    bool RenameDBRange( const OUString& rOld, const OUString& rNew );
+    SC_DLLPUBLIC void ModifyDBData( const ScDBData& rNewData );  // Name unchanged
+
+    void ModifyAllDBData( const ScDBCollection& rNewColl, const std::vector<ScRange>& rDelAreaList );
+
+    bool RepeatDB( const OUString& rDBName, bool bApi, bool bIsUnnamed, SCTAB aTab = 0);
+
+    bool DataPilotUpdate( ScDPObject* pOldObj, const ScDPObject* pNewObj,
+                          bool bRecord, bool bApi, bool bAllowMove = false );
+
+    SC_DLLPUBLIC bool RemovePivotTable(const ScDPObject& rDPObj, bool bRecord, bool bApi);
+    SC_DLLPUBLIC bool CreatePivotTable(const ScDPObject& rDPObj, bool bRecord, bool bApi);
+    SC_DLLPUBLIC bool UpdatePivotTable(ScDPObject& rDPObj, bool bRecord, bool bApi);
+
+    /**
+     * Reload the referenced pivot cache, and refresh all pivot tables that
+     * reference the cache.
+     */
+    void RefreshPivotTables(const ScDPObject* pDPObj, bool bApi);
+
+    /**
+     * Refresh the group dimensions of all pivot tables referencing the same
+     * cache.
+     */
+    void RefreshPivotTableGroups(ScDPObject* pDPObj);
+};
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

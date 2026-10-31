@@ -1,0 +1,41 @@
+/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+/*
+ * This file is part of the Collabora Office project.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+#pragma once
+
+#include <ooo/vba/excel/XMenuItems.hpp>
+#include <vbahelper/vbacollectionimpl.hxx>
+
+namespace ooo::vba { class XCommandBarControls; }
+
+typedef CollTestImplHelper< ov::excel::XMenuItems > MenuItems_BASE;
+
+class ScVbaMenuItems : public MenuItems_BASE
+{
+private:
+    css::uno::Reference< ov::XCommandBarControls > m_xCommandBarControls;
+
+public:
+    /// @throws css::uno::RuntimeException
+    ScVbaMenuItems( const css::uno::Reference< ov::XHelperInterface >& xParent, const css::uno::Reference< css::uno::XComponentContext >& xContext, css::uno::Reference< ov::XCommandBarControls > xCommandBarControls );
+
+    // XEnumerationAccess
+    virtual cpo::uno::Type SAL_CALL getElementType() override;
+    virtual css::uno::Reference< css::container::XEnumeration > SAL_CALL createEnumeration() override;
+    virtual cpo::uno::Any createCollectionObject( const cpo::uno::Any& aSource ) override;
+
+    // Methods
+    virtual sal_Int32 SAL_CALL getCount() override;
+    virtual cpo::uno::Any SAL_CALL Item( const cpo::uno::Any& Index, const cpo::uno::Any& /*Index2*/ ) override;
+    virtual css::uno::Reference< ov::excel::XMenuItem > SAL_CALL Add( const OUString& Caption, const cpo::uno::Any& OnAction, const cpo::uno::Any& ShortcutKey, const cpo::uno::Any& Before, const cpo::uno::Any& Restore, const cpo::uno::Any& StatusBar, const cpo::uno::Any& HelpFile, const cpo::uno::Any& HelpContextID ) override;
+    // XHelperInterface
+    virtual OUString getServiceImplName() override;
+    virtual cpo::uno::Sequence<OUString> getServiceNames() override;
+};
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

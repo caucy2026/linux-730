@@ -1,0 +1,12 @@
+{
+  "upstream": "https://github.com/CollaboraOnline/online.mirror",
+  "commit": "b91cb7428e620f5c34c2ff94d7f8ce2a7d494c62",
+  "tree": "3979bebf85a0de73fb519bb4d53f5ad29bfb34a2",
+  "purpose": "Original open-source engine pinned by KOffice 1.0.142; no private KEMI product patches",
+  "pristineSource": true,
+  "trackedBlobs": 81035,
+  "logicalBytes": 1713588444,
+  "largestBlobBytes": 66938368,
+  "sourceBuildPassed": false,
+  "marketPublished": false
+}

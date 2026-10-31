@@ -1,0 +1,27 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- Out-of-tree, generated/built files are not under the source tree:
+         $(OnlineBuildDir) is the online build root (config_version.h, the
+         generated coolkitconfig.xcu, and the built browser/dist);
+         $(MSBuildThisFileDirectory) holds config.h; @LOINCLUDE_WINDOWS@ is the
+         engine include (symlink resolved); the UnpackedTarball dirs are the
+         engine's bundled zlib/zstd/libpng; $(EngineLibDir) its static libs. -->
+    <OnlineBuildDir>$(MSBuildThisFileDirectory)..\..</OnlineBuildDir>
+    <IncludePath>$(MSBuildThisFileDirectory);$(OnlineBuildDir);@POCOINCLUDE_WINDOWS@;@LOINCLUDE_WINDOWS@;@LOBUILDDIR_WINDOWS@/workdir/UnpackedTarball/zlib;@LOBUILDDIR_WINDOWS@/workdir/UnpackedTarball/zstd/lib;@LOBUILDDIR_WINDOWS@/workdir/UnpackedTarball/libpng;$(IncludePath)</IncludePath>
+    <LibraryPath>@POCOLIB_WINDOWS@;$(LibraryPath)</LibraryPath>
+    <EngineLibDir>@LOBUILDDIR_WINDOWS@/workdir/LinkTarget/StaticLibrary</EngineLibDir>
+    <!-- Keep build intermediates out of the source tree for out-of-tree builds. -->
+    <IntDir>$(SolutionDir)$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <LO_PATH>@LO_PATH@</LO_PATH>
+    <APP_NAME>@APP_NAME@</APP_NAME>
+    <APP_VENDOR>@VENDOR@</APP_VENDOR>
+  </PropertyGroup>
+  <!-- Run the clang-cl compiles through the ccache masquerade directory
+       configure created. When CODA_CCACHE is empty the condition is false
+       and the stock ClangCL toolset is used, so a build without ccache is
+       unchanged. -->
+  <PropertyGroup Condition="'@CODA_CCACHE@' != ''">
+    <CLToolPath>@CODA_CCACHE@</CLToolPath>
+    <CLToolExe>clang-cl.exe</CLToolExe>
+  </PropertyGroup>
+</Project>

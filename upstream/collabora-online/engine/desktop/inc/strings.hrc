@@ -1,0 +1,98 @@
+/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+/*
+ * This file is part of the Collabora Office project.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * This file incorporates work covered by the following license notice:
+ *
+ *   Licensed to the Apache Software Foundation (ASF) under one or more
+ *   contributor license agreements. See the NOTICE file distributed
+ *   with this work for additional information regarding copyright
+ *   ownership. The ASF licenses this file to you under the Apache
+ *   License, Version 2.0 (the "License"); you may not use this file
+ *   except in compliance with the License. You may obtain a copy of
+ *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
+ */
+
+#pragma once
+
+#define NC_(Context, String) TranslateId(Context, u8##String)
+
+#define RID_STR_COPYING_PACKAGE                             NC_("RID_STR_COPYING_PACKAGE", "Copying: ")
+#define RID_STR_ERROR_WHILE_ADDING                          NC_("RID_STR_ERROR_WHILE_ADDING", "Error while adding: ")
+#define RID_STR_ERROR_WHILE_REMOVING                        NC_("RID_STR_ERROR_WHILE_REMOVING", "Error while removing: ")
+#define RID_STR_PACKAGE_ALREADY_ADDED                       NC_("RID_STR_PACKAGE_ALREADY_ADDED", "Extension has already been added: ")
+#define RID_STR_NO_SUCH_PACKAGE                             NC_("RID_STR_NO_SUCH_PACKAGE", "There is no such extension deployed: ")
+#define RID_STR_SYNCHRONIZING_REPOSITORY                    NC_("RID_STR_SYNCHRONIZING_REPOSITORY", "Synchronizing repository for %NAME extensions")
+
+#define RID_STR_REGISTERING_PACKAGE                         NC_("RID_STR_REGISTERING_PACKAGE", "Enabling: ")
+#define RID_STR_REVOKING_PACKAGE                            NC_("RID_STR_REVOKING_PACKAGE", "Disabling: ")
+#define RID_STR_CANNOT_DETECT_MEDIA_TYPE                    NC_("RID_STR_CANNOT_DETECT_MEDIA_TYPE", "Cannot detect media-type: ")
+#define RID_STR_UNSUPPORTED_MEDIA_TYPE                      NC_("RID_STR_UNSUPPORTED_MEDIA_TYPE", "This media-type is not supported: ")
+#define RID_STR_ERROR_WHILE_REGISTERING                     NC_("RID_STR_ERROR_WHILE_REGISTERING", "An error occurred while enabling: ")
+#define RID_STR_ERROR_WHILE_REVOKING                        NC_("RID_STR_ERROR_WHILE_REVOKING", "An error occurred while disabling: ")
+
+#define RID_STR_CONF_SCHEMA                                 NC_("RID_STR_CONF_SCHEMA", "Configuration Schema")
+#define RID_STR_CONF_DATA                                   NC_("RID_STR_CONF_DATA", "Configuration Data")
+
+#define RID_STR_BASIC_LIB                                   NC_("RID_STR_BASIC_LIB", "Basic Library")
+#define RID_STR_DIALOG_LIB                                  NC_("RID_STR_DIALOG_LIB", "Dialog Library")
+#define RID_STR_CANNOT_DETERMINE_LIBNAME                    NC_("RID_STR_CANNOT_DETERMINE_LIBNAME", "The library name could not be determined.")
+
+#define RID_STR_PACKAGE_BUNDLE                              NC_("RID_STR_PACKAGE_BUNDLE", "Extension")
+
+#define RID_STR_DYN_COMPONENT                               NC_("RID_STR_DYN_COMPONENT", "UNO Dynamic Library Component")
+#define RID_STR_JAVA_COMPONENT                              NC_("RID_STR_JAVA_COMPONENT", "UNO Java Component")
+#define RID_STR_PYTHON_COMPONENT                            NC_("RID_STR_PYTHON_COMPONENT", "UNO Python Component")
+#define RID_STR_COMPONENTS                                  NC_("RID_STR_COMPONENTS", "UNO Components")
+#define RID_STR_RDB_TYPELIB                                 NC_("RID_STR_RDB_TYPELIB", "UNO RDB Type Library")
+#define RID_STR_JAVA_TYPELIB                                NC_("RID_STR_JAVA_TYPELIB", "UNO Java Type Library")
+
+#define RID_STR_SFWK_LIB                                    NC_("RID_STR_SFWK_LIB", "%MACROLANG Library")
+
+#define RID_STR_HELP                                        NC_("RID_STR_HELP", "Help")
+#define RID_STR_HELPPROCESSING_GENERAL_ERROR                NC_("RID_STR_HELPPROCESSING_GENERAL_ERROR", "The extension cannot be installed because:\n")
+#define RID_STR_HELPPROCESSING_XMLPARSING_ERROR             NC_("RID_STR_HELPPROCESSING_XMLPARSING_ERROR", "The extension will not be installed because an error occurred in the Help files:\n")
+
+#define RID_STR_UNSUPPORTED_PLATFORM                        NC_("RID_STR_UNSUPPORTED_PLATFORM", "The extension '%Name' does not work on this computer.")
+
+#define STR_BOOTSTRAP_ERR_CANNOT_START                      NC_("STR_BOOTSTRAP_ERR_CANNOT_START", "The application cannot be started. ")
+#define STR_BOOTSTRAP_ERR_DIR_MISSING                       NC_("STR_BOOTSTRAP_ERR_DIR_MISSING", "The configuration directory \"$1\" could not be found.")
+#define STR_BOOTSTRAP_ERR_PATH_INVALID                      NC_("STR_BOOTSTRAP_ERR_PATH_INVALID", "The installation path is invalid.")
+#define STR_BOOTSTRAP_ERR_INTERNAL                          NC_("STR_BOOTSTRAP_ERR_INTERNAL", "An internal error occurred.")
+#define STR_BOOTSTRAP_ERR_FILE_CORRUPT                      NC_("STR_BOOTSTRAP_ERR_FILE_CORRUPT", "The configuration file \"$1\" is corrupt.")
+#define STR_BOOTSTRAP_ERR_FILE_MISSING                      NC_("STR_BOOTSTRAP_ERR_FILE_MISSING", "The configuration file \"$1\" was not found.")
+#define STR_BOOTSTRAP_ERR_NO_SUPPORT                        NC_("STR_BOOTSTRAP_ERR_NO_SUPPORT", "The configuration file \"$1\" does not support the current version.")
+#define STR_BOOTSTRAP_ERR_LANGUAGE_MISSING                  NC_("STR_BOOTSTRAP_ERR_LANGUAGE_MISSING", "The user interface language cannot be determined.")
+#define STR_BOOTSTRAP_ERR_USERINSTALL_FAILED                NC_("STR_BOOTSTRAP_ERR_USERINSTALL_FAILED", "User installation could not be completed. ")
+#define STR_BOOTSTRAP_ERR_NO_CFG_SERVICE                    NC_("STR_BOOTSTRAP_ERR_NO_CFG_SERVICE", "The configuration service is not available.")
+#define STR_BOOTSTRAP_ERR_2NDOFFICE_WITHCAT                 NC_("STR_BOOTSTRAP_ERR_2NDOFFICE_WITHCAT", "There is already another %PRODUCTNAME instance running.  Please close all %PRODUCTNAME processes before running with the '--cat' or '--script-cat' option.")
+#define STR_ASK_START_SETUP_MANUALLY                        NC_("STR_ASK_START_SETUP_MANUALLY", "Start the setup application to repair the installation from the CD or the folder containing the installation packages.")
+#define STR_CONFIG_ERR_ACCESS_GENERAL                       NC_("STR_CONFIG_ERR_ACCESS_GENERAL", "A general error occurred while accessing your central configuration. ")
+#define STR_LO_MUST_BE_RESTARTED                            NC_("STR_LO_MUST_BE_RESTARTED", "%PRODUCTNAME must unfortunately be manually restarted once after installation or update." )
+#define STR_QUERY_USERDATALOCKED                            NC_("STR_QUERY_USERDATALOCKED", "Either another instance of %PRODUCTNAME is accessing your personal settings or your personal settings are locked.\nSimultaneous access can lead to inconsistencies in your personal settings. Before continuing, you should make sure user '$u' closes %PRODUCTNAME on host '$h'.\n\nDo you really want to continue?")
+#define STR_TITLE_USERDATALOCKED                            NC_("STR_TITLE_USERDATALOCKED", "%PRODUCTNAME %PRODUCTVERSION")
+#define STR_ERR_PRINTDISABLED                               NC_("STR_ERR_PRINTDISABLED", "Printing is disabled. No documents can be printed.")
+#define STR_BOOTSTRAP_ERR_NO_PATHSET_SERVICE                NC_("STR_BOOTSTRAP_ERR_NO_PATHSET_SERVICE", "The path manager is not available.\n")
+#define STR_BOOTSTRAP_ERR_NOTENOUGHDISKSPACE                 NC_("STR_BOOTSTRAP_ERR_NOTENOUGHDISKSPACE", "%PRODUCTNAME user installation could not be completed due to insufficient free disk space. Please free more disc space at the following location and restart %PRODUCTNAME:\n\n")
+#define STR_BOOTSTRAP_ERR_NOACCESSRIGHTS                     NC_("STR_BOOTSTRAP_ERR_NOACCESSRIGHTS", "%PRODUCTNAME user installation could not be processed due to missing access rights. Please make sure that you have sufficient access rights for the following location and restart %PRODUCTNAME:\n\n")
+
+#define RID_STR_UNOPKG_ACCEPT_LIC_1                         NC_("RID_STR_UNOPKG_ACCEPT_LIC_1", "Extension Software License Agreement of $NAME:")
+#define RID_STR_UNOPKG_ACCEPT_LIC_2                         NC_("RID_STR_UNOPKG_ACCEPT_LIC_2", "Read the complete License Agreement displayed above. " \
+                                                               "Accept the License Agreement by typing \"yes\" on the console " \
+                                                               "then press the Return key. Type \"no\" to decline and to abort the " \
+                                                               "extension setup.")
+#define RID_STR_UNOPKG_ACCEPT_LIC_3                         NC_("RID_STR_UNOPKG_ACCEPT_LIC_3", "[Enter \"yes\" or \"no\"]:")
+#define RID_STR_UNOPKG_ACCEPT_LIC_4                         NC_("RID_STR_UNOPKG_ACCEPT_LIC_4", "Your input was not correct. Please enter \"yes\" or \"no\":")
+#define RID_STR_UNOPKG_ACCEPT_LIC_YES                       NC_("RID_STR_UNOPKG_ACCEPT_LIC_YES", "YES")
+#define RID_STR_UNOPKG_ACCEPT_LIC_Y                         NC_("RID_STR_UNOPKG_ACCEPT_LIC_Y", "Y")
+#define RID_STR_UNOPKG_ACCEPT_LIC_NO                        NC_("RID_STR_UNOPKG_ACCEPT_LIC_NO", "NO")
+#define RID_STR_UNOPKG_ACCEPT_LIC_N                         NC_("RID_STR_UNOPKG_ACCEPT_LIC_N", "N")
+#define RID_STR_CONCURRENTINSTANCE                          NC_("RID_STR_CONCURRENTINSTANCE", "unopkg cannot be started. The lock file indicates it is already running. " \
+                                                               "If this does not apply, delete the lock file at:")
+#define RID_STR_UNOPKG_ERROR                                NC_("RID_STR_UNOPKG_ERROR", "ERROR: ")
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

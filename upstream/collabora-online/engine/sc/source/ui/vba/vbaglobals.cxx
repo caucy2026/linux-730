@@ -1,0 +1,266 @@
+/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
+/*
+ * This file is part of the Collabora Office project.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * This file incorporates work covered by the following license notice:
+ *
+ *   Licensed to the Apache Software Foundation (ASF) under one or more
+ *   contributor license agreements. See the NOTICE file distributed
+ *   with this work for additional information regarding copyright
+ *   ownership. The ASF licenses this file to you under the Apache
+ *   License, Version 2.0 (the "License"); you may not use this file
+ *   except in compliance with the License. You may obtain a copy of
+ *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
+ */
+#include "vbaglobals.hxx"
+
+#include <com/sun/star/lang/XMultiComponentFactory.hpp>
+#include <comphelper/sequence.hxx>
+#include <com/sun/star/beans/PropertyValue.hpp>
+#include <com/sun/star/frame/XModel.hpp>
+
+#include "vbaapplication.hxx"
+
+using namespace ::com::sun::star;
+using namespace ::com::sun::star::uno;
+using namespace cpo::uno;
+using namespace ::ooo::vba;
+
+// ScVbaGlobals
+
+//ScVbaGlobals::ScVbaGlobals(  css::uno::Reference< css::uno::XComponentContext >const& rxContext,  ) : ScVbaGlobals_BASE( uno::Reference< XHelperInterface >(), rxContext )
+
+ScVbaGlobals::ScVbaGlobals( cpo::uno::Sequence< cpo::uno::Any > const& aArgs, uno::Reference< uno::XComponentContext >const& rxContext ) : ScVbaGlobals_BASE( uno::Reference< XHelperInterface >(), rxContext, "ExcelDocumentContext" )
+{
+    cpo::uno::Sequence< beans::PropertyValue > aInitArgs( aArgs.hasElements() ? 2 : 1 );
+    auto pInitArgs = aInitArgs.getArray();
+    pInitArgs[ 0 ].Name = u"Application"_ustr;
+    pInitArgs[ 0 ].Value <<= getApplication();
+    if ( aArgs.hasElements() )
+    {
+        pInitArgs[ 1 ].Name = u"ExcelDocumentContext"_ustr;
+        pInitArgs[ 1 ].Value <<= getXSomethingFromArgs< frame::XModel >( aArgs, 0 );
+    }
+    init( aInitArgs );
+}
+
+ScVbaGlobals::~ScVbaGlobals()
+{
+}
+
+// XGlobals
+
+uno::Reference<excel::XApplication > const &
+ScVbaGlobals::getApplication()
+{
+    if ( !mxApplication.is() )
+        mxApplication.set( new ScVbaApplication( mxContext) );
+    return mxApplication;
+}
+
+uno::Reference<excel::XApplication > SAL_CALL
+ScVbaGlobals::getExcel()
+{
+       return getApplication();
+}
+
+uno::Reference< excel::XWorkbook > SAL_CALL
+ScVbaGlobals::getActiveWorkbook()
+{
+    uno::Reference< excel::XWorkbook > xWorkbook( getApplication()->getActiveWorkbook(), uno::UNO_SET_THROW);
+    return xWorkbook;
+}
+
+uno::Reference< excel::XWindow > SAL_CALL
+ScVbaGlobals::getActiveWindow()
+{
+    return getApplication()->getActiveWindow();
+}
+
+uno::Reference< excel::XWorksheet > SAL_CALL
+ScVbaGlobals::getActiveSheet()
+{
+    return getApplication()->getActiveSheet();
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::WorkBooks( const cpo::uno::Any& aIndex )
+{
+    return getApplication()->Workbooks(aIndex);
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::WorkSheets(const cpo::uno::Any& aIndex)
+{
+    return getApplication()->Worksheets( aIndex );
+}
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::Sheets( const cpo::uno::Any& aIndex )
+{
+    return WorkSheets( aIndex );
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::Range( const cpo::uno::Any& Cell1, const cpo::uno::Any& Cell2 )
+{
+    return getApplication()->Range( Cell1, Cell2 );
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::Names( const cpo::uno::Any& aIndex )
+{
+    return getApplication()->Names( aIndex );
+}
+
+uno::Reference< excel::XRange > SAL_CALL
+ScVbaGlobals::getActiveCell()
+{
+    return getApplication()->getActiveCell();
+}
+
+uno::Reference< XAssistant > SAL_CALL
+ScVbaGlobals::getAssistant()
+{
+    return getApplication()->getAssistant();
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::getSelection()
+{
+    return getApplication()->getSelection();
+}
+
+uno::Reference< excel::XWorkbook > SAL_CALL
+ScVbaGlobals::getThisWorkbook()
+{
+    return getApplication()->getThisWorkbook();
+}
+void SAL_CALL
+ScVbaGlobals::Calculate()
+{
+    return getApplication()->Calculate();
+}
+
+uno::Reference< excel::XRange > SAL_CALL
+ScVbaGlobals::Cells( const cpo::uno::Any& RowIndex, const cpo::uno::Any& ColumnIndex )
+{
+    return getApplication()->getActiveSheet()->Cells( RowIndex, ColumnIndex );
+}
+uno::Reference< excel::XRange > SAL_CALL
+ScVbaGlobals::Columns( const cpo::uno::Any& aIndex )
+{
+    return getApplication()->getActiveSheet()->Columns( aIndex );
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::CommandBars( const cpo::uno::Any& aIndex )
+{
+    uno::Reference< XApplicationBase > xBase( getApplication(), uno::UNO_QUERY_THROW );
+    return xBase->CommandBars( aIndex );
+}
+
+css::uno::Reference< ov::excel::XRange > SAL_CALL
+ScVbaGlobals::Union( const css::uno::Reference< ov::excel::XRange >& Arg1, const css::uno::Reference< ov::excel::XRange >& Arg2, const cpo::uno::Any& Arg3, const cpo::uno::Any& Arg4, const cpo::uno::Any& Arg5, const cpo::uno::Any& Arg6, const cpo::uno::Any& Arg7, const cpo::uno::Any& Arg8, const cpo::uno::Any& Arg9, const cpo::uno::Any& Arg10, const cpo::uno::Any& Arg11, const cpo::uno::Any& Arg12, const cpo::uno::Any& Arg13, const cpo::uno::Any& Arg14, const cpo::uno::Any& Arg15, const cpo::uno::Any& Arg16, const cpo::uno::Any& Arg17, const cpo::uno::Any& Arg18, const cpo::uno::Any& Arg19, const cpo::uno::Any& Arg20, const cpo::uno::Any& Arg21, const cpo::uno::Any& Arg22, const cpo::uno::Any& Arg23, const cpo::uno::Any& Arg24, const cpo::uno::Any& Arg25, const cpo::uno::Any& Arg26, const cpo::uno::Any& Arg27, const cpo::uno::Any& Arg28, const cpo::uno::Any& Arg29, const cpo::uno::Any& Arg30 )
+{
+    return getApplication()->Union(  Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30 );
+}
+css::uno::Reference< ov::excel::XRange > SAL_CALL
+ScVbaGlobals::Intersect( const css::uno::Reference< ov::excel::XRange >& Arg1, const css::uno::Reference< ov::excel::XRange >& Arg2, const cpo::uno::Any& Arg3, const cpo::uno::Any& Arg4, const cpo::uno::Any& Arg5, const cpo::uno::Any& Arg6, const cpo::uno::Any& Arg7, const cpo::uno::Any& Arg8, const cpo::uno::Any& Arg9, const cpo::uno::Any& Arg10, const cpo::uno::Any& Arg11, const cpo::uno::Any& Arg12, const cpo::uno::Any& Arg13, const cpo::uno::Any& Arg14, const cpo::uno::Any& Arg15, const cpo::uno::Any& Arg16, const cpo::uno::Any& Arg17, const cpo::uno::Any& Arg18, const cpo::uno::Any& Arg19, const cpo::uno::Any& Arg20, const cpo::uno::Any& Arg21, const cpo::uno::Any& Arg22, const cpo::uno::Any& Arg23, const cpo::uno::Any& Arg24, const cpo::uno::Any& Arg25, const cpo::uno::Any& Arg26, const cpo::uno::Any& Arg27, const cpo::uno::Any& Arg28, const cpo::uno::Any& Arg29, const cpo::uno::Any& Arg30 )
+{
+    return getApplication()->Intersect(  Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30 );
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::Evaluate( const OUString& Name )
+{
+    return getApplication()->Evaluate( Name );
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::WorksheetFunction(  )
+{
+    return getApplication()->WorksheetFunction();
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::Windows( const cpo::uno::Any& aIndex )
+{
+    return getApplication()->Windows( aIndex );
+}
+
+uno::Reference< excel::XRange > SAL_CALL
+ScVbaGlobals::Rows( const cpo::uno::Any& aIndex )
+{
+    return getApplication()->getActiveSheet()->Rows( aIndex );
+
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::getDebug()
+{
+    try // return empty object on error
+    {
+        uno::Reference< lang::XMultiComponentFactory > xServiceManager( mxContext->getServiceManager(), uno::UNO_SET_THROW );
+        uno::Reference< uno::XInterface > xVBADebug = xServiceManager->createInstanceWithContext(
+            u"ooo.vba.Debug"_ustr, mxContext );
+        return cpo::uno::Any( xVBADebug );
+    }
+    catch( uno::Exception& )
+    {
+    }
+    return cpo::uno::Any();
+}
+
+cpo::uno::Any SAL_CALL
+ScVbaGlobals::MenuBars( const cpo::uno::Any& aIndex )
+{
+    return getApplication()->MenuBars(aIndex);
+}
+
+cpo::uno::Sequence< OUString > SAL_CALL
+ScVbaGlobals::getAvailableServiceNames(  )
+{
+    static const cpo::uno::Sequence< OUString > serviceNames = comphelper::concatSequences(
+        ScVbaGlobals_BASE::getAvailableServiceNames(),
+        std::initializer_list<OUString>
+        {
+            u"ooo.vba.excel.Range"_ustr,
+            u"ooo.vba.excel.Workbook"_ustr,
+            u"ooo.vba.excel.Window"_ustr,
+            u"ooo.vba.excel.Worksheet"_ustr,
+            u"ooo.vba.excel.Application"_ustr,
+            u"ooo.vba.excel.Hyperlink"_ustr,
+            u"com.sun.star.script.vba.VBASpreadsheetEventProcessor"_ustr
+        } );
+    return serviceNames;
+}
+
+OUString
+ScVbaGlobals::getServiceImplName()
+{
+    return u"ScVbaGlobals"_ustr;
+}
+
+cpo::uno::Sequence< OUString >
+ScVbaGlobals::getServiceNames()
+{
+        static cpo::uno::Sequence< OUString > aServiceNames
+        {
+            u"ooo.vba.excel.Globals"_ustr
+        };
+        return aServiceNames;
+}
+
+extern "C" SAL_DLLPUBLIC_EXPORT css::uno::XInterface *
+ScVbaGlobals_get_implementation(
+    css::uno::XComponentContext *context,
+    cpo::uno::Sequence<cpo::uno::Any> const &arguments)
+{
+    return cppu::acquire(new ScVbaGlobals(arguments, context));
+}
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */
