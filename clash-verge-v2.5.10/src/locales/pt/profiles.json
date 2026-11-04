@@ -22,16 +22,7 @@
     "importForm": {
       "placeholder": "URL do perfil",
       "actions": {
-        "paste": "Colar",
-        "lanScan": "LAN scan"
-      },
-      "lan": {
-        "title": "Backfill from LAN",
-        "hint": "Scan the code from a phone on the same network, paste the subscription link, and this field fills in automatically.",
-        "code": "Code",
-        "waiting": "Waiting for a submission…",
-        "empty": "No LAN address is available. Connect to a local network and try again.",
-        "failed": "Could not open the LAN input page."
+        "paste": "Colar"
       }
     },
     "feedback": {

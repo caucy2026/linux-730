@@ -21,6 +21,13 @@ export const commands = {
   openCoreDir: () => __TAURI_INVOKE<null>('open_core_dir'),
   getNetworkInterfaces: () =>
     __TAURI_INVOKE<string[]>('get_network_interfaces'),
+  startProfileLanInput: (locale: string, onAddress: Channel<string>) =>
+    __TAURI_INVOKE<LanProfileInputSession>('start_profile_lan_input', {
+      locale,
+      onAddress,
+    }),
+  stopProfileLanInput: (id: string) =>
+    __TAURI_INVOKE<void>('stop_profile_lan_input', { id }),
   getSystemHostname: () => __TAURI_INVOKE<string>('get_system_hostname'),
   restartApp: () => __TAURI_INVOKE<null>('restart_app'),
   installUpdate: (version: string, onEvent: Channel<DownloadEvent>) =>
@@ -552,6 +559,12 @@ export type JsonValue =
   | string
   | JsonValue[]
   | { [key in string]: JsonValue }
+
+export type LanProfileInputSession = {
+  id: string
+  url: string
+  expiresInSeconds: number
+}
 
 export type ListenerProbe = {
   address: string

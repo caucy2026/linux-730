@@ -23,15 +23,7 @@
       "placeholder": "Profile URL",
       "actions": {
         "paste": "Paste",
-        "lanScan": "LAN scan"
-      },
-      "lan": {
-        "title": "Backfill from LAN",
-        "hint": "Scan the code from a phone on the same network, paste the subscription link, and this field fills in automatically.",
-        "code": "Code",
-        "waiting": "Waiting for a submission…",
-        "empty": "No LAN address is available. Connect to a local network and try again.",
-        "failed": "Could not open the LAN input page."
+        "lanInput": "LAN QR input"
       }
     },
     "feedback": {
@@ -225,6 +217,16 @@
     },
     "qrViewer": {
       "title": "Subscription QR Code"
+    },
+    "lanInput": {
+      "title": "Enter an address from your phone",
+      "hint": "Use the same LAN. Scan and enter an address to fill this field, then review it and click Import. The QR expires in three minutes.",
+      "loading": "Opening LAN input…",
+      "ready": "Ready to scan.",
+      "expired": "This QR expired. Close and reopen it.",
+      "failed": "Could not open LAN input. Check the local network connection.",
+      "closeFailed": "Input closure was not confirmed; it expires within three minutes.",
+      "changed": "The address field changed; existing content was preserved."
     }
   }
 }

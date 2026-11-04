@@ -1,23 +1,33 @@
-import { invoke } from '@tauri-apps/api/core'
+import { Channel } from '@tauri-apps/api/core'
 
-export interface LanProfileInput {
-  port: number
-  code: string
-  urls: string[]
-}
+import { commands } from '@/services/bindings'
+import { mutate } from '@/services/mutate'
 
-export function startLanProfileInput() {
-  return invoke<LanProfileInput>('start_lan_profile_input')
-}
-
-export function getLanProfileInput() {
-  return invoke<LanProfileInput | null>('get_lan_profile_input')
-}
-
-export function takeLanProfileSubmission() {
-  return invoke<string | null>('take_lan_profile_submission')
-}
-
-export function stopLanProfileInput() {
-  return invoke<null>('stop_lan_profile_input')
+export async function openProfileLanInput(
+  locale: string,
+  onAddress: (value: string) => void,
+) {
+  let released = false
+  let closing: Promise<void> | undefined
+  const channel = new Channel<string>()
+  channel.onmessage = (value) => {
+    if (!released) onAddress(value)
+  }
+  const result = await mutate(
+    () => commands.startProfileLanInput(locale, channel),
+    { id: 'profile-lan-input', errorNotice: false },
+  )
+  if (!result.ok) throw new Error('LAN_INPUT_BUSY')
+  return {
+    info: result.value,
+    close: () => {
+      released = true
+      channel.onmessage = () => {}
+      closing ??= mutate(() => commands.stopProfileLanInput(result.value.id), {
+        id: 'profile-lan-input',
+        errorNotice: false,
+      }).then(() => {})
+      return closing
+    },
+  }
 }

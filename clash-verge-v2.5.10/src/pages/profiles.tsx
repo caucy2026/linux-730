@@ -10,6 +10,7 @@ import {
   CheckBoxRounded,
   ClearRounded,
   ContentPasteRounded,
+  QrCode2Rounded,
   DeleteRounded,
   IndeterminateCheckBoxRounded,
   LocalFireDepartmentRounded,
@@ -61,6 +62,7 @@ import {
 } from '@/store/app-store-context'
 import { debugLog } from '@/utils/debug'
 import { isValidUrl } from '@/utils/network'
+import getSystem from '@/utils/get-system'
 
 // 与 src-tauri/src/main.rs 的 worker_limit 上限(8)保持一致，避免前后端更新风暴不对齐
 const PROFILE_UPDATE_WORKER_LIMIT = 8
@@ -84,7 +86,8 @@ const ProfilePage = () => {
   const { t } = useTranslation()
   const location = useLocation()
   const [url, setUrl] = useState('')
-  const [lanOpen, setLanOpen] = useState(false)
+  const [lanInputOpen, setLanInputOpen] = useState(false)
+  const lanInputBaseline = useRef('')
   const [disabled, setDisabled] = useState(false)
   const [profileDndRevision, setProfileDndRevision] = useState(0)
   const [activatings, setActivatings] = useState<string[]>([])
@@ -806,6 +809,20 @@ const ProfilePage = () => {
         </Box>
       }
     >
+      <LanInputDialog
+        open={lanInputOpen}
+        onClose={() => setLanInputOpen(false)}
+        onAddress={(address) => {
+          if (!isValidUrl(address)) {
+            showNotice.error('profiles.page.feedback.errors.invalidUrl')
+          } else if (url !== lanInputBaseline.current) {
+            showNotice.error('profiles.modals.lanInput.changed')
+          } else {
+            setUrl(address)
+          }
+          setLanInputOpen(false)
+        }}
+      />
       <Stack
         direction="row"
         spacing={1}
@@ -858,6 +875,18 @@ const ProfilePage = () => {
             },
           }}
         />
+        {getSystem() === 'linux' && (
+          <IconButton
+            title={t('profiles.page.importForm.actions.lanInput')}
+            disabled={disabled || loading}
+            onClick={() => {
+              lanInputBaseline.current = url
+              setLanInputOpen(true)
+            }}
+          >
+            <QrCode2Rounded />
+          </IconButton>
+        )}
         <Button
           disabled={!url || disabled}
           loading={loading}
@@ -868,22 +897,6 @@ const ProfilePage = () => {
         >
           {t('profiles.page.actions.import')}
         </Button>
-        <Button
-          variant="outlined"
-          size="small"
-          sx={{ borderRadius: '6px' }}
-          onClick={() => setLanOpen(true)}
-        >
-          {t('profiles.page.importForm.actions.lanScan')}
-        </Button>
-        <LanInputDialog
-          open={lanOpen}
-          onClose={() => setLanOpen(false)}
-          onBackfill={(value) => {
-            setUrl(value)
-            setLanOpen(false)
-          }}
-        />
         <Button
           variant="contained"
           size="small"

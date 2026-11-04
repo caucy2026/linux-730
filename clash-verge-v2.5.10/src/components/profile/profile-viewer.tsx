@@ -1,6 +1,8 @@
+import QrCode2Rounded from '@mui/icons-material/QrCode2Rounded'
 import {
   Box,
   FormControl,
+  IconButton,
   InputAdornment,
   InputLabel,
   MenuItem,
@@ -19,9 +21,12 @@ import { useProfiles } from '@/hooks/use-profiles'
 import { createProfile, patchProfile } from '@/services/cmds'
 import { mutate } from '@/services/mutate'
 import { showNotice } from '@/services/notice-service'
+import getSystem from '@/utils/get-system'
+import { isValidUrl } from '@/utils/network'
 import { version } from '@root/package.json'
 
 import { FileInput } from './file-input'
+import { LanInputDialog } from './lan-input-dialog'
 
 interface Props {
   onChange: (isActivating?: boolean) => void
@@ -44,6 +49,8 @@ export function ProfileViewer({ onChange, ref }: ProfileViewerProps) {
   const [loading, setLoading] = useState(false)
   const { profiles } = useProfiles()
 
+  const [lanInputOpen, setLanInputOpen] = useState(false)
+  const lanInputBaseline = useRef<string | null | undefined>(undefined)
   const fileDataRef = useRef<string | null>(null)
 
   const { control, watch, setValue, reset, handleSubmit, getValues } =
@@ -216,6 +223,7 @@ export function ProfileViewer({ onChange, ref }: ProfileViewerProps) {
           }
         }
 
+        setLanInputOpen(false)
         setOpen(false)
         setTimeout(() => reset(), 500)
         fileDataRef.current = null
@@ -233,6 +241,7 @@ export function ProfileViewer({ onChange, ref }: ProfileViewerProps) {
 
   const handleClose = () => {
     try {
+      setLanInputOpen(false)
       setOpen(false)
       fileDataRef.current = null
       setTimeout(() => reset(), 500)
@@ -323,6 +332,24 @@ export function ProfileViewer({ onChange, ref }: ProfileViewerProps) {
         />
       )}
 
+      <LanInputDialog
+        open={open && isRemote && lanInputOpen}
+        onClose={() => setLanInputOpen(false)}
+        onAddress={(address) => {
+          if (!isValidUrl(address)) {
+            showNotice.error('profiles.page.feedback.errors.invalidUrl')
+          } else if (getValues('url') !== lanInputBaseline.current) {
+            showNotice.error('profiles.modals.lanInput.changed')
+          } else {
+            setValue('url', address, {
+              shouldDirty: true,
+              shouldValidate: true,
+            })
+          }
+          setLanInputOpen(false)
+        }}
+      />
+
       {isRemote && (
         <>
           <Controller
@@ -333,6 +360,27 @@ export function ProfileViewer({ onChange, ref }: ProfileViewerProps) {
                 {...text}
                 {...field}
                 multiline
+                slotProps={{
+                  input: {
+                    endAdornment: getSystem() === 'linux' && (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label={t(
+                            'profiles.page.importForm.actions.lanInput',
+                          )}
+                          title={t('profiles.page.importForm.actions.lanInput')}
+                          disabled={loading}
+                          onClick={() => {
+                            lanInputBaseline.current = getValues('url')
+                            setLanInputOpen(true)
+                          }}
+                        >
+                          <QrCode2Rounded />
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  },
+                }}
                 label={t('profiles.modals.profileForm.fields.subscriptionUrl')}
               />
             )}

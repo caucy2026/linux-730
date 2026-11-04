@@ -1,124 +1,105 @@
-import { Box, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Typography,
+} from '@mui/material'
 import { QRCodeSVG } from 'qrcode.react'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { BaseDialog } from '@/components/base'
-import {
-  type LanProfileInput,
-  startLanProfileInput,
-  stopLanProfileInput,
-  takeLanProfileSubmission,
-} from '@/services/profile-lan-input'
+import { showNotice } from '@/services/notice-service'
+import { openProfileLanInput } from '@/services/profile-lan-input'
 
+type InputHandle = Awaited<ReturnType<typeof openProfileLanInput>>
 interface Props {
   open: boolean
   onClose: () => void
-  onBackfill: (url: string) => void
+  onAddress: (value: string) => void
 }
 
-export function LanInputDialog({ open, onClose, onBackfill }: Props) {
+export const LanInputDialog = ({ open, onClose, onAddress }: Props) => {
   const { t, i18n } = useTranslation()
-  const [session, setSession] = useState<LanProfileInput | null>(null)
-  const [error, setError] = useState('')
-  const onBackfillRef = useRef(onBackfill)
-  onBackfillRef.current = onBackfill
+  const [value, setValue] = useState<string | null>(null)
+  const [state, setState] = useState<
+    'loading' | 'ready' | 'expired' | 'failed'
+  >('loading')
+  const addressRef = useRef(onAddress)
+  const closeRef = useRef(onClose)
+  addressRef.current = onAddress
+  closeRef.current = onClose
 
   useEffect(() => {
-    if (!open) {
-      setSession(null)
-      setError('')
-      return
+    if (!open) return
+    let disposed = false
+    let handle: InputHandle | undefined
+    let timer: ReturnType<typeof setTimeout> | undefined
+    setValue(null)
+    setState('loading')
+    const closeInput = (input: InputHandle) => {
+      void input
+        .close()
+        .catch(() => showNotice.error('profiles.modals.lanInput.closeFailed'))
     }
-
-    let cancelled = false
-    let timer = 0
-
-    const openSession = async () => {
-      try {
-        const next = await startLanProfileInput()
-        if (cancelled) {
-          await stopLanProfileInput()
+    void openProfileLanInput(i18n.language, (address) => {
+      if (disposed) return
+      addressRef.current(address)
+      closeRef.current()
+    })
+      .then((input) => {
+        if (disposed) {
+          closeInput(input)
           return
         }
-        setSession(next)
-        timer = window.setInterval(() => {
-          void takeLanProfileSubmission().then((url) => {
-            if (!cancelled && url) onBackfillRef.current(url)
-          })
-        }, 1000)
-      } catch (err) {
-        if (!cancelled) {
-          setError(err instanceof Error ? err.message : String(err))
-        }
-      }
-    }
-
-    void openSession()
+        handle = input
+        setValue(input.info.url)
+        setState('ready')
+        timer = setTimeout(() => {
+          if (disposed) return
+          setValue(null)
+          setState('expired')
+          closeInput(input)
+        }, input.info.expiresInSeconds * 1000)
+      })
+      .catch(() => {
+        if (!disposed) setState('failed')
+      })
     return () => {
-      cancelled = true
-      window.clearInterval(timer)
-      void stopLanProfileInput()
+      disposed = true
+      if (timer) clearTimeout(timer)
+      if (handle) closeInput(handle)
     }
-  }, [open])
-
-  const lang = i18n.language?.toLowerCase().startsWith('zh') ? 'zh' : 'en'
-  const page = session?.urls[0]
-  const scanUrl = page
-    ? `${page}${lang}?code=${encodeURIComponent(session?.code ?? '')}`
-    : ''
+  }, [open, i18n.language])
 
   return (
-    <BaseDialog
-      open={open}
-      title={t('profiles.page.importForm.lan.title')}
-      cancelBtn={t('shared.actions.close')}
-      disableOk
-      onCancel={onClose}
-      onClose={onClose}
-    >
-      <Typography variant="body2" sx={{ mb: 1.5 }}>
-        {t('profiles.page.importForm.lan.hint')}
-      </Typography>
-      {error ? (
-        <Typography color="error" variant="body2">
-          {t('profiles.page.importForm.lan.failed')} {error}
+    <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
+      <DialogTitle>{t('profiles.modals.lanInput.title')}</DialogTitle>
+      <DialogContent>
+        <Typography variant="body2" sx={{ mb: 2 }}>
+          {t('profiles.modals.lanInput.hint')}
         </Typography>
-      ) : null}
-      {session && session.urls.length === 0 ? (
-        <Typography variant="body2">
-          {t('profiles.page.importForm.lan.empty')}
-        </Typography>
-      ) : null}
-      {session ? (
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-          <Typography variant="body2">
-            {t('profiles.page.importForm.lan.code')}: {session.code}
-          </Typography>
-          {session.urls.map((url) => (
-            <Typography key={url} variant="body2" sx={{ wordBreak: 'break-all' }}>
-              {url}
-              {lang}
-            </Typography>
-          ))}
-          {scanUrl ? (
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                p: 2,
-                bgcolor: '#fff',
-                borderRadius: 1,
-              }}
-            >
-              <QRCodeSVG value={scanUrl} size={220} level="M" />
-            </Box>
-          ) : null}
-          <Typography variant="body2" color="text.secondary">
-            {t('profiles.page.importForm.lan.waiting')}
-          </Typography>
-        </Box>
-      ) : null}
-    </BaseDialog>
+        {value && state === 'ready' ? (
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              p: 2,
+              bgcolor: '#fff',
+              borderRadius: 1,
+            }}
+          >
+            <QRCodeSVG value={value} size={240} level="M" />
+          </Box>
+        ) : (
+          <Typography>{t(`profiles.modals.lanInput.${state}`)}</Typography>
+        )}
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onClose}>{t('shared.actions.close')}</Button>
+      </DialogActions>
+    </Dialog>
   )
 }

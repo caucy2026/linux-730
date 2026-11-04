@@ -98,49 +98,32 @@ pub struct AutoProxy {
     pub url: String,
 }
 
-#[derive(serde::Serialize, specta::Type)]
-pub struct LanProfileInput {
-    pub port: u16,
-    pub code: String,
-    pub urls: Vec<String>,
-}
-
-fn lan_view(session: crate::utils::lan_profile_input::LanProfileSession) -> LanProfileInput {
-    LanProfileInput {
-        port: session.port,
-        code: session.code,
-        urls: session.urls,
+#[tauri::command]
+#[specta::specta]
+pub async fn start_profile_lan_input(
+    locale: String,
+    on_address: tauri::ipc::Channel<String>,
+) -> CmdResult<crate::ipc::LanProfileInputSession> {
+    #[cfg(target_os = "linux")]
+    {
+        crate::utils::lan_profile_input::start(locale, on_address)
+            .await
+            .map_err(|code| super::CommandFailure::coded(code, "Could not open LAN address input."))
+    }
+    #[cfg(not(target_os = "linux"))]
+    {
+        let _ = (locale, on_address);
+        Err(super::CommandFailure::coded(
+            "LAN_INPUT_LINUX_ONLY",
+            "LAN input is available on Linux.",
+        ))
     }
 }
-
-/// Open the LAN page that accepts a profile URL from another device.
 #[tauri::command]
 #[specta::specta]
-pub async fn start_lan_profile_input() -> CmdResult<LanProfileInput> {
-    crate::utils::lan_profile_input::start()
-        .await
-        .map(lan_view)
-        .stringify_err()
-}
-
-/// Describe the open LAN page, if one is running.
-#[tauri::command]
-#[specta::specta]
-pub fn get_lan_profile_input() -> CmdResult<Option<LanProfileInput>> {
-    Ok(crate::utils::lan_profile_input::current().map(lan_view))
-}
-
-/// Take one submitted profile URL so the import field can be backfilled.
-#[tauri::command]
-#[specta::specta]
-pub fn take_lan_profile_submission() -> CmdResult<Option<String>> {
-    Ok(crate::utils::lan_profile_input::take_submission())
-}
-
-/// Close the LAN page and drop any URL still held in memory.
-#[tauri::command]
-#[specta::specta]
-pub fn stop_lan_profile_input() -> CmdResult {
-    crate::utils::lan_profile_input::stop();
-    Ok(())
+pub fn stop_profile_lan_input(id: String) {
+    #[cfg(target_os = "linux")]
+    crate::utils::lan_profile_input::stop(&id);
+    #[cfg(not(target_os = "linux"))]
+    let _ = id;
 }

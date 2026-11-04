@@ -3,7 +3,6 @@ pub mod connections_stream;
 pub mod dirs;
 pub mod help;
 pub mod init;
-pub(crate) mod lan_profile_input;
 #[cfg(target_os = "linux")]
 pub mod linux;
 #[cfg(target_os = "macos")]
@@ -24,3 +23,6 @@ pub mod tmpl;
 pub mod tray_speed;
 pub mod window_manager;
 pub mod yaml_emitter;
+
+#[cfg(target_os = "linux")]
+pub mod lan_profile_input;

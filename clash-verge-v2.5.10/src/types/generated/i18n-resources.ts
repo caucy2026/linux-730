@@ -368,6 +368,16 @@ export interface TranslationResources {
             lazy: string
           }
         }
+        lanInput: {
+          changed: string
+          closeFailed: string
+          expired: string
+          failed: string
+          hint: string
+          loading: string
+          ready: string
+          title: string
+        }
         logViewer: {
           title: string
         }
@@ -477,16 +487,8 @@ export interface TranslationResources {
         }
         importForm: {
           actions: {
-            lanScan: string
+            lanInput: string
             paste: string
-          }
-          lan: {
-            code: string
-            empty: string
-            failed: string
-            hint: string
-            title: string
-            waiting: string
           }
           placeholder: string
         }
@@ -1598,6 +1600,7 @@ export interface TranslationResources {
           noDisney: string
           originalsOnly: string
           pending: string
+          risky: string
           unsupportedRegion: string
           yes: string
         }

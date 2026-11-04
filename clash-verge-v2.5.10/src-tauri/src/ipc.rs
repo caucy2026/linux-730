@@ -16,6 +16,8 @@ pub fn builder() -> tauri_specta::Builder<tauri::Wry> {
             cmd::open_logs_dir,
             cmd::open_core_dir,
             cmd::get_network_interfaces,
+            cmd::start_profile_lan_input,
+            cmd::stop_profile_lan_input,
             cmd::get_system_hostname,
             cmd::restart_app,
             cmd::install_update,
@@ -69,10 +71,6 @@ pub fn builder() -> tauri_specta::Builder<tauri::Wry> {
             cmd::open_devtools,
             cmd::exit_app,
             cmd::get_network_interfaces_info,
-            cmd::start_lan_profile_input,
-            cmd::get_lan_profile_input,
-            cmd::take_lan_profile_submission,
-            cmd::stop_lan_profile_input,
             cmd::get_profiles,
             cmd::enhance_profiles,
             cmd::patch_profiles_config,
@@ -235,4 +233,12 @@ pub enum JsonValue {
     // Specta resolves fields in nested functions, where Self is unavailable.
     Array(#[specta(type = Vec<JsonValue>)] Vec<Self>),
     Object(#[specta(type = std::collections::HashMap<String, JsonValue>)] std::collections::HashMap<String, Self>),
+}
+
+#[derive(serde::Serialize, specta::Type)]
+#[serde(rename_all = "camelCase")]
+pub struct LanProfileInputSession {
+    pub id: String,
+    pub url: String,
+    pub expires_in_seconds: u32,
 }

@@ -356,32 +356,3 @@ impl NetworkManager {
         }
     }
 }
-
-/// Non-loopback IPv4 addresses a phone on the same network can open.
-/// Private LAN ranges are listed before other routable addresses.
-pub fn lan_ipv4_addresses() -> Vec<std::string::String> {
-    use network_interface::{NetworkInterface, NetworkInterfaceConfig as _};
-    use std::net::Ipv4Addr;
-
-    let Ok(interfaces) = NetworkInterface::show() else {
-        return Vec::new();
-    };
-    let mut addresses = Vec::new();
-    for interface in interfaces {
-        for addr in interface.addr {
-            let network_interface::Addr::V4(v4) = addr else {
-                continue;
-            };
-            let ip = v4.ip;
-            if ip.is_loopback() || ip.is_unspecified() || ip.is_link_local() {
-                continue;
-            }
-            let text = ip.to_string();
-            if !addresses.iter().any(|existing: &std::string::String| existing == &text) {
-                addresses.push(text);
-            }
-        }
-    }
-    addresses.sort_by_key(|ip| !ip.parse::<Ipv4Addr>().is_ok_and(Ipv4Addr::is_private));
-    addresses
-}

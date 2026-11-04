@@ -1,255 +1,349 @@
-//! Short-lived LAN page that lets another device on the same network submit a
-//! profile subscription URL. The desktop UI polls and backfills that URL.
-//!
-//! The listener exists only while a session is open. A pairing code must match
-//! before a URL is kept, and nothing is written to disk.
-
-use anyhow::{Context as _, Result, bail};
+use crate::{ipc::LanProfileInputSession, process::AsyncHandler};
+use network_interface::{Addr, NetworkInterface, NetworkInterfaceConfig as _};
+use parking_lot::Mutex;
 use serde::Deserialize;
-use std::net::Ipv4Addr;
-use std::sync::{Arc, Mutex, OnceLock};
-use tokio::sync::oneshot;
-use warp::Filter as _;
+use std::{
+    convert::Infallible,
+    sync::{
+        Arc, LazyLock,
+        atomic::{AtomicBool, Ordering},
+    },
+    time::{Duration, Instant},
+};
+use tauri::ipc::Channel;
+use tokio::{net::TcpListener, sync::oneshot};
+use warp::{Filter as _, http::StatusCode};
 
-const PAGE_EN: &str = include_str!("../../../lan-input-en.html");
-const PAGE_ZH: &str = include_str!("../../../lan-input-zh.html");
-const MAX_URL_LEN: usize = 2048;
+const TTL: Duration = Duration::from_secs(180);
+static CURRENT: LazyLock<Mutex<Option<Arc<Session>>>> = LazyLock::new(|| Mutex::new(None));
 
 struct Session {
-    port: u16,
-    code: String,
-    submitted: Mutex<Option<String>>,
-    shutdown: Mutex<Option<oneshot::Sender<()>>>,
+    id: String,
+    token: String,
+    host: String,
+    chinese: bool,
+    deadline: Instant,
+    active: AtomicBool,
+    deliver: Arc<dyn Fn(String) -> bool + Send + Sync>,
+    stop: Mutex<Option<oneshot::Sender<()>>>,
 }
-
-static SESSION: OnceLock<Mutex<Option<Arc<Session>>>> = OnceLock::new();
-
-fn session_slot() -> &'static Mutex<Option<Arc<Session>>> {
-    SESSION.get_or_init(|| Mutex::new(None))
+impl Session {
+    fn close(&self) {
+        self.active.store(false, Ordering::Release);
+        if let Some(stop) = self.stop.lock().take() {
+            let _ = stop.send(());
+        }
+    }
+    fn valid(&self, token: &str, host: Option<&str>, origin: Option<&str>) -> bool {
+        self.active.load(Ordering::Acquire)
+            && Instant::now() < self.deadline
+            && token == self.token
+            && host == Some(self.host.as_str())
+            && origin.is_none_or(|value| value == format!("http://{}", self.host))
+    }
 }
-
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub struct LanProfileSession {
-    pub port: u16,
-    pub code: String,
-    pub urls: Vec<String>,
+#[derive(Deserialize)]
+#[serde(deny_unknown_fields)]
+struct AddressInput {
+    address: String,
 }
+#[derive(Debug)]
+struct Denied;
+impl warp::reject::Reject for Denied {}
 
-/// Open a LAN listener, replacing any session that is already running.
-pub async fn start() -> Result<LanProfileSession> {
-    stop();
-
-    let listener = tokio::net::TcpListener::bind((Ipv4Addr::UNSPECIFIED, 0))
-        .await
-        .context("failed to bind the LAN profile input listener")?;
-    let port = listener
-        .local_addr()
-        .context("failed to read the LAN profile input port")?
-        .port();
-    let code = random_code().context("failed to generate a LAN pairing code")?;
-    let (shutdown_tx, shutdown_rx) = oneshot::channel();
-    let session = Arc::new(Session {
-        port,
-        code: code.clone(),
-        submitted: Mutex::new(None),
-        shutdown: Mutex::new(Some(shutdown_tx)),
+fn response(text: &str, status: StatusCode) -> warp::http::Response<String> {
+    warp::http::Response::builder()
+        .status(status)
+        .header("Content-Type", "text/html; charset=utf-8")
+        .header("Cache-Control", "no-store")
+        .header("Referrer-Policy", "no-referrer")
+        .header("X-Content-Type-Options", "nosniff")
+        .header(
+            "Content-Security-Policy",
+            "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'",
+        )
+        .body(text.to_owned())
+        .unwrap_or_default()
+}
+fn routes(session: Arc<Session>) -> impl warp::Filter<Extract = (impl warp::Reply,), Error = Infallible> + Clone {
+    let chinese = session.chinese;
+    let admit = warp::path!("input" / String)
+        .and(warp::header::optional::<String>("host"))
+        .and(warp::header::optional::<String>("origin"))
+        .and(warp::any().map(move || session.clone()))
+        .and_then(
+            |token: String, host: Option<String>, origin: Option<String>, session: Arc<Session>| async move {
+                if session.valid(&token, host.as_deref(), origin.as_deref()) {
+                    Ok(session)
+                } else {
+                    Err(warp::reject::custom(Denied))
+                }
+            },
+        );
+    let form = admit.clone().and(warp::get()).map(|session: Arc<Session>| {
+        let page = if session.chinese {
+            include_str!("lan-input-zh.html")
+        } else {
+            include_str!("lan-input-en.html")
+        };
+        response(page, StatusCode::OK)
     });
-
-    let routes = routes(Arc::clone(&session));
-    crate::process::AsyncHandler::spawn(move || async move {
-        warp::serve(routes)
-            .incoming(listener)
-            .graceful(async {
-                shutdown_rx.await.ok();
-            })
-            .run()
-            .await;
-    });
-
-    let view = LanProfileSession {
-        port,
-        code,
-        urls: page_urls(port),
-    };
-    *session_slot().lock().unwrap_or_else(|poisoned| poisoned.into_inner()) = Some(session);
-    Ok(view)
-}
-
-pub fn current() -> Option<LanProfileSession> {
-    let slot = session_slot().lock().unwrap_or_else(|poisoned| poisoned.into_inner());
-    slot.as_ref().map(|session| LanProfileSession {
-        port: session.port,
-        code: session.code.clone(),
-        urls: page_urls(session.port),
+    let submit = admit
+        .and(warp::post())
+        .and(warp::body::content_length_limit(8192))
+        .and(warp::body::form::<AddressInput>())
+        .map(|session: Arc<Session>, input: AddressInput| {
+            let address = input.address.trim();
+            let valid = address.len() <= 4096
+                && !address.chars().any(char::is_control)
+                && reqwest::Url::parse(address).is_ok_and(|url| matches!(url.scheme(), "http" | "https"));
+            if !valid {
+                return response(
+                    if session.chinese {
+                        "地址无效，请输入以 http:// 或 https:// 开头的地址。"
+                    } else {
+                        "Invalid address"
+                    },
+                    StatusCode::BAD_REQUEST,
+                );
+            }
+            if Instant::now() >= session.deadline
+                || session
+                    .active
+                    .compare_exchange(true, false, Ordering::AcqRel, Ordering::Acquire)
+                    .is_err()
+            {
+                return response(
+                    if session.chinese {
+                        "输入已结束，请重新扫码。"
+                    } else {
+                        "Input session has ended"
+                    },
+                    StatusCode::GONE,
+                );
+            }
+            let delivered = (session.deliver)(address.to_owned());
+            session.close();
+            if !delivered {
+                return response(
+                    if session.chinese {
+                        "电脑端输入已关闭。"
+                    } else {
+                        "Desktop input is closed"
+                    },
+                    StatusCode::GONE,
+                );
+            }
+            response(
+                if session.chinese {
+                    "<meta charset=utf-8><p>地址已回填。请返回电脑，核对后点击导入。</p>"
+                } else {
+                    "<p>Address received. Review it on the desktop and click Import.</p>"
+                },
+                StatusCode::OK,
+            )
+        });
+    form.or(submit).recover(move |error: warp::Rejection| async move {
+        let status = if error.find::<Denied>().is_some() {
+            StatusCode::FORBIDDEN
+        } else if error.is_not_found() {
+            StatusCode::NOT_FOUND
+        } else {
+            StatusCode::BAD_REQUEST
+        };
+        Ok::<_, Infallible>(response(
+            if chinese {
+                "输入请求不可用，请重新扫码。"
+            } else {
+                "Input request rejected"
+            },
+            status,
+        ))
     })
 }
 
-/// Return the newest accepted URL and clear it so the UI backfills once.
-pub fn take_submission() -> Option<String> {
-    let slot = session_slot().lock().unwrap_or_else(|poisoned| poisoned.into_inner());
-    let session = slot.as_ref()?;
-    session
-        .submitted
-        .lock()
-        .unwrap_or_else(|poisoned| poisoned.into_inner())
-        .take()
-}
-
-pub fn stop() {
-    let previous = session_slot()
-        .lock()
-        .unwrap_or_else(|poisoned| poisoned.into_inner())
-        .take();
-    if let Some(session) = previous
-        && let Some(sender) = session
-            .shutdown
-            .lock()
-            .unwrap_or_else(|poisoned| poisoned.into_inner())
-            .take()
-    {
-        sender.send(()).ok();
-    }
-}
-
-fn routes(
-    session: Arc<Session>,
-) -> impl warp::Filter<Extract = (warp::http::Response<String>,), Error = warp::Rejection> + Clone {
-    let page = warp::get()
-        .and(warp::path::param::<String>())
-        .and(warp::path::end())
-        .map(|lang: String| {
-            if !lang_is_known(&lang) {
-                return html_reply(PAGE_EN, warp::http::StatusCode::NOT_FOUND);
-            }
-            html_reply(page_for_lang(&lang), warp::http::StatusCode::OK)
-        });
-
-    let submit_session = Arc::clone(&session);
-    let submit = warp::post()
-        .and(warp::path("submit"))
-        .and(warp::path::end())
-        .and(warp::body::content_length_limit(
-            u64::try_from(MAX_URL_LEN + 256).unwrap_or(4096),
-        ))
-        .and(warp::body::json())
-        .map(move |body: SubmitBody| accept_submission(&submit_session, body));
-
-    page.or(submit)
-}
-
-#[derive(Deserialize)]
-struct SubmitBody {
-    code: String,
-    url: String,
-}
-
-fn html_reply(body: &str, status: warp::http::StatusCode) -> warp::http::Response<String> {
-    warp::http::Response::builder()
-        .status(status)
-        .header("content-type", "text/html; charset=utf-8")
-        .body(body.to_string())
-        .unwrap_or_else(|_| warp::http::Response::new(String::new()))
-}
-
-fn json_reply(body: &str, status: warp::http::StatusCode) -> warp::http::Response<String> {
-    warp::http::Response::builder()
-        .status(status)
-        .header("content-type", "application/json")
-        .body(body.to_string())
-        .unwrap_or_else(|_| warp::http::Response::new(String::new()))
-}
-
-fn accept_submission(session: &Session, body: SubmitBody) -> warp::http::Response<String> {
-    if body.code != session.code {
-        return json_reply(r#"{"ok":false,"error":"code"}"#, warp::http::StatusCode::FORBIDDEN);
-    }
-    let Some(url) = acceptable_profile_url(&body.url) else {
-        return json_reply(r#"{"ok":false,"error":"url"}"#, warp::http::StatusCode::BAD_REQUEST);
-    };
-    *session
-        .submitted
-        .lock()
-        .unwrap_or_else(|poisoned| poisoned.into_inner()) = Some(url);
-    json_reply(r#"{"ok":true}"#, warp::http::StatusCode::OK)
-}
-
-fn lang_is_known(lang: &str) -> bool {
-    matches!(lang, "en" | "zh")
-}
-
-fn page_for_lang(lang: &str) -> &'static str {
-    if lang == "zh" { PAGE_ZH } else { PAGE_EN }
-}
-
-fn page_urls(port: u16) -> Vec<String> {
-    super::network::lan_ipv4_addresses()
+pub async fn start(locale: String, on_address: Channel<String>) -> Result<LanProfileInputSession, &'static str> {
+    let mut interfaces = NetworkInterface::show().map_err(|_| "LAN_INPUT_INTERFACE_FAILED")?;
+    interfaces.sort_by_key(|interface| interface.name.clone());
+    let address = interfaces
         .into_iter()
-        .map(|host| format!("http://{host}:{port}/"))
-        .collect()
+        .filter(|interface| {
+            !["lo", "docker", "veth", "virbr", "br-", "tun", "tap", "clash"]
+                .iter()
+                .any(|prefix| interface.name.to_lowercase().starts_with(prefix))
+        })
+        .flat_map(|interface| interface.addr)
+        .find_map(|address| match address {
+            Addr::V4(value) if value.ip.is_private() => Some(value.ip),
+            _ => None,
+        })
+        .ok_or("LAN_INPUT_NO_PRIVATE_INTERFACE")?;
+    let listener = TcpListener::bind((address, 0))
+        .await
+        .map_err(|_| "LAN_INPUT_BIND_FAILED")?;
+    let port = listener.local_addr().map_err(|_| "LAN_INPUT_BIND_FAILED")?.port();
+    let host = format!("{address}:{port}");
+    let id = nanoid::nanoid!(16);
+    let token = nanoid::nanoid!(32);
+    let (stop, stopped) = oneshot::channel();
+    let session = Arc::new(Session {
+        id: id.clone(),
+        token: token.clone(),
+        host: host.clone(),
+        chinese: locale.starts_with("zh"),
+        deadline: Instant::now() + TTL,
+        active: AtomicBool::new(true),
+        deliver: Arc::new(move |address| on_address.send(address).is_ok()),
+        stop: Mutex::new(Some(stop)),
+    });
+    if let Some(previous) = CURRENT.lock().replace(session.clone()) {
+        previous.close();
+    }
+    let server_session = session.clone();
+    AsyncHandler::spawn(move || async move {
+        let shutdown = session.clone();
+        warp::serve(routes(server_session))
+            .incoming(listener)
+            .graceful(async move {
+                tokio::select! { _ = stopped => {}, _ = tokio::time::sleep(TTL) => {} }
+                shutdown.close();
+            })
+            .run()
+            .await;
+        let mut current = CURRENT.lock();
+        if current.as_ref().is_some_and(|value| value.id == session.id) {
+            current.take();
+        }
+    });
+    Ok(LanProfileInputSession {
+        id: id.clone(),
+        url: format!("http://{host}/input/{token}"),
+        expires_in_seconds: TTL.as_secs() as u32,
+    })
 }
-
-fn random_code() -> Result<String> {
-    const ALPHABET: &[u8] = b"ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-    let mut bytes = [0u8; 6];
-    getrandom::fill(&mut bytes).context("failed to read pairing-code entropy")?;
-    Ok(bytes
-        .iter()
-        .map(|byte| ALPHABET[(*byte as usize) % ALPHABET.len()] as char)
-        .collect())
-}
-
-pub fn acceptable_profile_url(raw: &str) -> Option<String> {
-    let trimmed = raw.trim();
-    if trimmed.is_empty() || trimmed.len() > MAX_URL_LEN || trimmed.chars().any(char::is_control) {
-        return None;
+pub fn stop(id: &str) {
+    let mut current = CURRENT.lock();
+    if current.as_ref().is_some_and(|value| value.id == id)
+        && let Some(session) = current.take()
+    {
+        session.close();
     }
-    let url = tauri::Url::parse(trimmed).ok()?;
-    if url.scheme() != "http" && url.scheme() != "https" {
-        return None;
-    }
-    if url.host_str().is_none() {
-        return None;
-    }
-    Some(trimmed.to_string())
-}
-
-#[cfg(test)]
-pub fn reject_bad_submission(code: &str, expected: &str, url: &str) -> Result<String> {
-    if code != expected {
-        bail!("pairing code does not match");
-    }
-    acceptable_profile_url(url).context("profile URL must be an http or https address")
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{PAGE_EN, PAGE_ZH, acceptable_profile_url, reject_bad_submission};
-
-    #[test]
-    fn pages_expose_the_submission_form() {
-        assert!(PAGE_EN.contains("id=\"profile-url\""));
-        assert!(PAGE_ZH.contains("id=\"profile-url\""));
-        assert!(PAGE_EN.contains("/submit"));
-        assert!(PAGE_ZH.contains("/submit"));
+    use super::*;
+    fn session(deadline: Instant, accept: bool) -> (Arc<Session>, Arc<Mutex<Vec<String>>>) {
+        let received = Arc::new(Mutex::new(Vec::new()));
+        let sink = received.clone();
+        (
+            Arc::new(Session {
+                id: "owner".into(),
+                token: "capability".into(),
+                host: "127.0.0.1:12000".into(),
+                chinese: false,
+                deadline,
+                active: AtomicBool::new(true),
+                deliver: Arc::new(move |value| {
+                    if accept {
+                        sink.lock().push(value);
+                    }
+                    accept
+                }),
+                stop: Mutex::new(None),
+            }),
+            received,
+        )
     }
-
-    #[test]
-    fn only_http_urls_are_accepted() {
+    #[tokio::test]
+    async fn admitted_address_is_delivered_once_without_echo() {
+        let (session, received) = session(Instant::now() + TTL, true);
+        let api = routes(session.clone());
+        let wrong = warp::test::request()
+            .method("GET")
+            .path("/input/wrong")
+            .header("host", "127.0.0.1:12000")
+            .reply(&api)
+            .await;
+        assert_eq!(wrong.status(), 403);
+        let foreign = warp::test::request()
+            .method("POST")
+            .path("/input/capability")
+            .header("host", "127.0.0.1:12000")
+            .header("origin", "http://foreign.invalid")
+            .reply(&api)
+            .await;
+        assert_eq!(foreign.status(), 403);
+        let body = "address=https%3A%2F%2Fexample.invalid%2Fone";
+        let response = warp::test::request()
+            .method("POST")
+            .path("/input/capability")
+            .header("host", "127.0.0.1:12000")
+            .header("origin", "http://127.0.0.1:12000")
+            .header("content-type", "application/x-www-form-urlencoded")
+            .header("content-length", body.len())
+            .body(body)
+            .reply(&api)
+            .await;
+        assert_eq!(response.status(), 200);
+        assert_eq!(&*received.lock(), &["https://example.invalid/one"]);
+        assert!(!String::from_utf8_lossy(response.body()).contains("example.invalid"));
         assert_eq!(
-            acceptable_profile_url("  https://example.com/sub?token=1  ").as_deref(),
-            Some("https://example.com/sub?token=1")
+            response.headers().get("cache-control").and_then(|v| v.to_str().ok()),
+            Some("no-store")
         );
-        assert!(acceptable_profile_url("javascript:alert(1)").is_none());
-        assert!(acceptable_profile_url("file:///tmp/a.yaml").is_none());
-        assert!(acceptable_profile_url("not a url").is_none());
+        let repeat = warp::test::request()
+            .method("GET")
+            .path("/input/capability")
+            .header("host", "127.0.0.1:12000")
+            .reply(&api)
+            .await;
+        assert_eq!(repeat.status(), 403);
+        assert_eq!(received.lock().len(), 1);
     }
-
-    #[test]
-    fn a_wrong_code_is_rejected() {
-        assert!(reject_bad_submission("AAAAAA", "BBBBBB", "https://example.com/a").is_err());
-        assert_eq!(
-            reject_bad_submission("BBBBBB", "BBBBBB", "https://example.com/a").unwrap_or_default(),
-            "https://example.com/a"
-        );
+    #[tokio::test]
+    async fn invalid_and_oversized_input_cannot_consume_the_session() {
+        let (session, received) = session(Instant::now() + TTL, true);
+        let api = routes(session.clone());
+        for body in [
+            "address=file%3A%2F%2F%2Fetc%2Fpasswd".to_owned(),
+            "address=".to_owned(),
+            "x".repeat(8193),
+        ] {
+            let result = warp::test::request()
+                .method("POST")
+                .path("/input/capability")
+                .header("host", "127.0.0.1:12000")
+                .header("content-type", "application/x-www-form-urlencoded")
+                .header("content-length", body.len())
+                .body(body)
+                .reply(&api)
+                .await;
+            assert_ne!(result.status(), 200);
+            assert!(session.active.load(Ordering::Acquire));
+            assert!(received.lock().is_empty());
+        }
+    }
+    #[tokio::test]
+    async fn expiry_cancellation_and_closed_desktop_reject_delivery() {
+        let (expired, _) = session(Instant::now() - Duration::from_secs(1), true);
+        assert!(!expired.valid("capability", Some("127.0.0.1:12000"), None));
+        let (closed, _) = session(Instant::now() + TTL, true);
+        closed.close();
+        assert!(!closed.valid("capability", Some("127.0.0.1:12000"), None));
+        let (session, received) = session(Instant::now() + TTL, false);
+        let body = "address=https%3A%2F%2Fexample.invalid";
+        let result = warp::test::request()
+            .method("POST")
+            .path("/input/capability")
+            .header("host", "127.0.0.1:12000")
+            .header("content-type", "application/x-www-form-urlencoded")
+            .header("content-length", body.len())
+            .body(body)
+            .reply(&routes(session.clone()))
+            .await;
+        assert_eq!(result.status(), 410);
+        assert!(received.lock().is_empty());
+        assert!(!session.active.load(Ordering::Acquire));
     }
 }
