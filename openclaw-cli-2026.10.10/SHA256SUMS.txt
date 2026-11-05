@@ -1,0 +1,2 @@
+e84efdf1a5fe167fd42af8cd0837b4158d847d281393ae1faba41681f041fe46  openclaw-cli_2026.10.10-1kemi1_arm64.deb
+406fe3fbde1c054adff8b297c16fdb5af6659db327c1ac8acd46b56ef1af9a92  node-v26.13.0-linux-arm64.tar.xz
