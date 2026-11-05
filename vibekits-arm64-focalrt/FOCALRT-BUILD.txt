@@ -1,0 +1,13 @@
+Built: Thu, 05 Nov 2026 08:32:15 +0800
+Source deb: VibeKits-1.9.0-dev.773-linux-arm64.deb
+SHA256 src: b8801bad4b3e9093e13fa678122dfa73eed0fe0849d6399a4f99d26c98615c6b
+Output: /workspace/vk-linux773/out/dual/VibeKits-1.9.0-dev.773-linux-arm64-focalrt.deb
+SHA256 out: 5fe2cfd5d030398c70951164e57114ebab9d6d5c46a100b0ab46fa76c2c239dc
+Bytes: 167302684
+Bundled:
+  conda-forge libstdcxx-ng 12.2.0 hc13a102_19 -> libstdc++.so.6.0.30 (GLIBCXX_3.4.29, CXXABI_1.3.13, GLIBC_2.17)
+  conda-forge libgcc-ng 12.2.0 h607ecd0_19 -> libgcc_s.so.1 (GLIBC_2.17)
+Launcher: /opt/vibekits/vibekits wrapper + vibekits.real
+Depends: libstdc++6 (>= 9) [was >= 11]
+Version kept: 1.9.0~dev.773+2773 / X-Kemi-Version-Code 2773
+gork.bot协助开发
