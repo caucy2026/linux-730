@@ -56,7 +56,7 @@ fn response(text: &str, status: StatusCode) -> warp::http::Response<String> {
         .status(status)
         .header("Content-Type", "text/html; charset=utf-8")
         .header("Cache-Control", "no-store")
-        .header("Referrer-Policy", "no-referrer")
+        .header("Referrer-Policy", "same-origin")
         .header("X-Content-Type-Options", "nosniff")
         .header(
             "Content-Security-Policy",
