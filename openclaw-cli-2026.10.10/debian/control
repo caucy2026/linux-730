@@ -1,0 +1,13 @@
+Package: openclaw-cli
+Version: 2026.10.10-1kemi1
+Section: devel
+Priority: optional
+Architecture: arm64
+Maintainer: KEMI / gork.bot <noreply@kemi.local>
+Installed-Size: 908244
+Depends:
+Homepage: https://openclaw.org
+Description: OpenClaw CLI+Gateway (aarch64, bundled Node 26.13.0)
+ OpenClaw 2026.10.10 with bundled Node.js v26.13.0 linux-arm64.
+ Repackaged for KEMI Linux store / Ubuntu 20.04 aarch64 (101).
+ gork.bot协助开发. Smoke-tested CLI+gateway on 101 (t79).
