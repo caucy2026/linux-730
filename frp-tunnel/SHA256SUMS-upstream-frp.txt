@@ -1,0 +1,1 @@
+02180b857480302fd934e9ddbd50fe2f73229f99062f88756abc6de9df5e95cf  frp_0.72.0_linux_arm64.tar.gz

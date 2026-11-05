@@ -1,0 +1,11 @@
+serverAddr = "YOUR_VPS_IP_OR_HOST"
+serverPort = 7000
+auth.method = "token"
+auth.token = "REPLACE_ME"
+
+[[proxies]]
+name = "web"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8080
+remotePort = 8080
