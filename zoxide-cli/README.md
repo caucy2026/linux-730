@@ -20,7 +20,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.zoxide`（商场；dpkg 名 `kemi-zoxide`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `118` |
 | deb | `kemi-zoxide_0.10.0-1kemi1_arm64.deb` |
 | version_name / code | `0.10.0-1kemi1` / `10000` |
 | bytes | `410580` |
@@ -44,10 +44,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t123 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.zoxide`
-- app_id （blank）
+- app_id `118`
 - version `0.10.0-1kemi1` / `10000`
-- deb SHA256 `e9817f3a5c34f950b999bbd50ab5b2cc85bb445c657870632385b2329818273a`
-- bytes `410580`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793959214078_aeb743f6_kemi-zoxide_0_10_0-1kemi1_arm64.deb`
+- SHA256 `e9817f3a5c34f950b999bbd50ab5b2cc85bb445c657870632385b2329818273a`
+- 四层 L1–L4 PASS
