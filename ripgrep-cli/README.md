@@ -19,7 +19,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.ripgrep`（商场；dpkg 名 `kemi-ripgrep`） |
-| app_id | （CREATE pending；合入时未知，parent 可后补） |
+| app_id | `111` |
 | deb | `kemi-ripgrep_15.2.0-1kemi1_arm64.deb` |
 | version_name / code | `15.2.0-1kemi1` / `1502001` |
 | bytes | `1342200` |
@@ -40,4 +40,13 @@
 
 ## 商场
 
-`os_type=linux` · `linuxpkg` · 独立货架（勿覆盖 Vibekits app90）。CREATE pending（app_id 合入时未知，parent 可后补）。
+`os_type=linux` · `linuxpkg` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
+
+CREATE **DONE**（t116 2026-11-06 Asia/Shanghai）：
+
+- package `com.kemi.ripgrep`
+- app_id `111`
+- version `15.2.0-1kemi1` / `1502001`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793931594251_2aa10a2f_kemi-ripgrep_15_2_0-1kemi1_arm64.deb`
+- SHA256 `dd79c0574f3ea73faf3b1f92b7a3fa506d3daa3b2ae62ed902eb66912fb49bc6`
+- 四层 L1–L4 PASS
