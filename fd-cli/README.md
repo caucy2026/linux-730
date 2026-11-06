@@ -20,7 +20,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.fd`（商场；dpkg 名 `kemi-fd`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `113` |
 | deb | `kemi-fd_10.5.1-1kemi1_arm64.deb` |
 | version_name / code | `10.5.1-1kemi1` / `1005001` |
 | bytes | `1129604` |
@@ -44,10 +44,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t117 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.fd`
-- app_id （blank）
+- app_id `113`
 - version `10.5.1-1kemi1` / `1005001`
-- deb SHA256 `09dc9ad1cc17ac260b52670625f9fd630a0339a2a516fc868b271688bae399a8`
-- bytes `1129604`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793955861107_e541a205_kemi-fd_10_5_1-1kemi1_arm64.deb`
+- SHA256 `09dc9ad1cc17ac260b52670625f9fd630a0339a2a516fc868b271688bae399a8`
+- 四层 L1–L4 PASS
