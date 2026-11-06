@@ -1,0 +1,8 @@
+package_name=com.kemi.anythingllm
+dpkg=kemi-anythingllm
+version=1.19.0-1kemi1
+version_code=11900
+app_id=128
+bytes=628456744
+sha256=9ee0277d5c3dd3364bd20715c8f360fce305e116fc957f72cd64fe663a534e29
+cdn=https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793975126593_90c3733a_kemi-anythingllm_1_19_0-1kemi1_arm64.deb
