@@ -20,7 +20,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.procs`（商场；dpkg 名 `kemi-procs`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `121` |
 | deb | `kemi-procs_0.14.12-1kemi1_arm64.deb` |
 | version_name / code | `0.14.12-1kemi1` / `14012` |
 | bytes | `1658172` |
@@ -44,10 +44,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t126 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.procs`
-- app_id （blank）
+- app_id `121`
 - version `0.14.12-1kemi1` / `14012`
-- deb SHA256 `757f6f6f1f583b2b86568e3b05642836b88eac770c22120df0a834fe19448652`
-- bytes `1658172`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793961333731_2eb4bf54_kemi-procs_0_14_12-1kemi1_arm64.deb`
+- SHA256 `757f6f6f1f583b2b86568e3b05642836b88eac770c22120df0a834fe19448652`
+- 四层 L1–L4 PASS
