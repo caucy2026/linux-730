@@ -19,7 +19,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.jq`（商场；dpkg 名 `kemi-jq`） |
-| app_id | （CREATE pending；合入时未知，parent 可后补） |
+| app_id | `112` |
 | deb | `kemi-jq_1.8.2-1kemi1_arm64.deb` |
 | version_name / code | `1.8.2-1kemi1` / `1082001` |
 | bytes | `595396` |
@@ -41,4 +41,13 @@
 
 ## 商场
 
-`os_type=linux` · `linuxpkg` · 独立货架（勿覆盖 Vibekits app90）。CREATE pending（app_id 合入时未知，parent 可后补）。
+`os_type=linux` · `linuxpkg` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
+
+CREATE **DONE**（t116 2026-11-06 Asia/Shanghai）：
+
+- package `com.kemi.jq`
+- app_id `112`
+- version `1.8.2-1kemi1` / `1082001`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793932070686_c57864f6_kemi-jq_1_8_2-1kemi1_arm64.deb`
+- SHA256 `0b91643f06a8e2f3fb1fa33e33d87b0ded658f133e14261ba1c68f3bb88cac6b`
+- 四层 L1–L4 PASS
