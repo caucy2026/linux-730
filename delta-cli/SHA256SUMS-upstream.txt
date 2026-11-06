@@ -1,0 +1,1 @@
+da7f4338f593572ff426ae153e0870e2fdc72729416eff551b40cdeb67940db8  delta-0.20.1-aarch64-unknown-linux-gnu.tar.gz
