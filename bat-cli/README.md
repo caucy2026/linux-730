@@ -20,9 +20,9 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.bat`（商场；dpkg 名 `kemi-bat`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `114` |
 | deb | `kemi-bat_0.26.1-1kemi1_arm64.deb` |
-| version_name / code | `0.26.1-1kemi1` / `0026001` |
+| version_name / code | `0.26.1-1kemi1` / `26001`（`0026001` = `26001`） |
 | bytes | `2606132` |
 | sha256 | `e9f40262807cfada501e0fd32a701f766c825fa8ad335173eb85b83c4a55e842` |
 | 本地指针 | `/workspace/t117-20261106/`（box 证据，勿提交） |
@@ -44,10 +44,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t118 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.bat`
-- app_id （blank）
-- version `0.26.1-1kemi1` / `0026001`
-- deb SHA256 `e9f40262807cfada501e0fd32a701f766c825fa8ad335173eb85b83c4a55e842`
-- bytes `2606132`
+- app_id `114`
+- version `0.26.1-1kemi1` / `26001`（与商场一致；`0026001` = `26001`）
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793956308652_80f6d82e_kemi-bat_0_26_1-1kemi1_arm64.deb`
+- SHA256 `e9f40262807cfada501e0fd32a701f766c825fa8ad335173eb85b83c4a55e842`
+- 四层 L1–L4 PASS
