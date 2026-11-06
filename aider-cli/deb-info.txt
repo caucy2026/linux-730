@@ -1,0 +1,19 @@
+ new Debian package, version 2.0.
+ size 111258600 bytes: control archive=548 bytes.
+     474 bytes,    16 lines      control
+ Package: kemi-aider
+ Version: 0.86.2-1kemi1
+ Section: devel
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 748112
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Depends: libc6 (>= 2.31)
+ Recommends: git
+ Provides: aider
+ Conflicts: aider
+ Replaces: aider
+ Description: Aider AI pair-programming Agent (arm64)
+  Terminal coding Agent (aider-chat 0.86.2) for KEMI Linux.
+  Bundles CPython 3.12 + dependencies. Requires user LLM credentials.
+  No Docker. gork.bot协助开发.
