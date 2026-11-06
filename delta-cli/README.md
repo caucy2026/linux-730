@@ -24,7 +24,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.delta`（商场；dpkg 名 `kemi-delta`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `117` |
 | deb | `kemi-delta_0.20.1-1kemi1_arm64.deb` |
 | version_name / code | `0.20.1-1kemi1` / `20001` |
 | bytes | `2388168` |
@@ -48,10 +48,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t121 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.delta`
-- app_id （blank）
+- app_id `117`
 - version `0.20.1-1kemi1` / `20001`
-- deb SHA256 `3c71660bf28966daf329676bf810aed2a78cf7ff4c19783f194717232d732ed4`
-- bytes `2388168`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793958954744_f1cd9a77_kemi-delta_0_20_1-1kemi1_arm64.deb`
+- SHA256 `3c71660bf28966daf329676bf810aed2a78cf7ff4c19783f194717232d732ed4`
+- 四层 L1–L4 PASS
