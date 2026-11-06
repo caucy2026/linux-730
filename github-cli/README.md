@@ -18,7 +18,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.gh`（商场；dpkg 名 `kemi-gh`） |
-| app_id | （CREATE 后填） |
+| app_id | （CREATE 待 Vault Bearer；101 冒烟已 PASS） |
 | deb | `kemi-gh_2.103.3-1kemi1_arm64.deb` |
 | version_name / code | `2.103.3-1kemi1` / `2103301` |
 | bytes | `9325088` |
@@ -31,9 +31,14 @@
 ./scripts/build-gh-kemi-deb.sh
 ```
 
-## 真机冒烟（硬门）
 
-必须在 101 安装后 `gh --version` / `gh help`；**不杀 vibekits**。
+## 真机冒烟（硬门 · 已 PASS · t116 2026-11-06 Asia/Shanghai）
+
+- 仿针 RID `7634801763` · hostname `mp730-156` · aarch64 · relay/sshReady
+- upload SHA `90ea913d67482059255af6aed4ddadd1af566ce9b0dfb109b63059ff82f8508e` · bytes `9325088`
+- `dpkg -i` → `kemi-gh 2.103.3-1kemi1`；`gh version 2.103.3 (2026-10-26)`；`gh help` OK
+- **未杀 vibekits**：VK_BEFORE=VK_AFTER=`3569119,3569357,3569381`
+- 证据：`/workspace/t116-20261106/evidence/smoke-gh-run.txt`
 
 ## 商场
 
