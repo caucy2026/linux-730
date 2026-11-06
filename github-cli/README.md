@@ -18,7 +18,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.gh`（商场；dpkg 名 `kemi-gh`） |
-| app_id | （CREATE 待 Vault Bearer；101 冒烟已 PASS） |
+| app_id | `110` |
 | deb | `kemi-gh_2.103.3-1kemi1_arm64.deb` |
 | version_name / code | `2.103.3-1kemi1` / `2103301` |
 | bytes | `9325088` |
@@ -43,3 +43,11 @@
 ## 商场
 
 `os_type=linux` · `linuxpkg` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
+
+CREATE **DONE**（t116 2026-11-06 Asia/Shanghai）：
+
+- app_id `110`
+- version `2.103.3-1kemi1` / `2103301`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793930893226_d882763d_kemi-gh_2_103_3-1kemi1_arm64.deb`
+- SHA256 `90ea913d67482059255af6aed4ddadd1af566ce9b0dfb109b63059ff82f8508e`
+- 四层 L1–L4 PASS
