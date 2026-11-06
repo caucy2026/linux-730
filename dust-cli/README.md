@@ -20,7 +20,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.dust`（商场；dpkg 名 `kemi-dust`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `120` |
 | deb | `kemi-dust_1.2.7-1kemi1_arm64.deb` |
 | version_name / code | `1.2.7-1kemi1` / `10207` |
 | bytes | `797396` |
@@ -44,10 +44,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t125 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.dust`
-- app_id （blank）
+- app_id `120`
 - version `1.2.7-1kemi1` / `10207`
-- deb SHA256 `f15ac77beed48ac24ce3ee398ad2201b32530f7474d2650c15af76d1fce94969`
-- bytes `797396`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793960683047_6c56ee7e_kemi-dust_1_2_7-1kemi1_arm64.deb`
+- SHA256 `f15ac77beed48ac24ce3ee398ad2201b32530f7474d2650c15af76d1fce94969`
+- 四层 L1–L4 PASS
