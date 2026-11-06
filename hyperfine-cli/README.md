@@ -20,7 +20,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.hyperfine`（商场；dpkg 名 `kemi-hyperfine`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `119` |
 | deb | `kemi-hyperfine_2.0.0-1kemi1_arm64.deb` |
 | version_name / code | `2.0.0-1kemi1` / `20000` |
 | bytes | `493488` |
@@ -44,10 +44,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t124 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.hyperfine`
-- app_id （blank）
+- app_id `119`
 - version `2.0.0-1kemi1` / `20000`
-- deb SHA256 `9878665a768f927c5f6f204c9b8723ecf75be5d7192e4f157d166851b94a4653`
-- bytes `493488`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793959633608_73ca552a_kemi-hyperfine_2_0_0-1kemi1_arm64.deb`
+- SHA256 `9878665a768f927c5f6f204c9b8723ecf75be5d7192e4f157d166851b94a4653`
+- 四层 L1–L4 PASS
