@@ -20,7 +20,7 @@
 | 项 | 值 |
 |---|---|
 | package_name | `com.kemi.yq`（商场；dpkg 名 `kemi-yq`） |
-| app_id | （CREATE pending；留空，父任务可回填） |
+| app_id | `115` |
 | deb | `kemi-yq_4.54.2-1kemi1_arm64.deb` |
 | version_name / code | `4.54.2-1kemi1` / `4054002` |
 | bytes | `4081236` |
@@ -44,10 +44,11 @@
 
 `os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
 
-CREATE **pending**（app_id 留空；父任务可回填）：
+CREATE **DONE**（t119 2026-11-06 Asia/Shanghai）：
 
 - package `com.kemi.yq`
-- app_id （blank）
+- app_id `115`
 - version `4.54.2-1kemi1` / `4054002`
-- deb SHA256 `614256a95ff38ab45355c60ffec56aed993607e265008dd054136e9af63ea061`
-- bytes `4081236`
+- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793958059414_ec4e5e7d_kemi-yq_4_54_2-1kemi1_arm64.deb`
+- SHA256 `614256a95ff38ab45355c60ffec56aed993607e265008dd054136e9af63ea061`
+- 四层 L1–L4 PASS
