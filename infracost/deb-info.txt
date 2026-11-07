@@ -1,0 +1,9 @@
+kemi-infracost_0.10.47-1kemi1_arm64.deb
+bytes=18774888
+sha256=e991bdd659194c91853cb00079a02ded4f350b4d440ad9a2a0fe43d6750c47b4
+app_id=247
+package=com.kemi.infracost
+version_code=1047
+upstream=infracost/infracost v0.10.47 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/infracost
+gork.bot协助开发
