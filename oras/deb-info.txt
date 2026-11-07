@@ -1,0 +1,9 @@
+kemi-oras_1.3.6-1kemi1_arm64.deb
+bytes=3098288
+sha256=8bd103958eeb3508f86990cedbb2148bc342938ed56d63aba020b575d669222a
+app_id=231
+package=com.kemi.oras
+version_code=10306
+upstream=oras-project/oras v1.3.6 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/oras
+gork.bot协助开发
