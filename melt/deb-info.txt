@@ -1,0 +1,9 @@
+kemi-melt_0.6.2-1kemi1_arm64.deb
+bytes=2288752
+sha256=d5786fddaafd60d959057ea67f99bc73f798b53fa1af8b2813b11daa0d569e08
+app_id=195
+package=com.kemi.melt
+version_code=602
+upstream=charmbracelet/melt v0.6.2 Linux_arm64 (static)
+install=/usr/bin/melt (+ man + completions)
+gork.bot协助开发
