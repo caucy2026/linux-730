@@ -1,0 +1,8 @@
+package: kemi-oha
+version: 1.16.0-1kemi1
+arch: arm64
+bytes: 3304736
+sha256: c713ec15ee9023193392235faa802434fdc8977e59c52ee1f43d7fc854164904
+install: /usr/bin/oha
+upstream: hatoo/oha v1.16.0 linux-arm64
+elf: AArch64 static EXEC (no NEEDED)
