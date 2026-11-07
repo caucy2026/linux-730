@@ -1,0 +1,9 @@
+kemi-sq_0.55.0-1kemi1_arm64.deb
+bytes=24702156
+sha256=7abce3d041882598d5ffca11417dc2437c54e930824c5846fbf3a4c8ffb33364
+app_id=198
+package=com.kemi.sq
+version_code=5500
+upstream=neilotoole/sq v0.55.0 linux-arm64 (static)
+install=/usr/bin/sq (+ man + completions)
+gork.bot协助开发
