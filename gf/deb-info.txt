@@ -1,0 +1,9 @@
+kemi-gf_0.0.20200618-1kemi1_arm64.deb
+bytes=873112
+sha256=8a8308e4531d0da3166a8563f348a6d1600eeb1b7551c0a1ad91f6c072c5336e
+app_id=290
+package=com.kemi.gf
+version_code=20200618
+upstream=tomnomnom/gf master dcd4c361 cross-build linux/arm64 static (CGO_ENABLED=0); patterns not bundled
+install=/usr/bin/gf
+gork.bot协助开发
