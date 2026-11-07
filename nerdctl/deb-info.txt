@@ -1,0 +1,9 @@
+kemi-nerdctl_2.4.2-1kemi1_arm64.deb
+bytes=7594744
+sha256=3f8bd89edde27bcb91af78d9eb8bb189b3d2562da7a2832283c258f81cd14bb9
+app_id=232
+package=com.kemi.nerdctl
+version_code=20402
+upstream=containerd/nerdctl v2.4.2 linux-arm64 slim (static / NO_NEEDED; single-CLI nerdctl only)
+install=/usr/bin/nerdctl
+gork.bot协助开发
