@@ -1,0 +1,11 @@
+package: kemi-hrdr
+version: 0.18.0-1kemi1
+arch: arm64
+bytes: 6258024
+sha256: 3e2acd3a66def72c289de2c0866bcf06377b56aad37e51d8a4cdd044b16d571b
+bin: /usr/bin/hrdr (static musl aarch64, upstream v0.18.0)
+upstream_tar: hrdr-v0.18.0-aarch64-unknown-linux-musl.tar.gz
+upstream_tar_sha256: 63c4c1d45ea003a81a25b5a847dfc98c7cfed2421ee8fe546656d7d944d13f9d
+app_id: 132
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794025642480_a0896d52_kemi-hrdr_0_18_0-1kemi1_arm64.deb
+smoke: BLOCKED_TRANSPORT
