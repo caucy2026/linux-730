@@ -1,0 +1,9 @@
+kemi-terragrunt_1.2.1-1kemi1_arm64.deb
+bytes=17602328
+sha256=7a00fefc9e2961fedceaf6f0671ef3c1358cb641859fd26f393ba2ecda539334
+app_id=244
+package=com.kemi.terragrunt
+version_code=10201
+upstream=gruntwork-io/terragrunt v1.2.1 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/terragrunt
+gork.bot协助开发
