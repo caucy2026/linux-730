@@ -1,0 +1,9 @@
+kemi-dalfox_3.2.4-1kemi1_arm64.deb
+bytes=4069292
+sha256=4f69d4ea1b50837ba13e5e65f51527de5aa299c8426fe29ba05442aa8280e17f
+app_id=271
+package=com.kemi.dalfox
+version_code=30204
+upstream=hahwul/dalfox v3.2.4 linux-aarch64-musl (static / NO_NEEDED / no ld-musl)
+install=/usr/bin/dalfox
+gork.bot协助开发
