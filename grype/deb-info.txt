@@ -1,0 +1,9 @@
+kemi-grype_0.121.2-1kemi1_arm64.deb
+bytes=19635368
+sha256=bf6a8f08728deb0f01b09549ed4c0ef372d42331bfda8d765dda2943ed4978a9
+app_id=233
+package=com.kemi.grype
+version_code=12102
+upstream=anchore/grype v0.121.2 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/grype
+gork.bot协助开发
