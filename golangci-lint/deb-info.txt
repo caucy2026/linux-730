@@ -1,0 +1,9 @@
+kemi-golangci-lint_2.15.0-1kemi1_arm64.deb
+bytes=9823520
+sha256=9f9256341a2318016fd52f9b79be18810313d286a1b0fe7e4b3f561a8d6ccc93
+app_id=262
+package=com.kemi.golangci-lint
+version_code=21500
+upstream=golangci/golangci-lint v2.15.0 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/golangci-lint
+gork.bot协助开发
