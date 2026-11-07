@@ -1,0 +1,9 @@
+kemi-tofu_1.13.9-1kemi1_arm64.deb
+bytes=19864196
+sha256=6c126a308a70f3e119ae10eb0005122371edf0248b41a58f32be534c3c9720e7
+app_id=239
+package=com.kemi.tofu
+version_code=11309
+upstream=opentofu/opentofu v1.13.9 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/tofu
+gork.bot协助开发
