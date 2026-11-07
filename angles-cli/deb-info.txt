@@ -1,0 +1,11 @@
+package: kemi-angles
+version: 0.6.3-1kemi1
+arch: arm64
+bytes: 1486800
+sha256: 901dc3eb2e4748a0719f9b34aa93d00eb12ef4240e44a0a3c3a0ba8ffb0311d6
+bin: /usr/bin/angles (static aarch64 EXEC, upstream v0.6.3)
+upstream_tar: angles-linux-arm64.tar.gz
+upstream_tar_sha256: d7337f01d39b00e13e781e345714cc2ace697a37183e64629efbc914f2af0183
+app_id: 133
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794025911556_f03cc51d_kemi-angles_0_6_3-1kemi1_arm64.deb
+smoke: BLOCKED_TRANSPORT
