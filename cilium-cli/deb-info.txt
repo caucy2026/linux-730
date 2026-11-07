@@ -1,0 +1,9 @@
+kemi-cilium-cli_0.20.2-1kemi1_arm64.deb
+bytes=52752972
+sha256=e3cb5129710ded3f4ee90a1811d12ccc933e2ac073ab19e3fd4b73a890f1894b
+app_id=216
+package=com.kemi.cilium-cli
+version_code=2002
+upstream=cilium/cilium-cli v0.20.2 linux-arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/cilium
+gork.bot协助开发
