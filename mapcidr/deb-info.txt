@@ -1,0 +1,9 @@
+kemi-mapcidr_1.1.97-1kemi1_arm64.deb
+bytes=6434040
+sha256=5bf0ba3bce8d6628848936f6be52dc7c6c140cfa8c2d71e62591203a69b7059c
+app_id=277
+package=com.kemi.mapcidr
+version_code=10197
+upstream=projectdiscovery/mapcidr v1.1.97 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/mapcidr
+gork.bot协助开发
