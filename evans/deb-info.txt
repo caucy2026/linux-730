@@ -1,0 +1,9 @@
+kemi-evans_0.10.11-1kemi1_arm64.deb
+bytes=9655208
+sha256=c936bffc272c42cc50317e8238d1f585068c61d6136ff549e20c8e5f5595a76a
+app_id=248
+package=com.kemi.evans
+version_code=1011
+upstream=ktr0731/evans v0.10.11 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/evans
+gork.bot协助开发
