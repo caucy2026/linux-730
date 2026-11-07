@@ -1,0 +1,9 @@
+kemi-subfinder_2.17.0-1kemi1_arm64.deb
+bytes=6414676
+sha256=e2285f60dd59702f897aef6fa74b089a07512570bda5c9fb07738d977421780b
+app_id=266
+package=com.kemi.subfinder
+version_code=21700
+upstream=projectdiscovery/subfinder v2.17.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/subfinder
+gork.bot协助开发
