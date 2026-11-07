@@ -1,0 +1,8 @@
+package: kemi-gping
+version: 1.21.0-1kemi1
+arch: arm64
+bytes: 957520
+sha256: 6dce1c7012c095eb252114c4f8221359a53149f3312e141683d36a9eac17e1d4
+install: /usr/bin/gping
+upstream: orf/gping gping-v1.21.0 Linux-musl-arm64
+elf: AArch64 musl static EXEC (no NEEDED)
