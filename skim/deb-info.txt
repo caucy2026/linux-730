@@ -1,0 +1,8 @@
+package: kemi-skim
+version: 5.9.0-1kemi1
+arch: arm64
+bytes: 1999932
+sha256: 66243ff3c88676337a87fcab1be11108c2d2d2b0df5b72daa5be4eefd9fc9deb
+install: /usr/bin/sk
+upstream: skim-rs/skim v5.9.0 aarch64-unknown-linux-musl
+elf: AArch64 musl static EXEC (no NEEDED)
