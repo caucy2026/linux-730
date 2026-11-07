@@ -1,0 +1,9 @@
+kemi-talosctl_1.14.5-1kemi1_arm64.deb
+bytes=19519860
+sha256=503c723c3ea8c5a461cf336d595eeb12e343b6483bcbe778ba240fada6927340
+app_id=223
+package=com.kemi.talosctl
+version_code=11405
+upstream=siderolabs/talos v1.14.5 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/talosctl
+gork.bot协助开发
