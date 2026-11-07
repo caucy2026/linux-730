@@ -1,0 +1,9 @@
+kemi-helm_4.3.1-1kemi1_arm64.deb
+bytes=11481036
+sha256=bea378935d0ae3f9b35337ba0912070188ecda769bd97ae15835619ec4e2afb6
+app_id=221
+package=com.kemi.helm
+version_code=40301
+upstream=helm/helm v4.3.1 linux-arm64 (static / NO_NEEDED via get.helm.sh)
+install=/usr/bin/helm
+gork.bot协助开发
