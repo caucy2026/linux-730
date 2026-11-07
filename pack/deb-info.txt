@@ -1,0 +1,9 @@
+kemi-pack_0.40.10-1kemi1_arm64.deb
+bytes=6863772
+sha256=ae1cb0552ba4d943253ab79ea26885feb3ca9af45c1f543406794482090606ea
+app_id=242
+package=com.kemi.pack
+version_code=4010
+upstream=buildpacks/pack v0.40.10 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/pack
+gork.bot协助开发
