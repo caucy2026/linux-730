@@ -1,0 +1,9 @@
+kemi-k6_2.3.0-1kemi1_arm64.deb
+bytes=23455836
+sha256=ccb71b76f1c870c9f6bb444932a8d09ce185dc4e4c2bb2cc2dca3ca24c3d7006
+app_id=249
+package=com.kemi.k6
+version_code=20300
+upstream=grafana/k6 v2.3.0 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/k6
+gork.bot协助开发
