@@ -1,0 +1,6 @@
+kemi-rclone_1.76.0-1kemi1_arm64.deb
+bytes=18739500
+sha256=74b1cf98edbafcdd27fabc8e544dc95a3e547ab498af75f04ebfe8a581f038c8
+install=/usr/bin/rclone + manpage
+ELF=AArch64 EXEC static (no PT_INTERP / no dynamic section)
+upstream_zip_sha256=ee169016675e23a69d77240565133ff7dbc9b33d16fa8f7053d4af39f1eaeb78
