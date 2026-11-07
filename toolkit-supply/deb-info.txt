@@ -1,0 +1,10 @@
+file=kemi-toolkit-supply_1.0.0-1kemi1_arm64.deb
+bytes=214915800
+sha256=941eee13bb13d25eea5e8470e02d62b54e12e018c18b31a3a5ff5ec1d823be97
+version=1.0.0-1kemi1
+version_code=10000
+app_id=305
+package=com.kemi.toolkit-supply
+group_id=supply
+members=12
+tools=cosign,syft,grype,trivy,tofu,terragrunt,cue,buf,dagger,infracost,grpcurl,evans

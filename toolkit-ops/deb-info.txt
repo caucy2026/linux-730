@@ -1,0 +1,10 @@
+file=kemi-toolkit-ops_1.0.0-1kemi1_arm64.deb
+bytes=171856580
+sha256=6a36720f751f193e96bd2e6852f4adbfd459bab686242ca6d564122bb9229d27
+version=1.0.0-1kemi1
+version_code=10000
+app_id=302
+package=com.kemi.toolkit-ops
+group_id=ops-net
+members=22
+tools=bottom,bandwhich,gping,trippy,doggo,duf,gdu,dua,diskus,dysk,termshark,cloudflared,frp,rclone,croc,age,sops,melt,websocat,curlie,pi-bolt,hrdr

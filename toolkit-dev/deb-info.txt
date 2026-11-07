@@ -1,0 +1,10 @@
+file=kemi-toolkit-dev_1.0.0-1kemi1_arm64.deb
+bytes=76132500
+sha256=b35f42a2a4ad62f164ce214efc2746fc565dea392cd2606cfbafbb128af6e8f7
+version=1.0.0-1kemi1
+version_code=10000
+app_id=299
+package=com.kemi.toolkit-dev
+group_id=dev-git
+members=15
+tools=lazygit,gitui,git-cliff,difftastic,riff,tokei,typos,ast-grep,goreleaser,actionlint,shellcheck,shfmt,gofumpt,golangci-lint,hadolint
