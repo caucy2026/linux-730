@@ -1,0 +1,9 @@
+kemi-soft-serve_0.12.4-1kemi1_arm64.deb
+bytes=7380980
+sha256=de16f187039ccc91b10fed0e45e953e0914e35e5308229f0eb358b703b99edc4
+app_id=200
+package=com.kemi.soft-serve
+version_code=1204
+upstream=charmbracelet/soft-serve v0.12.4 Linux_arm64 (static)
+install=/usr/bin/soft (+ man + completions)
+gork.bot协助开发
