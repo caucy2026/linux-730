@@ -1,0 +1,8 @@
+package: kemi-pup
+version: 0.4.0-1kemi1
+arch: arm64
+bytes: 1157092
+sha256: bfaffe1071f9ad5ec4cd557bba5e9c5e8122ed1c2b79d437271107cc09355ed3
+install: /usr/bin/pup
+upstream: ericchiang/pup v0.4.0 linux_arm64
+elf: AArch64 static EXEC (no NEEDED)
