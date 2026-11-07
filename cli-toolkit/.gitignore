@@ -1,6 +1,5 @@
 debs/
 upstream/
-members/
 *.deb
 *.tar.gz
 *.tar.xz

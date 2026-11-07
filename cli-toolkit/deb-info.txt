@@ -1,0 +1,7 @@
+file=kemi-cli-toolkit_1.1.0-1kemi1_arm64.deb
+bytes=27399296
+sha256=7cfd819c976411233f18c053b2b6b8005d86134a8ac1d02bd09d8d93b185e6d8
+version=1.1.0-1kemi1
+version_code=11000
+members=14
+tools=gh,rg,jq,fd,bat,yq,fzf,delta,zoxide,hyperfine,dust,procs,sd,xh
