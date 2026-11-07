@@ -1,0 +1,9 @@
+kemi-ffuf_2.3.0-1kemi1_arm64.deb
+bytes=2837816
+sha256=4c2982c30022f7ecabec54ab3de606c7ff0b771e24d743c4f4ab33816ee3702f
+app_id=268
+package=com.kemi.ffuf
+version_code=20300
+upstream=ffuf/ffuf v2.3.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/ffuf
+gork.bot协助开发
