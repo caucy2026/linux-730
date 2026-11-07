@@ -1,0 +1,9 @@
+kemi-gofumpt_0.12.0-1kemi1_arm64.deb
+bytes=978584
+sha256=d8eeb2cb9b5e5f33e61cdfdecf39de7c0e833fa4ccfe84a02937940c4f86d7f0
+app_id=261
+package=com.kemi.gofumpt
+version_code=1200
+upstream=mvdan/gofumpt v0.12.0 gofumpt_linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/gofumpt
+gork.bot协助开发
