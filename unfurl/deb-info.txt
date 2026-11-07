@@ -1,0 +1,9 @@
+kemi-unfurl_0.4.3-1kemi1_arm64.deb
+bytes=1978340
+sha256=c6f1a1f6452a99a6c39645ddaaad9c9d73477e9eff59a9982f70bb270c9dc24d
+app_id=286
+package=com.kemi.unfurl
+version_code=403
+upstream=tomnomnom/unfurl v0.4.3 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/unfurl
+gork.bot协助开发
