@@ -1,0 +1,5 @@
+file=kemi-lazygit_0.66.2-1kemi1_arm64.deb
+bytes=4591524
+sha256=9f9f724aaebbfa89ea5e25542514b771c69b8c3b36a5a9e99b636e009008e52d
+install=/usr/bin/lazygit
+abi=AArch64 EXEC static (NO_INTERP)
