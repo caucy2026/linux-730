@@ -1,0 +1,9 @@
+kemi-proxify_0.0.16-1kemi1_arm64.deb
+bytes=7734716
+sha256=8e47d84c0e9b7cabb685d668193caf7a35fa7764ba67995ccc5c72de31198d3e
+app_id=282
+package=com.kemi.proxify
+version_code=16
+upstream=projectdiscovery/proxify v0.0.16 linux_arm64 (static / NO_NEEDED; single-CLI)
+install=/usr/bin/proxify
+gork.bot协助开发
