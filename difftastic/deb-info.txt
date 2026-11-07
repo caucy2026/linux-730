@@ -1,0 +1,8 @@
+package: kemi-difftastic
+version: 0.72.0-1kemi1
+arch: arm64
+bytes: 5722424
+sha256: 2b08a70ed8d7c8a07854390b075ef7e84c23e769d193bc78a126c84bf28e0824
+install: /usr/bin/difft
+upstream: Wilfred/difftastic 0.72.0 aarch64-unknown-linux-gnu
+elf: AArch64 DYN; NEEDED libgcc_s/libpthread/libdl/libc; MAX GLIBC_2.18
