@@ -1,0 +1,9 @@
+kemi-uncover_1.2.1-1kemi1_arm64.deb
+bytes=6592288
+sha256=80a0b35e7dafdb5955dc1db76fd6f6ab852b93cabe34b0193c2176bb87f95039
+app_id=274
+package=com.kemi.uncover
+version_code=10201
+upstream=projectdiscovery/uncover v1.2.1 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/uncover
+gork.bot协助开发
