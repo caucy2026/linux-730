@@ -1,0 +1,9 @@
+kemi-minikube_1.39.0-1kemi1_arm64.deb
+bytes=39412140
+sha256=16c1c70081f459a331343472012b7dd1878fdd9cd5ea9cad3405814b2b687a52
+app_id=220
+package=com.kemi.minikube
+version_code=13900
+upstream=kubernetes/minikube v1.39.0 linux-arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/minikube
+gork.bot协助开发
