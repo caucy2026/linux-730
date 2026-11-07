@@ -1,0 +1,9 @@
+kemi-typos_1.52.0-1kemi1_arm64.deb
+bytes=4860700
+sha256=b61340775b0ddc6209c4261d63206f4524b3cae27c2aa9936e135a559f30595f
+app_id=186
+package=com.kemi.typos
+version_code=15200
+upstream=crate-ci/typos v1.52.0 aarch64-unknown-linux-musl (static)
+install=/usr/bin/typos
+gork.bot协助开发
