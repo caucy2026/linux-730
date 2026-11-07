@@ -1,0 +1,9 @@
+kemi-fnm_1.39.0-1kemi1_arm64.deb
+bytes=2520692
+sha256=f3dd493feb3886d653a13000e2aa687f43723039a001d7dc2d222148bcc9ca7c
+app_id=193
+package=com.kemi.fnm
+version_code=13900
+upstream=Schniz/fnm v1.39.0 linux arm64 (static, fnm-arm64.zip)
+install=/usr/bin/fnm
+gork.bot协助开发
