@@ -1,0 +1,9 @@
+kemi-kubens_0.11.0-1kemi1_arm64.deb
+bytes=4666452
+sha256=cc4c9883b2333238e23fc0f27b9b5152b4ff87614d66d1c41df534a122309a5f
+app_id=212
+package=com.kemi.kubens
+version_code=1100
+upstream=ahmetb/kubectx kubens v0.11.0 linux_arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/kubens (kubectx omitted; separate package)
+gork.bot协助开发
