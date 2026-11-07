@@ -1,0 +1,9 @@
+kemi-feroxbuster_2.13.1-1kemi1_arm64.deb
+bytes=3932000
+sha256=bf12723d3e790ff177b0fff3a9055aa889a4efc9b1a0f44a38c626c2dbc358d9
+app_id=270
+package=com.kemi.feroxbuster
+version_code=21301
+upstream=epi052/feroxbuster v2.13.1 aarch64-linux (glibc≤2.18)
+install=/usr/bin/feroxbuster
+gork.bot协助开发
