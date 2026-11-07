@@ -1,0 +1,9 @@
+kemi-grpcurl_1.9.4-1kemi1_arm64.deb
+bytes=5954880
+sha256=9a45cfe2a99486a2dd84ae604f0811a8e57d9657677d4b8c92f6fd66574fd026
+app_id=246
+package=com.kemi.grpcurl
+version_code=10904
+upstream=fullstorydev/grpcurl v1.9.4 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/grpcurl
+gork.bot协助开发
