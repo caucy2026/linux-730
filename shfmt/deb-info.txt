@@ -1,0 +1,9 @@
+kemi-shfmt_3.14.1-1kemi1_arm64.deb
+bytes=1049764
+sha256=3eba8c0e2ff056a944e28e9c422312c3b20d101076c6ef2bfb0839e72bd71710
+app_id=260
+package=com.kemi.shfmt
+version_code=31401
+upstream=mvdan/sh v3.14.1 shfmt_linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/shfmt
+gork.bot协助开发
