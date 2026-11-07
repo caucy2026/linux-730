@@ -1,0 +1,9 @@
+kemi-oxker_0.13.4-1kemi1_arm64.deb
+bytes=1284988
+sha256=bec31e34f2da3e995a5f7159c1d741018926b787b21b6e267e3cc2f0a84d1dfb
+app_id=206
+package=com.kemi.oxker
+version_code=1304
+upstream=mrjackwills/oxker v0.13.4 linux_aarch64 (static / NO_NEEDED)
+install=/usr/bin/oxker
+gork.bot协助开发
