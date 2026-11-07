@@ -1,0 +1,9 @@
+kemi-kind_0.33.0-1kemi1_arm64.deb
+bytes=2763300
+sha256=80465b432a980ff98afbcf81b368a824eee1e63c3b63fddff9470f6797c71332
+app_id=218
+package=com.kemi.kind
+version_code=3300
+upstream=kubernetes-sigs/kind v0.33.0 linux-arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/kind
+gork.bot协助开发
