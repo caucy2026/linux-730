@@ -1,0 +1,8 @@
+package: kemi-miller
+version: 6.22.0-1kemi1
+arch: arm64
+bytes: 3776692
+sha256: b2e8cbd5be9dfa445cc990b47d38db9892e9ef83f012b22bae770483ad35f83a
+install: /usr/bin/mlr
+upstream: johnkerl/miller v6.22.0 linux-arm64
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED; Go)
