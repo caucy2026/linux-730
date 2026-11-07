@@ -1,0 +1,9 @@
+kemi-crane_0.22.1-1kemi1_arm64.deb
+bytes=3101172
+sha256=abefa2b9750292acc3544701b967e906a27eb77d77b51c06a4d3bf8243114e40
+app_id=234
+package=com.kemi.crane
+version_code=2201
+upstream=google/go-containerregistry v0.22.1 Linux_arm64 (static / NO_NEEDED; single-CLI crane)
+install=/usr/bin/crane
+gork.bot协助开发
