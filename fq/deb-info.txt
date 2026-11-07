@@ -1,0 +1,9 @@
+kemi-fq_0.18.0-1kemi1_arm64.deb
+bytes=3034608
+sha256=7eac4aca6cdfdf4cc3c7e05f243c1e56ffbe4756d161cdf25e0821d9ebdf0e3d
+app_id=184
+package=com.kemi.fq
+version_code=1800
+upstream=wader/fq v0.18.0 linux_arm64 (static)
+install=/usr/bin/fq
+gork.bot协助开发
