@@ -1,0 +1,9 @@
+kemi-asnmap_1.2.0-1kemi1_arm64.deb
+bytes=5644164
+sha256=b150cc6373e234f03192d2233c8a9206ccb9bcb4bd1ae191b4f6f34cc5da5f09
+app_id=278
+package=com.kemi.asnmap
+version_code=10200
+upstream=projectdiscovery/asnmap v1.2.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/asnmap
+gork.bot协助开发
