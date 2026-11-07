@@ -1,0 +1,9 @@
+kemi-nuclei_3.11.1-1kemi1_arm64.deb
+bytes=26783920
+sha256=7c3455b90c800b342f7c42b2893281047d3b7864c97307663f8829000d145563
+app_id=263
+package=com.kemi.nuclei
+version_code=31101
+upstream=projectdiscovery/nuclei v3.11.1 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/nuclei
+gork.bot协助开发
