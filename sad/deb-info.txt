@@ -1,0 +1,8 @@
+package: kemi-sad
+version: 0.4.33-1kemi1
+arch: arm64
+bytes: 996104
+sha256: 3d07618e4500b8c2e6464dda410937ac50f3c20dac7dec1ad44249a78f1edba8
+install: /usr/bin/sad
+upstream: ms-jpq/sad v0.4.33 aarch64-unknown-linux-musl
+elf: AArch64 musl static EXEC (no NEEDED)
