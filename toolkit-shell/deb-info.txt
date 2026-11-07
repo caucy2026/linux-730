@@ -1,0 +1,10 @@
+file=kemi-toolkit-shell_1.0.0-1kemi1_arm64.deb
+bytes=156268476
+sha256=a72c56308852d5d27358eed6acfba6a5098998175dd927d55b99ada046f040c6
+version=1.0.0-1kemi1
+version_code=10000
+app_id=301
+package=com.kemi.toolkit-shell
+group_id=shell-desk
+members=32
+tools=starship,zellij,yazi,superfile,eza,lsd,atuin,mcfly,navi,tealdeer,gum,glow,just,ouch,hexyl,pastel,skim,viddy,watchexec,skate,grex,sad,fselect,ov,freeze,vhs,pop,wishlist,soft-serve,mods,fnm,mise

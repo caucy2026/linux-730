@@ -1,0 +1,10 @@
+file=kemi-toolkit-loadtest_1.0.0-1kemi1_arm64.deb
+bytes=47915296
+sha256=1941681532ef37bf0ee295cd1ad7461264097a5564aac547c4e3d1ade6cdf95e
+version=1.0.0-1kemi1
+version_code=10000
+app_id=298
+package=com.kemi.toolkit-loadtest
+group_id=loadtest
+members=7
+tools=k6,ghz,fortio,vegeta,bombardier,cassowary,oha

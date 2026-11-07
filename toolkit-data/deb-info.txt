@@ -1,0 +1,10 @@
+file=kemi-toolkit-data_1.0.0-1kemi1_arm64.deb
+bytes=98302544
+sha256=0f73f52a8f53cae28de4b719d799b154648e40217573def365cff26be050b327
+version=1.0.0-1kemi1
+version_code=10000
+app_id=300
+package=com.kemi.toolkit-data
+group_id=data-text
+members=13
+tools=miller,qsv,dasel,fx,gojq,gron,fq,pup,html-tool,sq,lnav,erdtree,lazysql

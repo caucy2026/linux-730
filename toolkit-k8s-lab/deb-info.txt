@@ -1,0 +1,10 @@
+file=kemi-toolkit-k8s-lab_1.0.0-1kemi1_arm64.deb
+bytes=363055896
+sha256=84cf18b5e358a207bf6fbafdf831266a6455074751d8ed48b3ad42b0f0f59335
+version=1.0.0-1kemi1
+version_code=10000
+app_id=306
+package=com.kemi.toolkit-k8s-lab
+group_id=k8s-lab
+members=8
+tools=kind,k3d,minikube,k0s,talosctl,argocd,cilium-cli,hubble

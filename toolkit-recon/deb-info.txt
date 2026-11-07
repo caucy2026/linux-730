@@ -1,0 +1,10 @@
+file=kemi-toolkit-recon_1.0.0-1kemi1_arm64.deb
+bytes=201049496
+sha256=06a07f9fa69307900c372dec36c7bed0886c732a1ff36afdf515127c03561462
+version=1.0.0-1kemi1
+version_code=10000
+app_id=304
+package=com.kemi.toolkit-recon
+group_id=recon
+members=34
+tools=nuclei,katana,naabu,subfinder,dnsx,ffuf,gobuster,feroxbuster,dalfox,gau,notify,uncover,tlsx,alterx,mapcidr,asnmap,cdncheck,chaos-client,interactsh-client,proxify,shuffledns,pdtm,anew,unfurl,qsreplace,waybackurls,hakrawler,gf,httprobe,meg,assetfinder,fff,uro,httpx

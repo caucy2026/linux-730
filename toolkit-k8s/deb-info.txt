@@ -1,0 +1,10 @@
+file=kemi-toolkit-k8s_1.0.0-1kemi1_arm64.deb
+bytes=174106540
+sha256=4e07c0d390aae3072c213e20f13e43735527c62c5ddf16eeed0c4e9da7d5d34a
+version=1.0.0-1kemi1
+version_code=10000
+app_id=303
+package=com.kemi.toolkit-k8s
+group_id=k8s-ops
+members=14
+tools=k9s,kubectx,kubens,popeye,kubie,kubeseal,helm,kustomize,stern,krew,flux,helmfile,skaffold,devspace
