@@ -1,0 +1,10 @@
+deb: kemi-crush_0.100.0-1kemi1_arm64.deb
+bytes: 16602996
+sha256: 675bddc1cb20a3ee11636d72d8f4b699570986a7abe8c63db31a840abfda9ac1
+package_name: com.kemi.crush
+dpkg: kemi-crush
+version_name: 0.100.0-1kemi1
+version_code: 100000
+install: /usr/bin/crush (+ man/completions)
+arch: arm64 static (no glibc dep beyond kernel)
+smoke: BLOCKED_TRANSPORT; CREATE app129 + 四层 PASS
