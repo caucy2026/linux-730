@@ -1,0 +1,8 @@
+package: kemi-gdu
+version: 5.39.0-1kemi1
+arch: arm64
+bytes: 5925168
+sha256: 47125adcd668ba63b77dac6930b57e1f963047e70f13308848e213787241db42
+install: /usr/bin/gdu
+upstream: dundee/gdu v5.39.0 linux_arm64 (binary gdu_linux_arm64)
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
