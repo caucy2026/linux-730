@@ -1,0 +1,9 @@
+kemi-ctop_0.7.7-1kemi1_arm64.deb
+bytes=3200072
+sha256=751ce98def59ab36e1b49eb4cc47ad1c7e15ac54f7d8bbf74544d66c8149e171
+app_id=204
+package=com.kemi.ctop
+version_code=707
+upstream=bcicen/ctop v0.7.7 linux-arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/ctop
+gork.bot协助开发
