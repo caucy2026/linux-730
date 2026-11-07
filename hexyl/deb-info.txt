@@ -1,0 +1,8 @@
+package: kemi-hexyl
+version: 0.17.0-1kemi1
+arch: arm64
+bytes: 380348
+sha256: 9faaa062e916de89100a030dc0feae825f29935f04e8c3d4426a3a07dca09ed7
+install: /usr/bin/hexyl
+upstream: sharkdp/hexyl v0.17.0 aarch64-unknown-linux-gnu
+elf: AArch64; NEEDED libgcc_s/libpthread/libc; MAX GLIBC_2.17
