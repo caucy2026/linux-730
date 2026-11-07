@@ -1,0 +1,9 @@
+kemi-gau_2.2.4-1kemi1_arm64.deb
+bytes=2347608
+sha256=a4af83735073174a36a61e3c02773795c59b32e814d4c995a25be9fdb758b4d3
+app_id=272
+package=com.kemi.gau
+version_code=20204
+upstream=lc/gau v2.2.4 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/gau
+gork.bot协助开发
