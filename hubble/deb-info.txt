@@ -1,0 +1,9 @@
+kemi-hubble_1.20.4-1kemi1_arm64.deb
+bytes=12566164
+sha256=8144fa1772893d3dd5da1f3a96209fb1ceac6fa9d7b5709d345650d497e6a3f6
+app_id=217
+package=com.kemi.hubble
+version_code=12004
+upstream=cilium/hubble v1.20.4 linux-arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/hubble
+gork.bot协助开发
