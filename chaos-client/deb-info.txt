@@ -1,0 +1,9 @@
+kemi-chaos-client_0.5.2-1kemi1_arm64.deb
+bytes=5616836
+sha256=6302a895687227cd8b3f0a9076035701a01cb19edff74b3c52b91346c309197c
+app_id=280
+package=com.kemi.chaos-client
+version_code=502
+upstream=projectdiscovery/chaos-client v0.5.2 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/chaos-client
+gork.bot协助开发
