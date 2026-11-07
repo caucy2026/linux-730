@@ -1,0 +1,9 @@
+kemi-bombardier_2.0.2-1kemi1_arm64.deb
+bytes=2639164
+sha256=69a64a69f13277740c90e60a407ef6341af8687870cfaff800991cc4514fd8b1
+app_id=253
+package=com.kemi.bombardier
+version_code=20002
+upstream=codesenberg/bombardier v2.0.2 bombardier-linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/bombardier
+gork.bot协助开发
