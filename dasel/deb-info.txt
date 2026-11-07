@@ -1,0 +1,8 @@
+package: kemi-dasel
+version: 3.11.2-1kemi1
+arch: arm64
+bytes: 2558784
+sha256: 58992e31e13ae70595f202931588cbb36acf95cb09a9f6d75ef57c19bbe59d1b
+install: /usr/bin/dasel
+upstream: TomWright/dasel v3.11.2 linux_arm64
+elf: AArch64 static EXEC (no NEEDED)
