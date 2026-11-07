@@ -1,0 +1,9 @@
+kemi-gobuster_3.8.2-1kemi1_arm64.deb
+bytes=2481976
+sha256=c204886b7bea14b7466f09d95a174836224d97bce09b7816cdd6f1ddffed9de8
+app_id=269
+package=com.kemi.gobuster
+version_code=30802
+upstream=OJ/gobuster v3.8.2 Linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/gobuster
+gork.bot协助开发
