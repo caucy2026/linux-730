@@ -1,0 +1,8 @@
+package: kemi-riff
+version: 3.7.0-1kemi1
+arch: arm64
+bytes: 1356216
+sha256: 338a8f0957fc302afc276312e0d25924329d416f3191bdcee1debcb680a54cc2
+install: /usr/bin/riff
+upstream: walles/riff 3.7.0 aarch64-linux
+elf: AArch64 static EXEC (no NEEDED)
