@@ -1,0 +1,9 @@
+kemi-waybackurls_0.1.0-1kemi1_arm64.deb
+bytes=1899236
+sha256=22816839f11c2fdf4fca9e2b9cb55cc311c21ecc9bbdc66ecfa8d90e3c7d8685
+app_id=288
+package=com.kemi.waybackurls
+version_code=100
+upstream=tomnomnom/waybackurls v0.1.0 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/waybackurls
+gork.bot协助开发
