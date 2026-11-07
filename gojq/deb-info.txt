@@ -1,0 +1,9 @@
+kemi-gojq_0.12.20-1kemi1_arm64.deb
+bytes=1628240
+sha256=1ca28ecb9ff7144f3755d772da3b8918e110f9bf4e1b6e04bd9b1aabb28b02d9
+app_id=183
+package=com.kemi.gojq
+version_code=1220
+upstream=itchyny/gojq v0.12.20 linux_arm64 (static)
+install=/usr/bin/gojq (+ zsh completion)
+gork.bot协助开发
