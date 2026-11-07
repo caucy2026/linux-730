@@ -1,0 +1,9 @@
+kemi-k9s_0.51.0-1kemi1_arm64.deb
+bytes=23600252
+sha256=93e8ba2effafd7bce7e78146d8b3e0b8115f93763bd5eb6ffab5ad0ffe16b9bc
+app_id=210
+package=com.kemi.k9s
+version_code=5100
+upstream=derailed/k9s v0.51.0 Linux_arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/k9s
+gork.bot协助开发
