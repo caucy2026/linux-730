@@ -1,0 +1,9 @@
+kemi-actionlint_1.7.12-1kemi1_arm64.deb
+bytes=1470568
+sha256=b25accc5998ce1853812283e1193de6a9a72c7238b61c7f6edc4d959c0b1d10a
+app_id=259
+package=com.kemi.actionlint
+version_code=10712
+upstream=rhysd/actionlint v1.7.12 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/actionlint
+gork.bot协助开发
