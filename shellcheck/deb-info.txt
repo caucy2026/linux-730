@@ -1,0 +1,9 @@
+kemi-shellcheck_0.11.0-1kemi1_arm64.deb
+bytes=6809928
+sha256=ba9847a5dc76c2f8d5e03bb1450cbb04d4e42fcbf6751440d165cc85d479c6b4
+app_id=256
+package=com.kemi.shellcheck
+version_code=1100
+upstream=koalaman/shellcheck v0.11.0 linux.aarch64 (static / NO_NEEDED)
+install=/usr/bin/shellcheck
+gork.bot协助开发
