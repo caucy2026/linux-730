@@ -1,0 +1,8 @@
+package: kemi-ouch
+version: 0.8.3-1kemi1
+arch: arm64
+bytes: 1849024
+sha256: 3b4b4a95bcf0e7d84446084da228e0eadad18900d56a4668ee7c248806083434
+install: /usr/bin/ouch
+upstream: ouch-org/ouch 0.8.3 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static musl (no PT_INTERP / no NEEDED)
