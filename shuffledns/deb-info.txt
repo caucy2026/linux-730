@@ -1,0 +1,9 @@
+kemi-shuffledns_1.2.1-1kemi1_arm64.deb
+bytes=5793540
+sha256=85ced926d11f8eced1b067923ce0f7f2fc06bbd9a178a6c6780fb78bafa98185
+app_id=283
+package=com.kemi.shuffledns
+version_code=10201
+upstream=projectdiscovery/shuffledns v1.2.1 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/shuffledns
+gork.bot协助开发
