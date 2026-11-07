@@ -1,0 +1,9 @@
+kemi-cosign_3.1.4-1kemi1_arm64.deb
+bytes=45118216
+sha256=564d80d5a543f87bfc1decfa8f6426bc8809e70f174c21c44c3f5e5dcaf368f3
+app_id=229
+package=com.kemi.cosign
+version_code=30104
+upstream=sigstore/cosign v3.1.4 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/cosign
+gork.bot协助开发
