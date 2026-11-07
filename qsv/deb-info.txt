@@ -1,0 +1,9 @@
+kemi-qsv_28.0.0-1kemi1_arm64.deb
+bytes=8535024
+sha256=323f71b2d0b0b123e9aeae0d0a0009f61ae014f77168d184dab86f787626db02
+app_id=182
+package=com.kemi.qsv
+version_code=280000
+upstream=dathere/qsv 28.0.0 aarch64-unknown-linux-musl (static)
+install=/usr/bin/qsv (qsvlite omitted)
+gork.bot协助开发
