@@ -1,0 +1,9 @@
+kemi-ast-grep_0.51.1-1kemi1_arm64.deb
+bytes=5315236
+sha256=0d4cf5a1e6e4d102cdebc02255205c1f8199eb1267c3a54bf79bd4322a6dc068
+app_id=188
+package=com.kemi.ast-grep
+version_code=5101
+upstream=ast-grep/ast-grep 0.51.1 aarch64-unknown-linux-gnu (MAX GLIBC 2.18)
+install=/usr/bin/ast-grep + /usr/bin/sg (deprecated shim)
+gork.bot协助开发
