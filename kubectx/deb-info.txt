@@ -1,0 +1,9 @@
+kemi-kubectx_0.11.0-1kemi1_arm64.deb
+bytes=3236320
+sha256=23f633518303d76cdfe78819bab560ff3067c105f39c32e725070d553ea56953
+app_id=211
+package=com.kemi.kubectx
+version_code=1100
+upstream=ahmetb/kubectx v0.11.0 linux_arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/kubectx (kubens omitted; separate package)
+gork.bot协助开发
