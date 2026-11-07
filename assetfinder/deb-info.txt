@@ -1,0 +1,9 @@
+kemi-assetfinder_0.1.1-1kemi1_arm64.deb
+bytes=1902968
+sha256=f37aed4b05e475ac594d709d11337713d0324abe6788ba081afe49c21f0c8e80
+app_id=293
+package=com.kemi.assetfinder
+version_code=101
+upstream=tomnomnom/assetfinder v0.1.1 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/assetfinder
+gork.bot协助开发
