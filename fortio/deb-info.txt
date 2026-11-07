@@ -1,0 +1,9 @@
+kemi-fortio_1.76.0-1kemi1_arm64.deb
+bytes=4759388
+sha256=965282fd3ff8a41afb7a2540671520f92b0ff7faa98e7ac8bc4bb411b9fedc1f
+app_id=251
+package=com.kemi.fortio
+version_code=17600
+upstream=fortio/fortio v1.76.0 fortio-linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/fortio
+gork.bot协助开发
