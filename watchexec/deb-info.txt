@@ -1,0 +1,8 @@
+package: kemi-watchexec
+version: 2.8.0-1kemi1
+arch: arm64
+bytes: 2593988
+sha256: 44150fe573419efe7c0960dafd7ec344a842e52f32e5bc62462074831800c8ab
+install: /usr/bin/watchexec
+upstream: watchexec/watchexec v2.8.0 aarch64-unknown-linux-musl
+elf: AArch64 musl static EXEC (no NEEDED)
