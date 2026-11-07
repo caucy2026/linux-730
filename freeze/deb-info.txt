@@ -1,0 +1,9 @@
+kemi-freeze_0.2.2-1kemi1_arm64.deb
+bytes=3739940
+sha256=1234ca7b8e71ef0495189b0a09e64d7a3b889dc39bfdff3ef1ceff0c47f523e4
+app_id=190
+package=com.kemi.freeze
+version_code=202
+upstream=charmbracelet/freeze v0.2.2 Linux_arm64 (static)
+install=/usr/bin/freeze
+gork.bot协助开发
