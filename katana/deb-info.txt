@@ -1,0 +1,9 @@
+kemi-katana_1.8.0-1kemi1_arm64.deb
+bytes=25464284
+sha256=c821445ea88a835c42b519543798daeb5dd890492c1c18af01285d4d2276042b
+app_id=264
+package=com.kemi.katana
+version_code=10800
+upstream=projectdiscovery/katana v1.8.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/katana
+gork.bot协助开发
