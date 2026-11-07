@@ -1,0 +1,9 @@
+package: kemi-starship
+version: 1.27.0-1kemi1
+arch: arm64
+bytes: 3146260
+sha256: 69d425014ee19b1c7ce3b61c7d9e9682abbcb91c774be8edd83c84eceeea2651
+install: /usr/bin/starship
+upstream: starship/starship v1.27.0 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
+note: helix 25.07.1 skipped (needs GLIBC_2.34 > device 2.31)
