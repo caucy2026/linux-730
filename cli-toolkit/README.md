@@ -1,94 +1,56 @@
-# CLI Toolkit（KEMI / 101 aarch64）
+# KEMI CLI 工具集（cli-toolkit）
 
-合主线：gork.bot协助开发。
+合主线：**gork.bot协助开发**。验证 ≠ 编译。
 
-合主线注明：**gork.bot协助开发**。
+将常用开源 CLI 小工具合并为 **一个** arm64 `.deb`，商场只计 **1 个 KPI**。
 
-## 用途
-
-把十三件已验证的 KEMI arm64 CLI 合并为一个 Focal xz deb，供商场单一货架安装。成员二进制沿用各单包内容，不在本目录重编译。
-
-成员（13）：gh、ripgrep、jq、fd、bat、yq、fzf、delta、zoxide、hyperfine、dust、procs、sd。
-
-## 成员
-
-| 成员 | 命令 | 原 dpkg | 原 deb | 原 app_id |
-|---|---|---|---|---|
-| gh | `/usr/bin/gh` | `kemi-gh` | `kemi-gh_2.103.3-1kemi1_arm64.deb` | `110` |
-| ripgrep | `/usr/bin/rg` | `kemi-ripgrep` | `kemi-ripgrep_15.2.0-1kemi1_arm64.deb` | `111` |
-| jq | `/usr/bin/jq` | `kemi-jq` | `kemi-jq_1.8.2-1kemi1_arm64.deb` | `112` |
-| fd | `/usr/bin/fd` | `kemi-fd` | `kemi-fd_10.5.1-1kemi1_arm64.deb` | `113` |
-| bat | `/usr/bin/bat` | `kemi-bat` | `kemi-bat_0.26.1-1kemi1_arm64.deb` | `114` |
-| yq | `/usr/bin/yq` | `kemi-yq` | `kemi-yq_4.54.2-1kemi1_arm64.deb` | `115` |
-| fzf | `/usr/bin/fzf` | `kemi-fzf` | `kemi-fzf_0.74.5-1kemi1_arm64.deb` | `116` |
-| delta | `/usr/bin/delta` | `kemi-delta` | `kemi-delta_0.20.1-1kemi1_arm64.deb` | `117` |
-| zoxide | `/usr/bin/zoxide` | `kemi-zoxide` | `kemi-zoxide_0.10.0-1kemi1_arm64.deb` | `118` |
-| hyperfine | `/usr/bin/hyperfine` | `kemi-hyperfine` | `kemi-hyperfine_2.0.0-1kemi1_arm64.deb` | `119` |
-| dust | `/usr/bin/dust` | `kemi-dust` | `kemi-dust_1.2.7-1kemi1_arm64.deb` | `120` |
-| procs | `/usr/bin/procs` | `kemi-procs` | `kemi-procs_0.14.12-1kemi1_arm64.deb` | `121` |
-| sd | `/usr/bin/sd` | `kemi-sd` | `kemi-sd_1.1.0-1kemi1_arm64.deb` | `122` |
-
-各单包配方仍在对应的 `*-cli/` 目录。本包上架后，这些单应用商场条目已删除。
-
-## Artifact
-
-| 项 | 值 |
+| 二进制 | 来源 |
 |---|---|
-| package_name | `com.kemi.cli-toolkit`（商场；dpkg 名 `kemi-cli-toolkit`） |
-| app_id | `123` |
-| deb | `kemi-cli-toolkit_1.0.0-1kemi1_arm64.deb` |
-| version_name / code | `1.0.0-1kemi1` / `10000` |
-| bytes | `24595556` |
-| sha256 | `2d021d1adddbe6ec013341ad86e3666562319ac40211100c23b91fe4261d61c0` |
-| 本地指针 | `/workspace/t129-20261106/`（box 证据，勿提交） |
-
-**巨大二进制不进 git**；构建时从既有单包 deb 合并，或按脚本重建。
-
-## 构建
-
-合并已有 arm64 单包（在各 `*-cli/debs/`，或 `MEMBER_DEB_DIR`）：
-
-```bash
-./scripts/build-cli-toolkit-kemi-deb.sh
-```
-
-缺单包时按各配方从上游重建后再合并（二进制仍不进 git）：
-
-```bash
-REBUILD_MISSING=1 ./scripts/build-cli-toolkit-kemi-deb.sh
-```
-
-产出写到 `cli-toolkit/debs/`（已 gitignore）。Ubuntu 20.04 的 dpkg 不能解 zstd，脚本固定 `dpkg-deb -Zxz`。
-
-核对已发布字节（不入库）：
-
-```bash
-curl -fL -o /tmp/kemi-cli-toolkit_1.0.0-1kemi1_arm64.deb \
-  https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793966637391_0a5c2c2a_kemi-cli-toolkit_1_0_0-1kemi1_arm64.deb
-sha256sum -c kemi-cli-toolkit_1.0.0-1kemi1_arm64.deb.sha256
-```
-
-`dpkg-deb` 跨版本不保证与商场包逐字节相同。已发布 SHA256 以本目录 `kemi-cli-toolkit_1.0.0-1kemi1_arm64.deb.sha256` 为准。
-
-## 真机冒烟（硬门 · 已 PASS · t129 2026-11-06 Asia/Shanghai）
-
-- KEMI 101 冒烟 PASS
-- KD CREATE PASS
-- 四层 L1–L4 PASS
-- 证据：`/workspace/t129-20261106/`（box，勿提交）
+| `gh` | kemi-gh |
+| `rg` | kemi-ripgrep |
+| `jq` | kemi-jq |
+| `fd` | kemi-fd |
+| `bat` | kemi-bat |
+| `yq` | kemi-yq |
+| `fzf` | kemi-fzf |
+| `delta` | kemi-delta |
+| `zoxide` | kemi-zoxide |
+| `hyperfine` | kemi-hyperfine |
+| `dust` | kemi-dust |
+| `procs` | kemi-procs |
+| `sd` | kemi-sd |
+| `xh` (+ `http`→xh) | kemi-xh 0.26.3 musl aarch64 |
 
 ## 商场
 
-`os_type=linux` · `linuxpkg` · 分类 `工作` · 独立货架（勿覆盖 Vibekits app90）。CREATE 仅在真机冒烟 PASS 后。
+- app_id: **123**
+- package_name: `com.kemi.cli-toolkit`
+- Package: `kemi-cli-toolkit`
+- Version: `1.1.0-1kemi1` · version_code `11000`
+- Architecture: `arm64` · data.tar.xz（Focal）
+- 分类：工作
+- 变更：相对 1.0.0 **UPDATE**（非新建），新增 xh
 
-CREATE **DONE**（t129 2026-11-06 Asia/Shanghai）：
+## 构建
 
-- package `com.kemi.cli-toolkit`
-- app_id `123`
-- version `1.0.0-1kemi1` / `10000`
-- CDN `https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1793966637391_0a5c2c2a_kemi-cli-toolkit_1_0_0-1kemi1_arm64.deb`
-- SHA256 `2d021d1adddbe6ec013341ad86e3666562319ac40211100c23b91fe4261d61c0`
-- bytes `24595556`
-- 101 冒烟 PASS · KD CREATE PASS · 四层 L1–L4 PASS
+1. 成员 `kemi-*.deb` 路径见 `scripts/build-cli-toolkit-deb.sh`
+2. `WORKROOT=/workspace/t146-20261107 ./scripts/build-cli-toolkit-deb.sh`
+3. 产物：`debs/kemi-cli-toolkit_1.1.0-1kemi1_arm64.deb` + `.sha256`
 
-注：本包取代原单应用商场条目 app110–122（已通过 POST /api/apps/delete 删除）。
+本目录为配方；**勿直接 git push**（由主线 CloudAgent 合入，消息含「gork.bot协助开发」）。
+
+## t146 制品指纹
+
+见 `kemi-cli-toolkit_1.1.0-1kemi1_arm64.deb.sha256` 与 `toolkit-meta.env`。
+
+| 项 | 值 |
+|---|---|
+| version | `1.1.0-1kemi1` / version_code `11000` |
+| bytes | `27399296` |
+| SHA256 | `7cfd819c976411233f18c053b2b6b8005d86134a8ac1d02bd09d8d93b185e6d8` |
+| tools | 14：gh、rg、jq、fd、bat、yq、fzf、delta、zoxide、hyperfine、dust、procs、sd、xh |
+| 101 smoke | **BLOCKED_TRANSPORT** |
+
+## 真机冒烟（硬门）
+
+101 冒烟本轮 **BLOCKED_TRANSPORT**。待目标 Vibekits 恢复连通后补冒烟。**验证 ≠ 编译**；box 上 qemu 跑 `--version` 不算真机 PASS。
