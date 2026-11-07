@@ -1,0 +1,9 @@
+kemi-vhs_0.12.1-1kemi1_arm64.deb
+bytes=6809228
+sha256=d14c264ccd6a29fd64b39dfe6ffbead3d5e1dbf1562cb2ed89628543913d9097
+app_id=197
+package=com.kemi.vhs
+version_code=1201
+upstream=charmbracelet/vhs v0.12.1 Linux_arm64 (static)
+install=/usr/bin/vhs (+ man + completions)
+gork.bot协助开发
