@@ -1,0 +1,9 @@
+kemi-kustomize_5.8.3-1kemi1_arm64.deb
+bytes=3298232
+sha256=752f47e56495921dd1002ff62926a7a2fa52d5d544fe86cb8ff294229a01d45a
+app_id=222
+package=com.kemi.kustomize
+version_code=50803
+upstream=kubernetes-sigs/kustomize v5.8.3 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/kustomize
+gork.bot协助开发
