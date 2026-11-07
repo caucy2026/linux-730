@@ -1,0 +1,8 @@
+package: kemi-tealdeer
+version: 1.9.1-1kemi1
+arch: arm64
+bytes: 1271576
+sha256: e59d1d306eecdfe005967a630857f1fe2c92146e81880b32c69f3ce639f1188e
+install: /usr/bin/tldr (+ bash/zsh/fish completions)
+upstream: tealdeer-rs/tealdeer v1.9.1 linux-aarch64-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
