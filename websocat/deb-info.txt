@@ -1,0 +1,9 @@
+kemi-websocat_1.14.1-1kemi1_arm64.deb
+bytes=2493468
+sha256=cc1658258c2261f946856ebf2bfad0e43750c3a05f30c71b7bc563a7486db4e8
+app_id=255
+package=com.kemi.websocat
+version_code=11401
+upstream=vi/websocat v1.14.1 websocat.aarch64-unknown-linux-musl (static / NO_NEEDED)
+install=/usr/bin/websocat
+gork.bot协助开发
