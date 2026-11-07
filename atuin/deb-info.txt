@@ -1,0 +1,9 @@
+package: kemi-atuin
+version: 18.24.5-1kemi1
+arch: arm64
+bytes: 12763300
+sha256: 12f012a576586cf78f97e95ffab4a95b382d06f0495f865558eee06e26992b97
+install: /usr/bin/atuin
+upstream: atuinsh/atuin v18.24.5 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
+note: shell history with optional encrypted sync; init hooks per upstream

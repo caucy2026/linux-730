@@ -1,0 +1,6 @@
+debs/
+upstream/
+*.deb
+*.tar.gz
+*.tar.xz
+*.tar.zst
