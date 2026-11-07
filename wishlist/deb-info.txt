@@ -1,0 +1,9 @@
+kemi-wishlist_0.15.2-1kemi1_arm64.deb
+bytes=3351568
+sha256=17fbd43ff245f9bc7369ee0f66a65ec6047e34b228d78f0c6bd4a4c9e5ad4129
+app_id=199
+package=com.kemi.wishlist
+version_code=1502
+upstream=charmbracelet/wishlist v0.15.2 Linux_arm64 (static)
+install=/usr/bin/wishlist (+ man + completions)
+gork.bot协助开发
