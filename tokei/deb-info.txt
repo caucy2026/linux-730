@@ -1,0 +1,9 @@
+package: kemi-tokei
+version: 12.1.2-1kemi1
+arch: arm64
+bytes: 1358112
+sha256: 15b52b0a19262ae0d3fc5894f207ff43bfd451ce913815ba5cb5958f74024c71
+install: /usr/bin/tokei
+upstream: XAMPPRocky/tokei v12.1.2 aarch64-unknown-linux-gnu
+elf: AArch64 DYN PIE; NEEDED libc/libpthread/libdl/libgcc_s; MAX GLIBC_2.18
+note: v13+ have no release assets
