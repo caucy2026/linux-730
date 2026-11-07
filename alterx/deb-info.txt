@@ -1,0 +1,9 @@
+kemi-alterx_0.1.0-1kemi1_arm64.deb
+bytes=4632556
+sha256=aadc1afe578cb4903f0dba6bf381db466175c47eb6c1c4bde35e369e2a45c065
+app_id=276
+package=com.kemi.alterx
+version_code=100
+upstream=projectdiscovery/alterx v0.1.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/alterx
+gork.bot协助开发
