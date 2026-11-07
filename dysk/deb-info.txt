@@ -1,0 +1,9 @@
+kemi-dysk_3.8.2-1kemi1_arm64.deb
+bytes=808052
+sha256=f397b982c896d0a0e7132f579b489989aa8e05561c544a2b83dac95690782d96
+app_id=187
+package=com.kemi.dysk
+version_code=30802
+upstream=Canop/dysk v3.8.2 aarch64-unknown-linux-musl (static)
+install=/usr/bin/dysk (+ man + completions)
+gork.bot协助开发
