@@ -1,0 +1,9 @@
+package: kemi-bandwhich
+version: 0.23.1-1kemi1
+arch: arm64
+bytes: 989000
+sha256: fd3e10675ec13f7e6e9c5d1c729b6fac4d85c584a3a3371bf6f6a64a9e115e64
+install: /usr/bin/bandwhich (+ man + bash/zsh/fish completions)
+upstream: imsnif/bandwhich v0.23.1 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
+note: may need CAP_NET_RAW on device for capture
