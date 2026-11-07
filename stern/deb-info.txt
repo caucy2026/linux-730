@@ -1,0 +1,9 @@
+kemi-stern_1.35.0-1kemi1_arm64.deb
+bytes=8114680
+sha256=cae8f6d5b242376cb3ae84389289710a711d0186e38b9ab9bb35319ad4b928ea
+app_id=207
+package=com.kemi.stern
+version_code=13500
+upstream=stern/stern v1.35.0 linux_arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/stern
+gork.bot协助开发
