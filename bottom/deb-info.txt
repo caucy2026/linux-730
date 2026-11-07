@@ -1,0 +1,8 @@
+package: kemi-bottom
+version: 0.15.0-1kemi1
+arch: arm64
+bytes: 1316068
+sha256: 1df8acec5ccd74398a0c6426e37b438e0a694a590d6ecc327fc3bf3b8238a28d
+install: /usr/bin/btm (+ bash/zsh/fish completions)
+upstream: ClementTsang/bottom 0.15.0 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
