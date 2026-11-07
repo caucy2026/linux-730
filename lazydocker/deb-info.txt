@@ -1,0 +1,9 @@
+kemi-lazydocker_0.25.2-1kemi1_arm64.deb
+bytes=3155844
+sha256=24bd100252edee5d7e21ff7371cebc54b1698a24fd0ad178575ef0d95f80979d
+app_id=203
+package=com.kemi.lazydocker
+version_code=2502
+upstream=jesseduffield/lazydocker v0.25.2 Linux_arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/lazydocker
+gork.bot协助开发
