@@ -1,0 +1,9 @@
+kemi-argocd_3.6.1-1kemi1_arm64.deb
+bytes=73109472
+sha256=b8723fbc5e4b423b2eab3d9ca12798345ed28b30b6eac1cee5d4e382f1531e23
+app_id=225
+package=com.kemi.argocd
+version_code=30601
+upstream=argoproj/argo-cd v3.6.1 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/argocd
+gork.bot协助开发
