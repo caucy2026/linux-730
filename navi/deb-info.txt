@@ -1,0 +1,9 @@
+package: kemi-navi
+version: 2.24.0-1kemi1
+arch: arm64
+bytes: 1236464
+sha256: 400a06731d1ff13821edde9a8811a6ea10a903220e86cf410c0f4323e42d2085
+install: /usr/bin/navi
+upstream: denisidoro/navi v2.24.0 aarch64-unknown-linux-gnu (static ELF)
+elf: AArch64 DYN static (no PT_INTERP / no NEEDED)
+note: interactive cheatsheet; may want fzf companion on device
