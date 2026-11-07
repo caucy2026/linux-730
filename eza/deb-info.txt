@@ -1,0 +1,9 @@
+package: kemi-eza
+version: 0.23.5-1kemi1
+arch: arm64
+bytes: 570296
+sha256: 32dbd82b99d9ea7be844c17753711b35cd03a8d0edc51a9f655f6b6553040f83
+install: /usr/bin/eza
+upstream: eza-community/eza v0.23.5 aarch64-unknown-linux-gnu_no_libgit
+elf: AArch64 dyn (libc/libgcc); max GLIBC_2.18
+note: SKIP aarch64 musl (no official asset)
