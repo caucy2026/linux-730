@@ -1,0 +1,8 @@
+package: kemi-fselect
+version: 0.10.4-1kemi1
+arch: arm64
+bytes: 2808816
+sha256: a0c56836a1755555ac1e7fe3b6b48251c8681fe379cc9f3f638d62dd27fc296e
+install: /usr/bin/fselect
+upstream: jhspetersson/fselect 0.10.4 aarch64-linux-musl
+elf: AArch64 musl static EXEC (no NEEDED)
