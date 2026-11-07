@@ -1,0 +1,9 @@
+kemi-dagger_0.21.11-1kemi1_arm64.deb
+bytes=13620612
+sha256=9e24b28395d71c2781ef6210f628dc442d6a14963857d1952d74668b50d9535a
+app_id=243
+package=com.kemi.dagger
+version_code=2111
+upstream=dagger/dagger v0.21.11 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/dagger
+gork.bot协助开发
