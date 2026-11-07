@@ -1,0 +1,9 @@
+kemi-mise_2026.11.3-1kemi1_arm64.deb
+bytes=38161128
+sha256=67b6846bc33c529d07b1968fb90389ba8cb8bcdd5f1a765439d75e0ddec90d2b
+app_id=194
+package=com.kemi.mise
+version_code=20261103
+upstream=jdx/mise v2026.11.3 linux-arm64-musl (static)
+install=/usr/bin/mise (+ man; mise.d helper under /usr/lib/mise/)
+gork.bot协助开发
