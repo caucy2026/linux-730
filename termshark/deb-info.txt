@@ -1,0 +1,9 @@
+kemi-termshark_2.4.0-1kemi1_arm64.deb
+bytes=3943164
+sha256=7ea970343c8bd0d3c153a90b95d5b8ecc6a1960abb9ff9302bd263864401f9ca
+app_id=209
+package=com.kemi.termshark
+version_code=20400
+upstream=gcla/termshark v2.4.0 linux_arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/termshark
+gork.bot协助开发
