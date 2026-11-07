@@ -1,0 +1,8 @@
+package: kemi-croc
+version: 11.6.4-1kemi1
+arch: arm64
+bytes: 8201492
+sha256: 6fda9cf436678bf576975ca695a3da451c00044b80b94fb53b1ff887b7e7a52d
+install: /usr/bin/croc /usr/bin/croc-update
+upstream: schollz/croc v11.6.4 Linux-ARM64
+elf: AArch64 static EXEC (no NEEDED)
