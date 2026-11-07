@@ -1,0 +1,9 @@
+kemi-httprobe_0.2.0-1kemi1_arm64.deb
+bytes=1705008
+sha256=6e5ae2d5cec616d8e64ce270e851febe7ae253829110ce1259d7eac4efed673a
+app_id=291
+package=com.kemi.httprobe
+version_code=200
+upstream=tomnomnom/httprobe v0.2 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/httprobe
+gork.bot协助开发
