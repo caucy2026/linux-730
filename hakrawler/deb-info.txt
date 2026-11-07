@@ -1,0 +1,9 @@
+kemi-hakrawler_2.1.0-1kemi1_arm64.deb
+bytes=3349928
+sha256=b6cc186c4e7c187f84931e229611e064933b8ebd9c36c5a971b359e75da9ca3b
+app_id=289
+package=com.kemi.hakrawler
+version_code=20100
+upstream=hakluke/hakrawler 2.1 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/hakrawler
+gork.bot协助开发
