@@ -1,0 +1,9 @@
+kemi-qsreplace_0.0.3-1kemi1_arm64.deb
+bytes=565928
+sha256=af45561c566e2f779c0f9baeccffa9a7787e93b90b4215ca29d3b360c6a54852
+app_id=287
+package=com.kemi.qsreplace
+version_code=3
+upstream=tomnomnom/qsreplace v0.0.3 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/qsreplace
+gork.bot协助开发
