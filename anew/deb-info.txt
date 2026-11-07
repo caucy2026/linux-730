@@ -1,0 +1,9 @@
+kemi-anew_0.2.0-1kemi1_arm64.deb
+bytes=518492
+sha256=3009102c8e0a7172b467a5d212e98899f312212e587c0876d090e082e54d1a27
+app_id=285
+package=com.kemi.anew
+version_code=200
+upstream=tomnomnom/anew v0.2 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/anew
+gork.bot协助开发
