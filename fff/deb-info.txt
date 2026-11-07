@@ -1,0 +1,9 @@
+kemi-fff_0.0.20210805-1kemi1_arm64.deb
+bytes=1784680
+sha256=33b7164375b9944734316da86f024a3be4486672ce67e0e4424e8094e6f90064
+app_id=294
+package=com.kemi.fff
+version_code=20210805
+upstream=tomnomnom/fff master 544f7e59 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/fff
+gork.bot协助开发
