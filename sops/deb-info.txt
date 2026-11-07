@@ -1,0 +1,8 @@
+package: kemi-sops
+version: 3.13.3-1kemi1
+arch: arm64
+bytes: 9679216
+sha256: 27a983fce614795c84eee56f307659e0e183f8e7e98920532853f1e2e511d97a
+install: /usr/bin/sops
+upstream: getsops/sops v3.13.3 linux.arm64
+elf: AArch64 static EXEC (no NEEDED)
