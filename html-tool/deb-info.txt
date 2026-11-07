@@ -1,0 +1,9 @@
+kemi-html-tool_0.0.20220725-1kemi1_arm64.deb
+bytes=1800244
+sha256=fb8a9f43b93f324b24160569325ae386340aec03e92cec81067c57c33a04ed59
+app_id=295
+package=com.kemi.html-tool
+version_code=20220725
+upstream=tomnomnom/hacks/html-tool 6fd7870 cross-build linux/arm64 static (CGO_ENABLED=0)
+install=/usr/bin/html-tool
+gork.bot协助开发
