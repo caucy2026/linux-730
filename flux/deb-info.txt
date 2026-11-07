@@ -1,0 +1,9 @@
+kemi-flux_2.10.0-1kemi1_arm64.deb
+bytes=14865936
+sha256=56d1f35c0ffc6fa092df8663e9acecb63aed0e862b92ba0655d381af621ce436
+app_id=224
+package=com.kemi.flux
+version_code=21000
+upstream=fluxcd/flux2 v2.10.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/flux
+gork.bot协助开发
