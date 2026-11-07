@@ -1,0 +1,8 @@
+package: kemi-trippy
+version: 0.13.0-1kemi1
+arch: arm64
+bytes: 2252992
+sha256: 6124dce1d6def9bcc31a5679b860d9e6049f0f2de92198a4edab76b2b14fef30
+install: /usr/bin/trip
+upstream: fujiapple852/trippy 0.13.0 aarch64-unknown-linux-musl
+elf: AArch64 musl static EXEC (no NEEDED)
