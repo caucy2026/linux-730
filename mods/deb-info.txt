@@ -1,0 +1,9 @@
+kemi-mods_1.8.1-1kemi1_arm64.deb
+bytes=6694692
+sha256=d1aac82690bd3e001c090ebb9ed31f22eb87ae2450d4a05ad5d30d9f728445de
+app_id=192
+package=com.kemi.mods
+version_code=10801
+upstream=charmbracelet/mods v1.8.1 Linux_arm64 (static)
+install=/usr/bin/mods (+ man + completions)
+gork.bot协助开发
