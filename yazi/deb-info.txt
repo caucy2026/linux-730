@@ -1,0 +1,8 @@
+package: kemi-yazi
+version: 26.9.1-1kemi1
+arch: arm64
+bytes: 9555980
+sha256: 0560c0d8805509532ca206f69e9fc6379339ee432a1176fd343c87d6d5a25956
+install: /usr/bin/yazi + /usr/bin/ya (+ bash/zsh/fish completions)
+upstream: sxyazi/yazi v26.9.1 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED) for both binaries
