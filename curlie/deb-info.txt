@@ -1,0 +1,8 @@
+package: kemi-curlie
+version: 1.8.2-1kemi1
+arch: arm64
+bytes: 752528
+sha256: 41904f2a43a260f0cb1ca2413bcc6789f4b1e0e952e4cc6704bf8bd90ea0130e
+install: /usr/bin/curlie
+upstream: rs/curlie v1.8.2 linux_arm64
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED; Go)
