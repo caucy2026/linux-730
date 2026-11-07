@@ -1,0 +1,9 @@
+kemi-helmfile_1.8.3-1kemi1_arm64.deb
+bytes=28269640
+sha256=1d699ce0bf6d7903c277e6f545a5906b81ffe7612c050700ab0184a9ea1c0665
+app_id=228
+package=com.kemi.helmfile
+version_code=10803
+upstream=helmfile/helmfile v1.8.3 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/helmfile
+gork.bot协助开发
