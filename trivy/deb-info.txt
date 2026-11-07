@@ -1,0 +1,9 @@
+kemi-trivy_0.76.2-1kemi1_arm64.deb
+bytes=30118140
+sha256=0c032f6917ff1ea96e9ec1c254933e447996b2261b70b346977a13cc8443e5b5
+app_id=235
+package=com.kemi.trivy
+version_code=7602
+upstream=aquasecurity/trivy v0.76.2 Linux-ARM64 (static / NO_NEEDED; single-CLI)
+install=/usr/bin/trivy
+gork.bot协助开发
