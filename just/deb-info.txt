@@ -1,0 +1,8 @@
+package: kemi-just
+version: 1.59.0-1kemi1
+arch: arm64
+bytes: 1572224
+sha256: 781785df4c2d39be62c4c700589006bff14bf187b7080a85f205be9d7d1219bf
+install: /usr/bin/just (+ man + bash/zsh/fish completions)
+upstream: casey/just v1.59.0 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
