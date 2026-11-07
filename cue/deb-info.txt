@@ -1,0 +1,9 @@
+kemi-cue_0.17.1-1kemi1_arm64.deb
+bytes=5994576
+sha256=756d4cd422df4380a73e4bf90464d440be8af21bc5984988ef67fe8a1c01b020
+app_id=241
+package=com.kemi.cue
+version_code=1701
+upstream=cue-lang/cue v0.17.1 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/cue
+gork.bot协助开发
