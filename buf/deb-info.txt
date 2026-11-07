@@ -1,0 +1,9 @@
+kemi-buf_1.75.0-1kemi1_arm64.deb
+bytes=9657612
+sha256=793a0e1e2aabd3147005c254723f7b5b2c6fd795b2a38ad2a5e730b01de0eb26
+app_id=245
+package=com.kemi.buf
+version_code=17500
+upstream=bufbuild/buf v1.75.0 Linux-aarch64 (static / NO_NEEDED)
+install=/usr/bin/buf
+gork.bot协助开发
