@@ -1,0 +1,9 @@
+kemi-devspace_6.3.21-1kemi1_arm64.deb
+bytes=20227028
+sha256=24e70541eeae1f88da2a4a95a57af0d3c3e4e6dee8deccd28de75b0a40b3beac
+app_id=240
+package=com.kemi.devspace
+version_code=60321
+upstream=devspace-sh/devspace v6.3.21 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/devspace
+gork.bot协助开发
