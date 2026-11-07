@@ -1,0 +1,9 @@
+kemi-pop_0.5.0-1kemi1_arm64.deb
+bytes=3382472
+sha256=292fd0868659f5608c7213e5e848dbf9fb1850aef814d197df8178e792decc8f
+app_id=196
+package=com.kemi.pop
+version_code=500
+upstream=charmbracelet/pop v0.5.0 Linux_arm64 (static)
+install=/usr/bin/pop (+ man + completions)
+gork.bot协助开发
