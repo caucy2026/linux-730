@@ -1,0 +1,9 @@
+kemi-superfile_1.6.0-1kemi1_arm64.deb
+bytes=10411056
+sha256=bf18e0af8017fabd34f6b9e47cb67b245b71499584fd7b188e900dd5ee816a46
+app_id=202
+package=com.kemi.superfile
+version_code=10600
+upstream=yorukot/superfile v1.6.0 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/spf
+gork.bot协助开发
