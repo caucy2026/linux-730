@@ -1,0 +1,8 @@
+package: kemi-grex
+version: 1.4.6-1kemi1
+arch: arm64
+bytes: 855444
+sha256: 3e038823329a474bb45c4dc7e5aea2a7faf31cdceba4d6667e188a3cf1ab96d4
+install: /usr/bin/grex
+upstream: pemistahl/grex v1.4.6 aarch64-unknown-linux-musl
+elf: AArch64 musl static EXEC (no NEEDED)
