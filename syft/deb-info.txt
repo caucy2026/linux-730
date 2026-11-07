@@ -1,0 +1,9 @@
+kemi-syft_1.57.0-1kemi1_arm64.deb
+bytes=18926324
+sha256=2aa15f0de4e2ad48ae537e0e630b97370b0abac1d9dd25a410eb0a6b542602c8
+app_id=230
+package=com.kemi.syft
+version_code=15700
+upstream=anchore/syft v1.57.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/syft
+gork.bot协助开发
