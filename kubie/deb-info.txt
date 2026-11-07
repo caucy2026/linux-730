@@ -1,0 +1,9 @@
+kemi-kubie_0.28.0-1kemi1_arm64.deb
+bytes=2011920
+sha256=cc5b32cf1be046668c86daed062c9ab55390bd2a7a88b099b58e5d56ddaa65f7
+app_id=214
+package=com.kemi.kubie
+version_code=2800
+upstream=kubie-org/kubie v0.28.0 linux-arm64 (static / NO_NEEDED; formerly sbstp/kubie)
+install=/usr/bin/kubie
+gork.bot协助开发
