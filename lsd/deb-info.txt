@@ -1,0 +1,8 @@
+package: kemi-lsd
+version: 1.2.0-1kemi1
+arch: arm64
+bytes: 1111548
+sha256: 100121c577d536d0607e81cecdf03ccd1ec93b7b80f5a6297b0afc2c2f1f9d3d
+install: /usr/bin/lsd (+ man + bash/zsh/fish completions)
+upstream: lsd-rs/lsd v1.2.0 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
