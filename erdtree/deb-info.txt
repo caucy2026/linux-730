@@ -1,0 +1,8 @@
+package: kemi-erdtree
+version: 3.1.2-1kemi1
+arch: arm64
+bytes: 1731508
+sha256: f75a8b809c807ceefc5941dec0ee9b6ec7b9f4c6c5a8f950b3356284759eab20
+install: /usr/bin/erd
+upstream: solidiquis/erdtree v3.1.2 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static musl (no PT_INTERP / no NEEDED)
