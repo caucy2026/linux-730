@@ -1,0 +1,9 @@
+kemi-dry_0.13.0-1kemi1_arm64.deb
+bytes=3298892
+sha256=637a0ae32e0bb485f9c6dfb9aa238318e557aef3c1cac09c02e93af713fc7d46
+app_id=205
+package=com.kemi.dry
+version_code=1300
+upstream=moncho/dry v0.13.0 linux-arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/dry
+gork.bot协助开发
