@@ -1,0 +1,9 @@
+kemi-hadolint_2.15.1-1kemi1_arm64.deb
+bytes=7511980
+sha256=0b381a41914653594a3dfe65ee67eed95d9cbcece736a5b17cc0c168a369f4ff
+app_id=236
+package=com.kemi.hadolint
+version_code=21501
+upstream=hadolint/hadolint v2.15.1 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/hadolint
+gork.bot协助开发
