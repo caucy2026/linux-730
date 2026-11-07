@@ -1,0 +1,8 @@
+package: kemi-diskus
+version: 0.9.0-1kemi1
+arch: arm64
+bytes: 292688
+sha256: 46b952d13504e8fc8eab16de00841ad4d7884b18ee0560f56a64834f99909e71
+install: /usr/bin/diskus
+upstream: sharkdp/diskus v0.9.0 aarch64-unknown-linux-gnu
+elf: AArch64 DYN/EXEC; NEEDED libc/libpthread/libgcc_s/libdl; MAX GLIBC_2.18
