@@ -1,0 +1,9 @@
+kemi-ov_0.55.0-1kemi1_arm64.deb
+bytes=5707920
+sha256=e5cd9059ba6886c475a2ea4373efbe1fa11e97db69892b150b3e497d124f98f3
+app_id=189
+package=com.kemi.ov
+version_code=5500
+upstream=noborus/ov v0.55.0 linux_arm64 (static)
+install=/usr/bin/ov
+gork.bot协助开发
