@@ -1,0 +1,8 @@
+package: kemi-dive
+version: 0.13.1-1kemi1
+arch: arm64
+bytes: 2630464
+sha256: a6c37d59e14078e585b702bacea6213294e1a9317c83addc64aca453af585adf
+install: /usr/bin/dive
+upstream: wagoodman/dive v0.13.1 linux_arm64
+elf: AArch64 static EXEC (no NEEDED)
