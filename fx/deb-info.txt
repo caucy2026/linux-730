@@ -1,0 +1,8 @@
+package: kemi-fx
+version: 40.0.1-1kemi1
+arch: arm64
+bytes: 7846840
+sha256: 51c08bff8ab730c71759bc91b1a08d7c6f8b6bd8b489b2cfb5aaa281958577ca
+install: /usr/bin/fx
+upstream: antonmedv/fx v40.0.1 fx_linux_arm64
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
