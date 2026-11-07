@@ -1,0 +1,9 @@
+kemi-ghz_0.121.0-1kemi1_arm64.deb
+bytes=5416820
+sha256=3ccc8c942e5fb82afe5134c078607a480bb9914d60317fc3f3d9008967d82497
+app_id=250
+package=com.kemi.ghz
+version_code=12100
+upstream=bojand/ghz v0.121.0 ghz-linux-arm64 (static / NO_NEEDED; ghz only, no ghz-web)
+install=/usr/bin/ghz
+gork.bot协助开发
