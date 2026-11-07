@@ -1,0 +1,9 @@
+kemi-lnav_0.14.1-1kemi1_arm64.deb
+bytes=32931380
+sha256=6ae949a88be854eaf00ce93746e7496515d5d592fb641809b3ddbd5076529dde
+app_id=181
+package=com.kemi.lnav
+version_code=1401
+upstream=tstack/lnav v0.14.1 linux-musl-arm64 (static)
+install=/usr/bin/lnav (+ man1)
+gork.bot协助开发
