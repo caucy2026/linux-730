@@ -1,0 +1,8 @@
+package: kemi-zellij
+version: 0.45.1-1kemi1
+arch: arm64
+bytes: 10171936
+sha256: 38409d2253848f3596be32898a70dbfad9de7d1abfe2f1f4e64ec90e5c31ca06
+install: /usr/bin/zellij
+upstream: zellij-org/zellij v0.45.1 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
