@@ -1,0 +1,9 @@
+kemi-goreleaser_2.20.0-1kemi1_arm64.deb
+bytes=16426012
+sha256=b068862043ee235c544f1be3f0d1311ad4378c5a1fbce99b61a04bfc5714fb91
+app_id=258
+package=com.kemi.goreleaser
+version_code=22000
+upstream=goreleaser/goreleaser v2.20.0 Linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/goreleaser
+gork.bot协助开发
