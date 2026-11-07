@@ -1,0 +1,8 @@
+package: kemi-mcfly
+version: 0.9.4-1kemi1
+arch: arm64
+bytes: 1721832
+sha256: 949d078788aabc0b45d58c187d1ce4224a5892078122c41085eeb6545359cd86
+install: /usr/bin/mcfly
+upstream: cantino/mcfly v0.9.4 aarch64-unknown-linux-musl
+elf: AArch64 musl static EXEC (no NEEDED)
