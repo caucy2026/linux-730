@@ -1,0 +1,8 @@
+package: kemi-dua
+version: 3.0.0-1kemi1
+arch: arm64
+bytes: 1547436
+sha256: 9fc31f20de8cb0d61026947b490ebcb70bc53f3b266a6117f84ee4211247a873
+install: /usr/bin/dua
+upstream: Byron/dua-cli v3.0.0 aarch64-unknown-linux-musl
+elf: AArch64 EXEC static musl (no PT_INTERP / no NEEDED)
