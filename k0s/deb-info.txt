@@ -1,0 +1,9 @@
+kemi-k0s_1.37.2+k0s.1-1kemi1_arm64.deb
+bytes=157228280
+sha256=3ff41200c494bf09c9aaa6718523bed1da3efedd04cdd795b4d4a3abe1dad17d
+app_id=227
+package=com.kemi.k0s
+version_code=13702
+upstream=k0sproject/k0s v1.37.2+k0s.1 linux-arm64 (static / NO_NEEDED)
+install=/usr/bin/k0s
+gork.bot协助开发
