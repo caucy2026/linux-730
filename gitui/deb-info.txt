@@ -1,0 +1,8 @@
+package: kemi-gitui
+version: 0.28.1-1kemi1
+arch: arm64
+bytes: 5493248
+sha256: af216338fd2793695fc35e9188fcaea9807477bb4dc7dbcca8b09b8e27ceef28
+install: /usr/bin/gitui
+upstream: gitui-org/gitui v0.28.1 linux-aarch64
+elf: AArch64 DYN; NEEDED libgcc_s/libpthread/libm/libdl/libc; MAX GLIBC_2.28
