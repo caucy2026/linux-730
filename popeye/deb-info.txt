@@ -1,0 +1,9 @@
+kemi-popeye_0.22.1-1kemi1_arm64.deb
+bytes=12016340
+sha256=a181ce4ac86d148cc61ebccef1a590497d5dda00324e13ce4c0c54452808d5bc
+app_id=213
+package=com.kemi.popeye
+version_code=2201
+upstream=derailed/popeye v0.22.1 linux_arm64 (static CGO_ENABLED=0 / NO_NEEDED)
+install=/usr/bin/popeye
+gork.bot协助开发
