@@ -1,0 +1,9 @@
+kemi-krew_0.5.0-1kemi1_arm64.deb
+bytes=3348592
+sha256=7e42c4909d0f835714fa960e3b053517136605b460be4327b04be9ed8bd30682
+app_id=226
+package=com.kemi.krew
+version_code=500
+upstream=kubernetes-sigs/krew v0.5.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/krew
+gork.bot协助开发
