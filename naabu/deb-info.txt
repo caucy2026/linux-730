@@ -1,0 +1,9 @@
+kemi-naabu_2.7.0-1kemi1_arm64.deb
+bytes=7340308
+sha256=de4a4d6d564a6d7c3d6dd9d8c13d97a057e88ce4104ebacf16373194d047a9ec
+app_id=265
+package=com.kemi.naabu
+version_code=20700
+upstream=projectdiscovery/naabu v2.7.0 linux_arm64 gnu (NEEDED libc; no GLIBC>2.31 version-needs; musl skipped for 101)
+install=/usr/bin/naabu
+gork.bot协助开发
