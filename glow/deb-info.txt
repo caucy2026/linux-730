@@ -1,0 +1,8 @@
+package: kemi-glow
+version: 3.0.0-1kemi1
+arch: arm64
+bytes: 4392700
+sha256: 90d0c6ec1a593090074af833e9f40e51ee1444ff0dc2722ca42395d485a7db11
+install: /usr/bin/glow (+ man + bash/zsh/fish completions)
+upstream: charmbracelet/glow v3.0.0 Linux_arm64
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
