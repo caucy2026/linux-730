@@ -1,0 +1,5 @@
+kemi-pi-bolt_1.1.2-1kemi1_arm64.deb
+bytes=63488156
+sha256=d9c92c20f0b8b87d6dade8e67f93e5608dc6aa96eeb44daebeb12ca471278c46
+install=/opt/kemi-pi-bolt + /usr/bin/pi-bolt + /usr/bin/pi
+glibc_max=2.17
