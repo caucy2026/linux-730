@@ -1,0 +1,11 @@
+package: kemi-goose
+version: 1.57.0-1kemi1
+arch: arm64
+bytes: 28755776
+sha256: 1439d6fb4c7ab3d4e38609cc8878b44d020665e357d20783204882d484bffffe
+bin: /usr/bin/goose (static musl aarch64, upstream v1.57.0)
+upstream_tar: goose-aarch64-unknown-linux-musl.tar.gz
+upstream_tar_sha256: 00a32522f0421ed72fc06f36bfc44c8e51cffefb4daf22a81bb84ccd29d1a1ce
+app_id: 130
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794025022256_a359256d_kemi-goose_1_57_0-1kemi1_arm64.deb
+smoke: BLOCKED_TRANSPORT
