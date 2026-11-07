@@ -1,0 +1,9 @@
+*.deb
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tgz
+*.zip
+dl/
+debs/
+secrets/

@@ -1,0 +1,9 @@
+kemi-notify_1.0.7-1kemi1_arm64.deb
+bytes=4127448
+sha256=cbf739983579ab9ccef3c109698b022cc1179520886e3d2204451b32faa3efd4
+app_id=273
+package=com.kemi.notify
+version_code=10007
+upstream=projectdiscovery/notify v1.0.7 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/notify
+gork.bot协助开发
