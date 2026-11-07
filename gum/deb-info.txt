@@ -1,0 +1,8 @@
+package: kemi-gum
+version: 2.0.2-1kemi1
+arch: arm64
+bytes: 3233360
+sha256: 0ea6d79e17097ee27677221eb054a0c5c54d6b311c5864386ab09f694472ea50
+install: /usr/bin/gum (+ man + bash/zsh/fish completions)
+upstream: charmbracelet/gum v2.0.2 Linux_arm64
+elf: AArch64 EXEC static (no PT_INTERP / no NEEDED)
