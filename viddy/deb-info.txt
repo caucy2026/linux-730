@@ -1,0 +1,8 @@
+package: kemi-viddy
+version: 1.3.1-1kemi1
+arch: arm64
+bytes: 2691184
+sha256: b1c0575966ba6e3dd7d3fa2d704acd1ecbd68d8ffa6f7019353e1cf218350ed5
+install: /usr/bin/viddy
+upstream: sachaos/viddy v1.3.1 linux-arm64
+elf: AArch64 static EXEC (no NEEDED)
