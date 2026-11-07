@@ -1,0 +1,9 @@
+kemi-regctl_0.11.7-1kemi1_arm64.deb
+bytes=3331992
+sha256=e1491a3f574c524db63ca0c13ecfe7b1bcf411ef5adad90f902189a5ef61849d
+app_id=238
+package=com.kemi.regctl
+version_code=1107
+upstream=regclient/regclient v0.11.7 linux-arm64 (static / NO_NEEDED; single-CLI)
+install=/usr/bin/regctl
+gork.bot协助开发
