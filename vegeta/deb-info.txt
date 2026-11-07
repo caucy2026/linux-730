@@ -1,0 +1,9 @@
+kemi-vegeta_12.13.0-1kemi1_arm64.deb
+bytes=2826372
+sha256=71dce59bcba8ddc12bfe234eb6fd93f444d4da59017599f898189a0ccae1118e
+app_id=252
+package=com.kemi.vegeta
+version_code=121300
+upstream=tsenart/vegeta v12.13.0 vegeta_linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/vegeta
+gork.bot协助开发
