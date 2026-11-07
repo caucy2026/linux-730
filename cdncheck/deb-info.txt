@@ -1,0 +1,9 @@
+kemi-cdncheck_1.4.0-1kemi1_arm64.deb
+bytes=4933188
+sha256=32e5fdb110e9e9f7b08a1ef730da890d413cab5b445b34f1baa963bf1c3ae2b0
+app_id=279
+package=com.kemi.cdncheck
+version_code=10400
+upstream=projectdiscovery/cdncheck v1.4.0 linux_arm64 (static / NO_NEEDED)
+install=/usr/bin/cdncheck
+gork.bot协助开发
