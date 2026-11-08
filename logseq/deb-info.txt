@@ -1,0 +1,9 @@
+Package: kemi-logseq
+Version: 2.0.2-1kemi1
+Architecture: arm64
+Bytes: 115523456
+SHA256: bfda1a8375b5f0707af3d5c861d9a52ec54214561792e155c973dd58a80431c6
+Upstream: https://github.com/logseq/logseq/releases/tag/2.0.2
+Upstream asset: Logseq-linux-arm64-2.0.2.zip
+Upstream SHA256: 9f0404ea59f5af58874ed51c9291bde0ebd2b0ae65fe3259abfc42d3188904d5
+Layout: /opt/Logseq + /usr/bin/logseq (--no-sandbox); dropped @zvec/bindings-linux-x64
