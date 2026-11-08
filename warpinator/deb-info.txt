@@ -1,0 +1,7 @@
+Package: kemi-warpinator
+Version: 1.8.8-1kemi1
+Architecture: arm64
+Bytes: 4056700
+SHA256: 04c26f0c250e475e85e069dff6b88bae10eb30d3645e678716775117a5e5e7f2
+Upstream: warpinator_1.8.8-wasta-202501061416~ubuntu20.04.1_arm64.deb
+Bundled: libxapp1 2.6.1 + gir1.2-xapp-1.0 + python3-xapp 3.0.3 + xapps-common 2.6.1 (wasta focal)
