@@ -1,0 +1,9 @@
+Package: kemi-bruno
+Version: 4.3.0-1kemi1
+Architecture: arm64
+Upstream: bruno_4.3.0_arm64_linux.deb (usebruno/bruno)
+Layout: /opt/Bruno + /usr/bin/bruno (--no-sandbox)
+Probe: aarch64 requiredGlibc ≤2.25 PASS vs 101 ≤2.31 (8 ELFs)
+Bytes: 107923580
+SHA256: 8615cbb2f86d542a9d98ad7e3c538a7f3954aec6cc0f9f522f5e597e24dc4d8b
+合主线：gork.bot协助开发
