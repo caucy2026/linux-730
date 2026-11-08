@@ -1,0 +1,6 @@
+Package: kemi-syncthing
+Version: 2.1.7-1kemi1
+Architecture: arm64
+Bytes: 9890132
+SHA256: 352c844852eb03a2d419504489ace404799cdc6761a6eb5c7583bf9238e71840
+Upstream: syncthing_2.1.7_arm64.deb (1ce6836149febb1409ebe2a9876cb8cd5bba917d64029ed75afe72b780c691a9 / 12901050)
