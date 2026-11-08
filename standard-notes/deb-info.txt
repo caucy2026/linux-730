@@ -1,0 +1,6 @@
+filename=kemi-standard-notes_3.202.11-1kemi1_arm64.deb
+bytes=107963512
+sha256=7a165f554072e8e1b91e3e7f0ffbeb2c9415ad80c427f6d2f7a0e87c2bb8ccb3
+upstream=standard-notes-3.202.11-linux-arm64.deb
+drops=microtime/prebuilds/linux-arm, linux-x64; @cbor-extract *.musl.node
+layout=/opt/Standard Notes + /usr/bin/standard-notes (--no-sandbox)
