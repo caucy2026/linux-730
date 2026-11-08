@@ -1,0 +1,8 @@
+package=kemi-open-webui
+version=0.1.4-1kemi1
+arch=arm64
+bytes=100703952
+sha256=d40757be6bf46db8ff5158fd71596d6fcea28cfde6ed7b87c9a960b6090e6acb
+cdn=https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794108543305_6f7139c2_kemi-open-webui_0_1_4-1kemi1_arm64.deb
+app_id=307
+package_name=com.kemi.open-webui
