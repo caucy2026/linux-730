@@ -1,0 +1,10 @@
+dpkg: kemi-tabby
+package_name: com.kemi.tabby
+version: 1.0.238-1kemi1
+version_code: 10238
+arch: arm64
+bytes: 104041848
+sha256: 1ed24210e277c7a1ccd5bbe3d6e1065278a6c1b0e76a550a1cc2e3004f8288a0
+upstream: tabby-1.0.238-linux-arm64.deb (a79e381455b8e1d9f4e253aa342323e2eb4d33ea204e7ec2d51dcd9dc7a137d0 / 125550188)
+patch: node-pty arm64 Release/bin ← prebuilds/linux-arm64 (GLIBC 2.28; drop 2.34)
+probe_max_glibc: 2.28
