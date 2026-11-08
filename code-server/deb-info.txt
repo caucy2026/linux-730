@@ -1,0 +1,9 @@
+Package: kemi-code-server
+Version: 4.145.2-1kemi1
+Architecture: arm64
+Bytes: 149426980
+SHA256: 93e6bd6e54e09fe32ae8aac6424a99f2db6e0d4c514cb3e20b5911bacfddb47b
+Upstream: https://github.com/coder/code-server/releases/tag/v4.145.2
+Upstream asset: code-server-4.145.2-linux-arm64.tar.gz
+Upstream SHA256: e867a34416e2da4a83496b09580001893e7a4e5bb58a0624c4fcd22819e7d53d
+Layout: /usr/lib/code-server + /usr/bin/code-server
