@@ -1,0 +1,33 @@
+ new Debian package, version 2.0.
+ size 4743704 bytes: control archive=4488 bytes.
+      50 bytes,     3 lines   *  config               #!/bin/sh
+    1276 bytes,    23 lines      control
+     451 bytes,    16 lines   *  postinst             #!/bin/sh
+     638 bytes,    21 lines   *  postrm               #!/bin/sh
+    1784 bytes,    92 lines   *  preinst              #!/bin/sh
+      50 bytes,     1 lines      shlibs
+    6232 bytes,    90 lines      templates
+      26 bytes,     1 lines      triggers
+ Package: kemi-gnumeric
+ Version: 1.12.46-1ubuntu2kemi1
+ Section: math
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 26105
+ Pre-Depends: debconf
+ Depends: debconf (>= 0.5) | debconf-2.0, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.29), libcairo2 (>= 1.10.0), libgdk-pixbuf2.0-0 (>= 2.25.2), libglib2.0-0 (>= 2.39.4), libgoffice-0.10-10 (>= 0.10.46), libgsf-1-114 (>= 1.14.27), libgtk-3-0 (>= 3.13.7), libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libxml2 (>= 2.7.4), pxlib1, zlib1g (>= 1:1.1.4), gsfonts, procps, dconf-gsettings-backend | gsettings-backend
+ Recommends: gnumeric-doc (>= 1.12.46), evince, lp-solve
+ Suggests: gnumeric-plugins-extra, fonts-liberation | ttf-mscorefonts-installer, libgsf-1-dev
+ Provides: gnumeric (= 1.12.46-1ubuntu2), gnumeric-common (= 1.12.46-1ubuntu2)
+ Conflicts: gnumeric, gnumeric-common
+ Replaces: gnumeric, gnumeric-common
+ Breaks: gnumeric-doc (<< 1.12.46)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.gnumeric.org/
+ Description: spreadsheet application for GNOME (arm64)
+  Gnumeric 1.12.46 — official Ubuntu 20.04 arm64, KEMI
+  repack, with bundled official gnumeric-common.
+  A spreadsheet application that interoperates well with
+  other spreadsheets.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
