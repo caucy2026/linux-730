@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 36388 bytes: control archive=776 bytes.
+     678 bytes,    17 lines      control
+     298 bytes,     8 lines   *  postinst             #!/bin/sh
+ Package: kemi-gnome-firmware
+ Version: 3.34.0-2ubuntu1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 145
+ Depends: libc6 (>= 2.17), libfwupd2 (>= 1.7.9), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.22.29), libsoup2.4-1 (>= 2.51.92), libxmlb2 (>= 0.1.0), fwupd
+ Conflicts: gnome-firmware
+ Replaces: gnome-firmware
+ Provides: gnome-firmware (= 3.34.0-2ubuntu1)
+ Homepage: https://gitlab.gnome.org/hughsie/gnome-firmware-updater
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: GTK front end for fwupd
+  Firmware 3.34.0-2ubuntu1 — official Ubuntu 20.04
+  arm64, KEMI repack of gnome-firmware.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.

@@ -1,0 +1,9 @@
+# Firmware
+
+短描述：官方 Ubuntu 20.04 Firmware（gnome-firmware）fwupd 的 GTK 前端（focal-updates universe，arm64）
+
+长描述：Firmware（官方软件包名与启动器均为 gnome-firmware）3.34.0-2ubuntu1，官方 Ubuntu 20.04（focal-updates universe）Architecture: arm64 软件包的 KEMI 重打包，新于 focal Release 3.34.0-2。官方 GUI stanza 无 Source 字段，未默认填充；官方 U20 arm64 索引与 ports 池目录在 U20 版本中仅有 gnome-firmware 本身，无同源捆绑包。官方不同源 Depends 全部保持为 Depends（含 libc6 (>= 2.17)、libfwupd2 (>= 1.7.9)、libglib2.0-0、libgtk-3-0、libsoup2.4-1、libxmlb2、fwupd）。官方控制文件无 Recommends，无 Suggests。未发现可作为打包候选的过渡虚包 / gir / -dev。官方 /usr/bin/gnome-firmware 为 aarch64 ELF，留在官方路径。/opt/gnome-firmware 下仅为符号链接。另有 /usr/bin/kemi-gnome-firmware → gnome-firmware。探针：1 个独立包装 aarch64 ELF，requiredGlibc 2.17（1 个有版本、0 个空值），无 GLIBCXX（0 个有版本、1 个空值，不把空值当作最大值），符合 Ubuntu 20.04 / KEMI 101（glibc ≤2.31）。官方软件包仅带一份 en_GB .mo，按官方路径打包，不发明任何翻译（不发明 zh_CN）。官方应用图标仅为可缩放 org.gnome.Firmware.svg（另有 symbolic SVG，无官方 PNG / 256）；官方 SVG 在官方路径只打包一次。从官方应用 SVG 栅格化的 128×128 evidence PNG 仅用作商城 CREATE --icon，不打入 deb。官方 symbolic SVG 不用作商城图标。官方桌面 Name=Firmware 保留。官方 appdata <name> 同样为 Firmware。商城 app_name=Firmware（官方桌面 Name 与官方 appdata <name> 一致，没有更有辨识度的官方标题，如 Print Settings 之于 Printers 那种情形）。无 GenericName。官方相对 Exec 已改为绝对路径并添加 TryExec。官方 NoDisplay=false 保留。官方 changelog 为真实文件（非悬空符号链接），保留在官方文档路径，并用 cp -L 复制到 kemi 文档目录。已追加 icon-cache 与 desktop-database 钩子。本包提供版本化 Provides: gnome-firmware (= 3.34.0-2ubuntu1)。官方 SHA 与大小已与 ports.ubuntu.com 及 Aliyun ubuntu-ports（https；Aliyun http 返回 500）池文件及 focal-updates universe Packages stanza 核对一致。本轮无 librarian URL，ports 池目录无该版本 .buildinfo。无 Debian 纪元，无波浪号。mall version_name 3.34.0-2ubuntu1kemi1 长度为 20，已被商城接受，无需缩短。
+
+发布说明：首次上架官方 Ubuntu 20.04 gnome-firmware 3.34.0-2ubuntu1（focal-updates universe，arm64）。官方 ELF 留在 /usr；/opt 仅为符号链接。官方桌面 Name=Firmware 保持；商城 app_name=Firmware。128 evidence PNG 仅作 CREATE 图标且不打包。探测 1 ELF，requiredGlibc 2.17，通过。合主线：gork.bot协助开发。
+
+合主线：gork.bot协助开发
