@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 114352 bytes: control archive=924 bytes.
+     693 bytes,    17 lines      control
+     648 bytes,    16 lines   *  postinst             #!/bin/sh
+     511 bytes,    14 lines   *  postrm               #!/bin/sh
+ Package: kemi-gnome-usage
+ Version: 3.32.0-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 474
+ Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.17), libcairo2 (>= 1.2.4), libdazzle-1.0-0 (>= 3.30), libglib2.0-0 (>= 2.43.4), libgtk-3-0 (>= 3.20.10), libgtop-2.0-11 (>= 2.34.0), libpango-1.0-0 (>= 1.14.0)
+ Replaces: gnome-usage
+ Conflicts: gnome-usage
+ Provides: gnome-usage (= 3.32.0-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Usage
+ Description: simple system monitor app for GNOME
+  GNOME Usage 3.32.0-1 — official Ubuntu 20.04
+  arm64, KEMI repack.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
