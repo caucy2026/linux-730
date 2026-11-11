@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 1814768 bytes: control archive=964 bytes.
+    1047 bytes,    18 lines      control
+     380 bytes,    11 lines   *  postinst             #!/bin/sh
+     380 bytes,    11 lines   *  postrm               #!/bin/sh
+ Package: kemi-keepassxc
+ Version: 2.4.3+dfsg.1-1build1kemi1
+ Section: utils
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 10667
+ Depends: libargon2-1 (>= 0~20171227), libc6 (>= 2.29), libgcrypt20 (>= 1.8.0), libqrencode4 (>= 3.2.0), libqt5concurrent5 (>= 5.6.0~rc), libqt5core5a (>= 5.10.0), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.10.0) | libqt5gui5-gles (>= 5.10.0), libqt5network5 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5widgets5 (>= 5.11.0~rc1), libqt5x11extras5 (>= 5.6.0), libsodium23 (>= 1.0.8), libstdc++6 (>= 5.2), libx11-6, libxi6, libxtst6, libykpers-1-1 (>= 1.12.0), libzxcvbn0 (>= 0.20150103), zlib1g (>= 1:1.1.4)
+ Replaces: keepassxc
+ Conflicts: keepassxc
+ Provides: keepassxc (= 2.4.3+dfsg.1-1build1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://www.keepassxc.org/
+ Description: Cross Platform Password Manager (arm64)
+  KeePassXC 2.4.3+dfsg.1-1build1 — official Ubuntu 20.04
+  arm64, KEMI repack.
+  Community-driven KeePass password manager (Qt5).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
