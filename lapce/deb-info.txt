@@ -1,0 +1,20 @@
+ new Debian package, version 2.0.
+ size 13610252 bytes: control archive=756 bytes.
+     563 bytes,    15 lines      control
+     281 bytes,     9 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+ Package: kemi-lapce
+ Version: 0.4.6-1kemi1
+ Section: devel
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 50856
+ Depends: libc6 (>= 2.30), libgcc-s1 (>= 4.2), libssl1.1 (>= 1.1.1), zlib1g (>= 1:1.1.4)
+ Conflicts: lapce, lapce-nightly
+ Replaces: lapce, lapce-nightly
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://lapce.dev
+ Description: Lapce lightning-fast code editor (arm64)
+  Lapce 0.4.6 — official debian bullseye arm64, KEMI repack.
+  Lightning-fast Rust code editor (Floem / wgpu). glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
