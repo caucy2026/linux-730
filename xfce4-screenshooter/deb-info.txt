@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 130256 bytes: control archive=860 bytes.
+     874 bytes,    16 lines      control
+     281 bytes,     9 lines   *  postinst             #!/bin/sh
+     281 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-xfce4-screenshooter
+ Version: 1.9.7-1kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 700
+ Depends: libc6 (>= 2.17), libcairo2 (>= 1.10.0), libexo-2-0 (>= 0.11.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.21.4), libsoup2.4-1 (>= 2.41.90), libx11-6, libxext6, libxfce4ui-2-0 (>= 4.13.5), libxfce4util7 (>= 4.9.0), libxfixes3, libxml2 (>= 2.7.4)
+ Recommends: libxfce4panel-2.0-4 (>= 4.13.0)
+ Conflicts: xfce4-screenshooter
+ Replaces: xfce4-screenshooter
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://docs.xfce.org/apps/xfce4-screenshooter/start
+ Description: Xfce4 Screenshooter lightweight XFCE screenshot tool (arm64)
+  Xfce4 Screenshooter 1.9.7 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3/XFCE screenshot utility. glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
