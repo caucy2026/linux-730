@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 187292 bytes: control archive=840 bytes.
+     642 bytes,    16 lines      control
+     418 bytes,    12 lines   *  postinst             #!/bin/sh
+     281 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-catfish
+ Version: 1.4.13-1kemi1
+ Section: utils
+ Priority: optional
+ Architecture: all
+ Installed-Size: 1185
+ Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-pango-1.0, python3-dbus, python3-gi-cairo, python3-pexpect, python3:any
+ Recommends: mlocate | locate
+ Conflicts: catfish
+ Replaces: catfish
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://docs.xfce.org/apps/catfish/start
+ Description: Catfish file searching tool (GTK3)
+  Catfish 1.4.13 — official Ubuntu 20.04 all.deb, KEMI repack.
+  Lightweight GTK3 file search (Python + typelibs). glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
