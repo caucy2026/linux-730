@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 1156836 bytes: control archive=9420 bytes.
+    1054 bytes,    19 lines      control
+   32316 bytes,   385 lines      md5sums
+     879 bytes,    24 lines   *  postinst             #!/bin/sh
+     581 bytes,    15 lines   *  postrm               #!/bin/sh
+     135 bytes,    10 lines   *  prerm                #!/bin/sh
+ Package: kemi-mate-terminal
+ Version: 1.24.0-2ubuntu1kemi1
+ Section: misc
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 16608
+ Depends: gsettings-desktop-schemas, mate-desktop-common, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libcairo2 (>= 1.2.4), libdconf1 (>= 0.14.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.50), libgtk-3-0 (>= 3.22), libice6 (>= 1:1.0.0), libpango-1.0-0 (>= 1.14.0), libsm6, libvte-2.91-0 (>= 0.51.90), libx11-6, dconf-gsettings-backend | gsettings-backend
+ Provides: mate-terminal (= 1.24.0-2ubuntu1), mate-terminal-common (= 1.24.0-2ubuntu1), x-terminal-emulator
+ Conflicts: mate-terminal, mate-terminal-common
+ Replaces: mate-terminal, mate-terminal-common
+ Breaks: mate-terminal (<< 1.1.0-2)
+ Homepage: http://www.mate-desktop.org
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: MATE terminal emulator application
+  MATE Terminal 1.24.0-2ubuntu1 — official
+  Ubuntu 20.04 arm64, KEMI repack of
+  mate-terminal, bundling official
+  mate-terminal-common. glibc≤2.31
+  (Ubuntu 20.04). gork.bot协助开发.
