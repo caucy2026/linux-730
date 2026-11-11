@@ -1,0 +1,27 @@
+ new Debian package, version 2.0.
+ size 1688360 bytes: control archive=1024 bytes.
+    1126 bytes,    20 lines      control
+     148 bytes,     6 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+      55 bytes,     1 lines      shlibs
+      73 bytes,     2 lines      triggers
+ Package: kemi-font-manager
+ Version: 0.7.7-0.3kemi1
+ Section: graphics
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 8857
+ Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.17), libcairo2 (>= 1.10.0), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.6), libglib2.0-0 (>= 2.44), libgtk-3-0 (>= 3.22), libjson-glib-1.0-0 (>= 1.2.0), libpango-1.0-0 (>= 1.22.0), libpangoft2-1.0-0 (>= 1.14.0), libsqlite3-0 (>= 3.6.17), libxml2 (>= 2.7.4)
+ Suggests: file-roller, nautilus-font-manager, nemo-font-manager, yelp
+ Replaces: font-manager, font-manager-common, font-viewer
+ Conflicts: font-manager, font-manager-common, font-viewer
+ Provides: font-manager (= 0.7.7-0.3), font-manager-common (= 0.7.7-0.3), font-viewer (= 0.7.7-0.3)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://fontmanager.github.io/
+ Description: font management application for the GNOME desktop (arm64)
+  Font Manager 0.7.7-0.3 — official Ubuntu 20.04 arm64,
+  KEMI repack, with bundled font-manager-common and
+  font-viewer.
+  Preview, compare and manage desktop fonts (GTK3).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
