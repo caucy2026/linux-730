@@ -1,0 +1,9 @@
+# Tilix
+
+短描述：官方 Ubuntu 20.04 Tilix 平铺终端（focal，arm64）
+
+长描述：Tilix 1.9.3-4build3，官方 Ubuntu 20.04（focal universe）Architecture: arm64 软件包的 KEMI 重打包，并捆绑同源精确版本硬依赖 tilix-common (= 1.9.3-4build3，Architecture: all)。focal-updates 无更新包。GTK3/D 平铺终端模拟器。官方 /usr/bin/tilix 为已编译的 aarch64 ELF（无 RUNPATH，链接系统 GTK-D / VTE-D / Phobos 库）。官方 /usr/bin/tilix.wrapper 为 Perl 包装脚本，不是 ELF，用作官方 x-terminal-emulator 候选项。官方文件留在官方路径；/opt/tilix 下仅为符号链接。另有 /usr/bin/kemi-tilix → tilix。官方 GTK-D / VTE-D / Phobos / libc6 依赖保持为 Depends，未捆绑。官方 Suggests python-nautilus 保持为 Suggests。官方控制文件无 Recommends。官方 Provides: x-terminal-emulator 已保留。探针：1 个独立包装 ELF，requiredGlibc 2.17（1 个有版本需求，0 个空值），无 GLIBCXX（0 个有版本需求，1 个空值，空值不作为最大值），对 Ubuntu 20.04 / KEMI 101（glibc ≤2.31 / GLIBCXX ≤3.4.28）满足。官方 tilix-common 含 33 个 .mo（含 zh_CN / zh_TW），无 Yelp 帮助。官方应用图标仅为 SVG（com.gexperts.Tilix.svg）；无官方 hicolor PNG。从官方 SVG 栅格化的 128×128 证据 PNG 仅用于商城 CREATE --icon，未打进 deb。官方桌面图标为 com.gexperts.Tilix。官方桌面 Name=Tilix。官方桌面 Exec=tilix 已改为 /usr/bin/tilix（含动作 Exec）；已添加 TryExec=/usr/bin/tilix。官方 D-Bus Exec=/usr/bin/tilix --gapplication-service 已是绝对路径并保持不变。官方 changelog 为真实文件，已用 cp -L 复制。官方 x-terminal-emulator 的 update-alternatives（指向 /usr/bin/tilix.wrapper）已保留。本包提供版本化 Provides: tilix (= 1.9.3-4build3) 与 tilix-common (= 1.9.3-4build3)。官方来源为 Ubuntu 20.04 focal universe tilix 1.9.3-4build3（Architecture: arm64）及 tilix-common 1.9.3-4build3（Architecture: all）；官方 SHA 与大小已与 ports.ubuntu.com 池文件及 focal universe Packages stanza 核对一致。本轮无 librarian URL。
+
+发布说明：首次上架官方 Ubuntu 20.04 tilix 1.9.3-4build3（focal universe Architecture: arm64）并捆绑同源 tilix-common。官方 ELF 留在 /usr/bin；官方 Perl 包装脚本留在 /usr/bin/tilix.wrapper；/opt 仅为符号链接。官方 GTK-D 依赖未捆绑。官方桌面 Exec 改写为 /usr/bin/tilix。从官方 SVG 栅格化的 128×128 证据 PNG 用于商城图标，未打进 deb。探测 1 ELF，glibc 2.17，无 GLIBCXX。合主线：gork.bot协助开发。
+
+合主线：gork.bot协助开发
