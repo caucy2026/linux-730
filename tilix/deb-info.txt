@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 714692 bytes: control archive=1092 bytes.
+     931 bytes,    20 lines      control
+     777 bytes,    23 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     126 bytes,     9 lines   *  prerm                #!/bin/sh
+ Package: kemi-tilix
+ Version: 1.9.3-4build3kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 4434
+ Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.17), libgtkd-3-0 (>= 3.9.0), libphobos2-ldc-shared90 (>= 1:1.20.0), libunwind8, libvted-3-0 (>= 3.9.0), libx11-6
+ Suggests: python-nautilus
+ Breaks: terminix (<< 1.5.4-1~), terminix-common (<< 1.5.4-1~)
+ Replaces: tilix, tilix-common, terminix (<< 1.5.4-1~), terminix-common (<< 1.5.4-1~)
+ Conflicts: tilix, tilix-common
+ Provides: x-terminal-emulator, tilix (= 1.9.3-4build3), tilix-common (= 1.9.3-4build3)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://gnunn1.github.io/tilix-web/
+ Description: Tiling terminal emulator for GNOME
+  Tilix 1.9.3-4build3 — official Ubuntu 20.04
+  Architecture: arm64 plus bundled tilix-common, KEMI
+  repack. GTK3/D tiling terminal emulator.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
