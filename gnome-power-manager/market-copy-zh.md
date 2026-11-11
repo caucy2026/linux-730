@@ -1,0 +1,9 @@
+# GNOME Power Statistics
+
+短描述：官方 Ubuntu 20.04 GNOME Power Statistics 电池与电源统计工具（focal main，arm64）
+
+长描述：GNOME Power Statistics（官方二进制 gnome-power-statistics，官方软件包名 gnome-power-manager）3.32.0-2，官方 Ubuntu 20.04（focal main）arm64 软件包的 KEMI 重打包。focal-updates / focal-security / focal-backports 无更新包。同源源码在 focal 各口袋仅此一个二进制包，无 -data/-common 或精确版本库可捆绑。官方 /usr/bin/gnome-power-statistics 为 aarch64 ELF，留在官方路径；/opt/gnome-power-manager 下仅为符号链接。另有 /usr/bin/kemi-gnome-power-manager → gnome-power-statistics。不同源依赖（GTK / glib / cairo / pango / pangocairo / libupower-glib3、libc6 (>= 2.27)、dconf-gsettings-backend | gsettings-backend、default-dbus-session-bus | dbus-session-bus、gnome-settings-daemon-common、upower (>= 0.99)）保持为 Depends。官方控制文件无 Recommends、无 Suggests。无 Debian 纪元，无波浪号。探针：1 个独立包装 ELF，requiredGlibc 2.27（1 个有版本需求，0 个空值，不发明最大值），无 GLIBCXX（0 个有版本需求，1 个空值，空值不作为最大值），无 RUNPATH，符合 Ubuntu 20.04 / KEMI 101（glibc ≤2.31 / GLIBCXX ≤3.4.28）。官方软件包不带 .mo（Ubuntu language-pack 拆分），不发明语言包。官方应用图标为 16/22/24/32/48 PNG 与 scalable / symbolic SVG，无官方 256 PNG；从官方 SVG 栅格化的 128×128 evidence PNG 仅用作商城 CREATE --icon，不打入 deb。官方 16–48 PNG 与 SVG 仅按官方路径打包一次。官方桌面 Name=Power Statistics；商城 app_name=GNOME Power Statistics（官方 appdata <name> 使用的常用上游标题）。官方桌面 Exec 已改写为 /usr/bin/gnome-power-statistics，并添加 TryExec。官方 changelog 为真实文件，已用 cp -L 复制。官方 rm_conffile 维护脚本保留；已追加 icon-cache、desktop-database、glib-compile-schemas 钩子。本包提供版本化 Provides: gnome-power-manager (= 3.32.0-2)。官方来源为 Ubuntu 20.04 focal main gnome-power-manager 3.32.0-2（arm64）；官方 SHA 与大小已与 ports.ubuntu.com 及 Aliyun ubuntu-ports 池文件及 focal main Packages stanza 核对一致。本轮无 librarian URL。
+
+发布说明：首次上架官方 Ubuntu 20.04 gnome-power-manager 3.32.0-2（focal main arm64）。官方二进制为 gnome-power-statistics。无同源捆绑。官方 ELF 留在 /usr；/opt 仅为符号链接。官方桌面 Name=Power Statistics 保持；商城 app_name=GNOME Power Statistics。官方桌面 Exec 已改写为绝对路径。官方图标为 16–48 PNG 加 SVG；128 evidence PNG 仅作 CREATE 图标且不打包。探测 1 ELF，glibc 2.27，无 GLIBCXX。合主线：gork.bot协助开发。
+
+合主线：gork.bot协助开发
