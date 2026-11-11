@@ -1,0 +1,28 @@
+ new Debian package, version 2.0.
+ size 59988 bytes: control archive=1288 bytes.
+      37 bytes,     1 lines      conffiles
+     863 bytes,    21 lines      control
+     851 bytes,    21 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     432 bytes,    11 lines   *  prerm                #!/bin/sh
+ Package: kemi-devhelp
+ Version: 3.36.2-0ubuntu1kemi1
+ Section: devel
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 153
+ Depends: python3:any, libamtk-5-0 (>= 5.0.0), libc6 (>= 2.17), libdevhelp-3-6 (>= 3.36.0), libglib2.0-0 (>= 2.60), libgtk-3-0 (>= 3.22), libpango-1.0-0 (>= 1.14.0), libwebkit2gtk-4.0-37 (>= 2.24)
+ Recommends: libgtk-3-doc, libglib2.0-doc, libpango1.0-doc
+ Breaks: devhelp-common (<< 3.21.91-1)
+ Replaces: devhelp, devhelp-common (<< 3.21.91-1)
+ Conflicts: devhelp
+ Provides: devhelp (= 3.36.2-0ubuntu1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Devhelp
+ Description: GNOME developers help program
+  Devhelp 3.36.2-0ubuntu1 — official Ubuntu 20.04
+  Architecture: arm64, KEMI repack.
+  API documentation browser for GNOME
+  (GTK3 + WebKitGTK GUI).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
