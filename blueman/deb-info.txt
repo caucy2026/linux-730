@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 642428 bytes: control archive=1944 bytes.
+      83 bytes,     2 lines      conffiles
+    1147 bytes,    19 lines      control
+    1951 bytes,    47 lines   *  postinst             #!/bin/sh
+    1264 bytes,    46 lines   *  postrm               #!/bin/sh
+     599 bytes,    17 lines   *  prerm                #!/bin/sh
+ Package: kemi-blueman
+ Version: 2.1.2-1ubuntu0.3kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 2520
+ Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.17), libglib2.0-0 (>= 2.31.8), dconf-gsettings-backend | gsettings-backend, python3 (<< 3.9), python3 (>= 3.8~), python3:any, dbus, default-dbus-session-bus | dbus-session-bus, bluez (>= 5), bluez-obexd, python3-gi (>= 3.27.2), notification-daemon, librsvg2-common, gnome-icon-theme | mate-icon-theme | elementary-xfce-icon-theme | adwaita-icon-theme | papirus-icon-theme, libpulse-mainloop-glib0, gir1.2-gtk-3.0, gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-pango-1.0, python3-cairo, python3-gi-cairo, gir1.2-appindicator3-0.1, gir1.2-nm-1.0
+ Recommends: policykit-1, pulseaudio-module-bluetooth
+ Provides: blueman
+ Conflicts: blueman
+ Replaces: blueman
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://github.com/blueman-project/blueman
+ Description: Graphical bluetooth manager (arm64)
+  Blueman 2.1.2 — official Ubuntu 20.04 arm64, KEMI
+  repack.
+  A GTK+ Bluetooth manager using the BlueZ D-Bus backend.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
