@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 55148 bytes: control archive=1140 bytes.
+     629 bytes,    18 lines      control
+     766 bytes,    21 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     429 bytes,    11 lines   *  prerm                #!/bin/sh
+ Package: kemi-d-feet
+ Version: 0.3.15-2kemi1
+ Section: devel
+ Priority: optional
+ Architecture: all
+ Installed-Size: 249
+ Depends: gir1.2-glib-2.0, gir1.2-gtk-3.0 (>= 3.6), python3-gi (>= 3.3.91), dconf-gsettings-backend | gsettings-backend, python3:any
+ Replaces: d-feet
+ Conflicts: d-feet
+ Provides: d-feet (= 0.3.15-2)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/DFeet
+ Description: D-Bus object browser, viewer and debugger
+  D-Feet 0.3.15-2 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Python 3 GTK3 typelib D-Bus debugger.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
