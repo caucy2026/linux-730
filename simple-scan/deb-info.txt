@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 169508 bytes: control archive=948 bytes.
+     919 bytes,    17 lines      control
+     416 bytes,    12 lines   *  postinst             #!/bin/sh
+     416 bytes,    12 lines   *  postrm               #!/bin/sh
+ Package: kemi-simple-scan
+ Version: 3.36.3-0ubuntu0.20.04.0kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 525
+ Depends: default-dbus-session-bus | dbus-session-bus, xdg-utils, dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.17), libcairo2 (>= 1.4.10), libcolord2 (>= 0.1.10), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.43.92), libgtk-3-0 (>= 3.21.5), libgusb2 (>= 0.2.2), libpackagekit-glib2-18 (>= 0.9.4), libsane (>= 1.0.24), libwebp6 (>= 0.5.1), libwebpmux3 (>= 0.6.1-2), zlib1g (>= 1:1.1.4)
+ Recommends: yelp
+ Conflicts: simple-scan
+ Replaces: simple-scan
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://gitlab.gnome.org/GNOME/simple-scan
+ Description: Simple Scanning Utility (arm64)
+  Simple Scan 3.36.3 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3 document scanner (SANE frontend).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
