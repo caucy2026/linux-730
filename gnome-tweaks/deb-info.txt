@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 58404 bytes: control archive=1268 bytes.
+    1013 bytes,    20 lines      control
+     786 bytes,    23 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     449 bytes,    13 lines   *  prerm                #!/bin/sh
+ Package: kemi-gnome-tweaks
+ Version: 3.34.0-2ubuntu1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: all
+ Installed-Size: 224
+ Depends: python3:any, gsettings-desktop-schemas (>= 3.28), gnome-settings-daemon, gnome-shell-common (>= 3.24), mutter-common, python3-gi (>= 3.10), gir1.2-gtk-3.0 (>= 3.12), gir1.2-gnomedesktop-3.0 (>= 3.30), gir1.2-handy-0.0, gir1.2-soup-2.4, gir1.2-notify-0.7, gir1.2-glib-2.0 (>= 1.58), gir1.2-pango-1.0, gnome-shell-extension-prefs
+ Breaks: gnome-tweak-tool (<= 3.27.4)
+ Replaces: gnome-tweaks, gnome-tweak-tool (<= 3.27.4)
+ Conflicts: gnome-tweaks
+ Provides: gnome-tweaks (= 3.34.0-2ubuntu1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Tweaks
+ Description: tool to adjust advanced configuration settings for GNOME
+  GNOME Tweaks 3.34.0-2ubuntu1 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Advanced GNOME settings not in gnome-control-center
+  (GTK3, Python 3 typelib GUI).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
