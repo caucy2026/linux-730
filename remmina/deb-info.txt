@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 359660 bytes: control archive=1064 bytes.
+    1476 bytes,    18 lines      control
+     414 bytes,    12 lines   *  postinst             #!/bin/sh
+     414 bytes,    12 lines   *  postrm               #!/bin/sh
+ Package: kemi-remmina
+ Version: 1.4.25+dfsg-20.04.1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1370
+ Depends: default-dbus-session-bus | dbus-session-bus, libappindicator3-1 (>= 0.4.90), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavahi-ui-gtk3-0 (>= 0.6.30), libc6 (>= 2.17), libcairo2 (>= 1.6.0), libcups2 (>= 1.6.0), libfreerdp-client2-2 (>= 2.0.0~git20160317.1.75ae3f5+dfsg1), libfreerdp2-2 (>= 2.3.0+dfsg1), libgcrypt20 (>= 1.8.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.61.2), libgtk-3-0 (>= 3.21.5), libjson-glib-1.0-0 (>= 1.2.0), libpango-1.0-0 (>= 1.14.0), libsecret-1-0 (>= 0.7), libsodium23 (>= 1.0.10), libsoup2.4-1 (>= 2.30.0), libssh-4 (>= 0.8.1), libvncclient1 (>= 0.9.10), libvte-2.91-0 (>= 0.51.90), libwinpr2-2 (>= 2.1.0+dfsg1), libx11-6
+ Suggests: remmina-plugin-exec, remmina-plugin-kwallet, remmina-plugin-spice, remmina-plugin-www
+ Breaks: remmina-plugin-gnome
+ Conflicts: remmina, remmina-common, remmina-plugin-rdp, remmina-plugin-vnc, remmina-plugin-secret, remmina-plugin-gnome
+ Replaces: remmina, remmina-common, remmina-plugin-rdp, remmina-plugin-vnc, remmina-plugin-secret, remmina-plugin-gnome
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://www.remmina.org/
+ Description: GTK+ remote desktop client (arm64)
+  Remmina 1.4.25 — official Ubuntu 20.04 arm64, KEMI repack
+  with remmina-common and RDP/VNC/secret plugins.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
