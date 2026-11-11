@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 915980 bytes: control archive=820 bytes.
+     778 bytes,    17 lines      control
+     283 bytes,     9 lines   *  postinst             #!/bin/sh
+     283 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-gucharmap
+ Version: 13.0.1-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 3569
+ Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libcairo2 (>= 1.2.4), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.4.0), libgucharmap-2-90-7 (= 1:13.0.1-1), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), dconf-gsettings-backend | gsettings-backend
+ Recommends: yelp
+ Conflicts: gucharmap
+ Replaces: gucharmap
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Gucharmap
+ Description: Unicode character picker and font browser (arm64)
+  Gucharmap 13.0.1 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3 Unicode character map and font browser.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
