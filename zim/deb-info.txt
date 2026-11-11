@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 1010000 bytes: control archive=1248 bytes.
+     735 bytes,    20 lines      control
+     906 bytes,    25 lines   *  postinst             #!/bin/sh
+     524 bytes,    13 lines   *  postrm               #!/bin/sh
+     422 bytes,    13 lines   *  prerm                #!/bin/sh
+ Package: kemi-zim
+ Version: 0.72.0-1kemi1
+ Section: x11
+ Priority: optional
+ Architecture: all
+ Installed-Size: 4004
+ Depends: python3:any, python3-gi, python3-xdg, gir1.2-gtk-3.0, xdg-utils
+ Recommends: gir1.2-gtkspell3-3.0
+ Suggests: bzr, git, mercurial, fossil, graphviz, ditaa, scrot, dvipng, gir1.2-gtksource-3.0, python3-zeitgeist, r-base, gnuplot, lilypond
+ Replaces: zim
+ Conflicts: zim
+ Provides: zim (= 0.72.0-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://zim-wiki.org
+ Description: graphical text editor based on wiki technologies
+  Zim 0.72.0-1 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Desktop wiki for notes and notebooks (GTK3, Python 3).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
