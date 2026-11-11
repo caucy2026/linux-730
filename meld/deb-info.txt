@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 548316 bytes: control archive=884 bytes.
+     611 bytes,    16 lines      control
+     678 bytes,    18 lines   *  postinst             #!/bin/sh
+     539 bytes,    15 lines   *  postrm               #!/bin/sh
+ Package: kemi-meld
+ Version: 3.22.3-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: all
+ Installed-Size: 3294
+ Depends: dconf-gsettings-backend | gsettings-backend, gir1.2-gtk-3.0, gir1.2-gtksource-4, patch, python3, python3-gi (>= 3.20), python3-gi-cairo
+ Recommends: yelp
+ Conflicts: meld
+ Replaces: meld
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://meld.app
+ Description: Meld graphical diff and merge tool (GTK3)
+  Meld 3.22.3 — official Ubuntu/Debian all.deb, KEMI repack.
+  Graphical file and directory diff/merge (Python + GTK3). glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
