@@ -1,0 +1,25 @@
+ new Debian package, version 2.0.
+ size 2827528 bytes: control archive=1092 bytes.
+    1416 bytes,    20 lines      control
+     291 bytes,     9 lines   *  postinst             #!/bin/sh
+     291 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-abiword
+ Version: 3.0.2-10kemi1
+ Section: editors
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 15812
+ Depends: gsfonts, libabiword-3.0 (>= 3.0.2), libc6 (>= 2.17), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.8.0), libglib2.0-0 (>= 2.16.0), libgnutls30 (>= 3.6.6), libgoffice-0.10-10 (>= 0.10.2), libgsf-1-114 (>= 1.14.9), libgtk-3-0 (>= 3.0.0), libjpeg8 (>= 8c), liblink-grammar5 (>= 5.7.0), libloudmouth1-0 (>= 1.3.3), libots0 (>= 0.5.0), libpng16-16 (>= 1.6.2-1), librdf0 (>= 1.0.17), libreadline8 (>= 6.0), librevenge-0.0-0, libsoup2.4-1 (>= 2.4.0), libstdc++6 (>= 5.2), libtelepathy-glib0 (>= 0.13.0), libtidy5deb1 (>= 1:5.2.0), libwmf0.2-7 (>= 0.2.8.4), libwpd-0.10-10, libwpg-0.3-3, libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)
+ Recommends: aspell-en | aspell-dictionary, fonts-liberation, poppler-utils
+ Provides: abiword, abiword-common, abiword-plugin-grammar
+ Conflicts: abiword, abiword-common, abiword-plugin-grammar
+ Replaces: abiword, abiword-common, abiword-plugin-grammar
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.abisource.com/
+ Description: efficient word processor (arm64)
+  AbiWord 3.0.2 — official Ubuntu 20.04 arm64, KEMI
+  repack, with bundled official abiword-common and
+  abiword-plugin-grammar.
+  A full-featured, efficient word processing application.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
