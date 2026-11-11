@@ -1,0 +1,33 @@
+ new Debian package, version 2.0.
+ size 327560 bytes: control archive=3380 bytes.
+      27 bytes,     1 lines      conffiles
+    1841 bytes,    23 lines      control
+    3598 bytes,    45 lines      md5sums
+     249 bytes,    10 lines   *  postinst             #!/bin/sh
+     271 bytes,    10 lines   *  postrm               #!/bin/sh
+     104 bytes,     2 lines      shlibs
+    3568 bytes,    93 lines      symbols
+      72 bytes,     2 lines      triggers
+ Package: kemi-mate-control-center
+ Version: 1.24.0-1kemi1
+ Section: misc
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1464
+ Depends: caja-common (>= 1.8.0), desktop-file-utils, gsettings-desktop-schemas, libglib2.0-bin, marco-common (>= 1.18), mate-control-center-common (>= 1.24.0-1), mate-desktop (>= 1.22), mate-icon-theme, mate-menus, mate-settings-daemon (>= 1.22), libaccountsservice0 (>= 0.6.8), libc6 (>= 2.29), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libcanberra-gtk3-0 (>= 0.25), libcanberra0 (>= 0.2), libdbus-glib-1-2 (>= 0.78), libdconf1 (>= 0.14.0), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.21.4), libmarco-private2 (>= 1.22.2), libmate-desktop-2-17 (>= 1.24), libmate-menu2 (>= 1.22.0), libmatekbd4 (>= 1.18), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpolkit-gobject-1-0 (>= 0.99), libx11-6, libxcursor1 (>> 1.1.2), libxi6 (>= 2:1.2.0), libxklavier16 (>= 5.0), libxml2 (>= 2.7.4), libxss1, libatk1.0-0 (>= 1.12.4)
+ Suggests: gconf2
+ Provides: mate-control-center (= 1.24.0-1), libmate-slab0 (= 1.24.0-1), libmate-window-settings1 (= 1.24.0-1)
+ Conflicts: mate-control-center, libmate-slab0, libmate-window-settings1
+ Replaces: mate-control-center, libmate-slab0, libmate-window-settings1
+ Breaks: ubuntu-mate-default-settings (<< 16.04), mate-control-center (<< 1.9.0)
+ Homepage: http://www.mate-desktop.org/
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: utilities to configure the MATE desktop
+  MATE Control Center 1.24.0-1 — official
+  Ubuntu 20.04 arm64, KEMI repack of
+  mate-control-center, bundling official
+  libmate-slab0 and
+  libmate-window-settings1. Official
+  mate-control-center-common stays Depends
+  (range, not bundled). glibc≤2.31
+  (Ubuntu 20.04). gork.bot协助开发.
