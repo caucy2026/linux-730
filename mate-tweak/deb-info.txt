@@ -1,0 +1,27 @@
+ new Debian package, version 2.0.
+ size 130204 bytes: control archive=5120 bytes.
+    1165 bytes,    21 lines      control
+   15188 bytes,   184 lines      md5sums
+     204 bytes,     7 lines   *  postinst             #!/bin/sh
+     261 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-mate-tweak
+ Version: 20.04.0-1ubuntu3kemi1
+ Section: misc
+ Priority: optional
+ Architecture: all
+ Installed-Size: 2624
+ Depends: dconf-cli, gir1.2-gtk-3.0, gir1.2-notify-0.7, mate-panel (>= 1.18.0), mesa-utils, python3 (>= 3.3), python3-distro, python3-gi, python3-psutil, python3-setproctitle, x11-xserver-utils, python3-pkg-resources, python3:any
+ Recommends: mate-indicator-applet (>= 1.18.0)
+ Suggests: compton, ayatana-indicator-application | indicator-application, ayatana-indicator-datetime | indicator-datetime, ayatana-indicator-messages | indicator-messages, ayatana-indicator-sound | indicator-sound, ayatana-indicator-session | indicator-session, ayatana-indicator-power | indicator-power
+ Provides: mate-tweak (= 20.04.0-1ubuntu3)
+ Conflicts: mate-tweak
+ Replaces: mate-tweak
+ Homepage: https://github.com/ubuntu-mate/mate-tweak
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: MATE desktop tweak tool
+  MATE Tweak 20.04.0-1ubuntu3 — official
+  Ubuntu 20.04 all, KEMI repack of
+  mate-tweak. No same-source exact-version
+  hard Depends to bundle. Official
+  Recommends and Suggests kept.
+  glibc≤2.31 (Ubuntu 20.04). gork.bot协助开发.
