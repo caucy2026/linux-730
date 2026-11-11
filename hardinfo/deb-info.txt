@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 306936 bytes: control archive=788 bytes.
+     703 bytes,    18 lines      control
+     148 bytes,     6 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+ Package: kemi-hardinfo
+ Version: 0.5.1+git20180227-2kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 767
+ Depends: pciutils (>= 1:2.1.11-10), zlib1g-dev, libc6 (>= 2.27), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.43.2), libgtk2.0-0 (>= 2.18.0), libpango-1.0-0 (>= 1.14.0)
+ Recommends: lm-sensors
+ Suggests: mesa-utils
+ Conflicts: hardinfo
+ Replaces: hardinfo
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://hardinfo.org
+ Description: System profiler and benchmark (arm64)
+  HardInfo 0.5.1+git20180227-2 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK2 system information and benchmark tool.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
