@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 54528 bytes: control archive=832 bytes.
+     815 bytes,    20 lines      control
+     298 bytes,     8 lines   *  postinst             #!/bin/sh
+ Package: kemi-gnome-bluetooth
+ Version: 3.34.3-0ubuntu1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 114
+ Depends: bluez (>= 5.5), bluez-obexd, udev (>= 154), libc6 (>= 2.17), libglib2.0-0 (>= 2.38.0), libgnome-bluetooth13 (>= 3.12.0), libgtk-3-0 (>= 3.0.0)
+ Recommends: gnome-control-center | unity-control-center, gvfs-backends
+ Conflicts: bluez-gnome, gnome-bluetooth
+ Replaces: gnome-bluetooth
+ Breaks: gnome-shell (<< 3.12)
+ Provides: gnome-bluetooth (= 3.34.3-0ubuntu1)
+ Homepage: https://wiki.gnome.org/Projects/GnomeBluetooth
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: GNOME Bluetooth tools
+  Bluetooth Transfer 3.34.3-0ubuntu1 — official
+  Ubuntu 20.04 arm64, KEMI repack of
+  gnome-bluetooth (bluetooth-sendto).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
