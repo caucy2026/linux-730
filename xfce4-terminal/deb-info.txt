@@ -1,0 +1,25 @@
+ new Debian package, version 2.0.
+ size 367400 bytes: control archive=1004 bytes.
+     915 bytes,    19 lines      control
+     506 bytes,    14 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+     204 bytes,     8 lines   *  prerm                #!/bin/sh
+ Package: kemi-xfce4-terminal
+ Version: 0.8.9.1-1kemi1
+ Section: xfce
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 2069
+ Depends: exo-utils, libc6 (>= 2.17), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.21.5), libpango-1.0-0 (>= 1.14.0), libutempter0 (>= 1.1.5), libvte-2.91-0 (>= 0.51.90), libx11-6, libxfce4ui-2-0 (>= 4.11.0), libxfce4util7 (>= 4.9.0), libxfconf-0-3 (>= 4.6.0)
+ Recommends: default-dbus-session-bus | dbus-session-bus
+ Provides: x-terminal-emulator
+ Conflicts: xfce4-terminal
+ Replaces: xfce4-terminal
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://goodies.xfce.org/projects/applications/terminal
+ Description: Xfce terminal emulator (arm64)
+  Xfce Terminal 0.8.9.1 — official Ubuntu 20.04 arm64,
+  KEMI repack.
+  Lightweight terminal emulator for X11, designed for Xfce.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
