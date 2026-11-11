@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 354360 bytes: control archive=924 bytes.
+    1077 bytes,    17 lines      control
+     291 bytes,     9 lines   *  postinst             #!/bin/sh
+     291 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-parole
+ Version: 1.0.5-1kemi1
+ Section: xfce
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1932
+ Depends: gstreamer1.0-alsa | gstreamer1.0-audiosink, gstreamer1.0-libav, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-x, libc6 (>= 2.17), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.88), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.41.1), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.0.0), libgtk-3-0 (>= 3.21.5), libnotify4 (>= 0.7.0), libtagc0 (>= 1.5), libx11-6, libxfce4ui-2-0 (>= 4.11.1), libxfce4util7 (>= 4.9.0), libxfconf-0-3 (>= 4.6.0)
+ Suggests: gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly
+ Conflicts: parole
+ Replaces: parole
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://goodies.xfce.org/projects/applications/parole
+ Description: media player based on GStreamer framework (arm64)
+  Parole 1.0.5 — official Ubuntu 20.04 arm64, KEMI repack.
+  Xfce media player based on the GStreamer framework.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
