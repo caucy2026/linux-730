@@ -1,0 +1,25 @@
+ new Debian package, version 2.0.
+ size 4639956 bytes: control archive=1208 bytes.
+      45 bytes,     1 lines      conffiles
+    1186 bytes,    18 lines      control
+     740 bytes,    18 lines   *  postinst             #!/bin/sh
+     614 bytes,    15 lines   *  postrm               #!/bin/sh
+     146 bytes,     6 lines   *  prerm                #!/bin/sh
+ Package: kemi-onboard
+ Version: 1.4.1-2ubuntu7kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 25033
+ Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-pango-1.0 (>= 1.29.3), iso-codes, librsvg2-common, python3-cairo, python3-dbus, python3-gi-cairo, dconf-gsettings-backend | gsettings-backend, python3 (<< 3.9), python3 (>= 3.8~), python3:any, libc6 (>= 2.29), libcairo2 (>= 1.10.0), libcanberra0 (>= 0.2), libdconf1 (>= 0.14.0), libgcc-s1 (>= 3.0), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.9.10), libhunspell-1.7-0, libstdc++6 (>= 5.2), libudev1 (>= 183), libx11-6, libxi6 (>= 2:1.2.99.4), libxkbfile1, libxtst6
+ Recommends: gir1.2-appindicator3-0.1, gir1.2-atspi-2.0, xdg-utils
+ Suggests: mousetweaks (>= 3.3.90)
+ Conflicts: onboard, onboard-common, onboard-data
+ Replaces: onboard, onboard-common, onboard-data
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://launchpad.net/onboard
+ Description: Simple On-screen Keyboard (arm64)
+  Onboard 1.4.1 — official Ubuntu 20.04 arm64, KEMI repack.
+  Flexible on-screen keyboard (common + language models bundled).
+  glibc≤2.31 (Ubuntu 20.04, Python 3.8).
+  gork.bot协助开发.
