@@ -1,0 +1,20 @@
+ new Debian package, version 2.0.
+ size 643404 bytes: control archive=816 bytes.
+     738 bytes,    15 lines      control
+     281 bytes,     9 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+ Package: kemi-flameshot
+ Version: 12.1.0-1kemi1
+ Section: graphics
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 3600
+ Depends: hicolor-icon-theme, libc6 (>= 2.17), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), libqt5core5a (>= 5.10.0), libqt5dbus5 (>= 5.9.0~), libqt5gui5 (>= 5.10.0) | libqt5gui5-gles (>= 5.10.0), libqt5network5 (>= 5.9.0~), libqt5widgets5 (>= 5.11.0~rc1), libqt5svg5 (>= 5.9.0~)
+ Conflicts: flameshot
+ Replaces: flameshot
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://flameshot.org/
+ Description: Flameshot screenshot tool (arm64)
+  Flameshot 12.1.0 — official debian-10 arm64, KEMI repack.
+  Powerful yet simple-to-use screenshot software (Qt5). glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
