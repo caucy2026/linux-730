@@ -1,0 +1,25 @@
+ new Debian package, version 2.0.
+ size 49284 bytes: control archive=1132 bytes.
+     658 bytes,    19 lines      control
+     784 bytes,    23 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     401 bytes,    12 lines   *  prerm                #!/bin/sh
+ Package: kemi-alacarte
+ Version: 3.36.0-1kemi1
+ Section: utils
+ Priority: optional
+ Architecture: all
+ Multi-Arch: foreign
+ Installed-Size: 132
+ Depends: python3:any, gnome-menus (>= 3.5.3), python3-gi, gir1.2-gtk-3.0, gir1.2-gmenu-3.0 (>= 3.5.3), gir1.2-glib-2.0, gir1.2-gdkpixbuf-2.0
+ Replaces: alacarte
+ Conflicts: alacarte
+ Provides: alacarte (= 3.36.0-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://gitlab.gnome.org/GNOME/alacarte
+ Description: easy GNOME menu editing tool
+  Alacarte 3.36.0-1 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Python 3 GTK3 typelib menu editor.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
