@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 104556 bytes: control archive=800 bytes.
+     632 bytes,    16 lines      control
+     404 bytes,    12 lines   *  postinst             #!/bin/sh
+     281 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-gpicview
+ Version: 0.2.5-3kemi1
+ Section: graphics
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 433
+ Depends: libc6 (>= 2.29), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk2.0-0 (>= 2.20.0), libjpeg8 (>= 8c), libx11-6
+ Recommends: xdg-utils
+ Conflicts: gpicview
+ Replaces: gpicview
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.lxde.org/
+ Description: GPicView lightweight GTK2 image viewer (arm64)
+  GPicView 0.2.5 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK2/LXDE image viewer. glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
