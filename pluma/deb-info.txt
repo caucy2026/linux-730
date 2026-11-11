@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 2263708 bytes: control archive=1076 bytes.
+    1148 bytes,    20 lines      control
+     411 bytes,    12 lines   *  postinst             #!/bin/sh
+     283 bytes,     9 lines   *  postrm               #!/bin/sh
+     148 bytes,     6 lines   *  prerm                #!/bin/sh
+ Package: kemi-pluma
+ Version: 1.24.0-1kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 26024
+ Depends: gir1.2-peas-1.0, iso-codes, mate-desktop-common, python3, dconf-gsettings-backend | gsettings-backend, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libcairo2 (>= 1.2.4), libenchant1c2a (>= 1.6.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libgirepository-1.0-1 (>= 0.9.3), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.21.6), libgtksourceview-3.0-1 (>= 3.23.90), libice6 (>= 1:1.0.0), libpango-1.0-0 (>= 1.14.0), libpeas-1.0-0 (>= 1.0.0), libsm6, libx11-6, libxml2 (>= 2.7.4)
+ Recommends: zenity
+ Conflicts: pluma, pluma-common, gir1.2-pluma-1.0
+ Replaces: pluma, pluma-common, gir1.2-pluma-1.0, mate-text-editor (<< 1.5.0)
+ Breaks: mate-text-editor (<< 1.5.0)
+ Provides: mate-text-editor
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.mate-desktop.org/
+ Description: official text editor of the MATE desktop (arm64)
+  Pluma 1.24.0 — official Ubuntu 20.04 arm64, KEMI repack.
+  Tabbed GTK3 text editor with syntax highlighting and plugins
+  (common + typelib bundled).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
