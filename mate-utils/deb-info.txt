@@ -1,0 +1,29 @@
+ new Debian package, version 2.0.
+ size 236056 bytes: control archive=2624 bytes.
+    1127 bytes,    20 lines      control
+    1525 bytes,    20 lines      md5sums
+     249 bytes,    10 lines   *  postinst             #!/bin/sh
+     271 bytes,    10 lines   *  postrm               #!/bin/sh
+      39 bytes,     1 lines      shlibs
+    6926 bytes,   173 lines      symbols
+      72 bytes,     2 lines      triggers
+ Package: kemi-mate-utils
+ Version: 1.24.0-1kemi1
+ Section: misc
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1080
+ Depends: mate-desktop-common, mate-utils-common (>= 1.24.0-1), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.29), libcairo2 (>= 1.10.0), libcanberra-gtk3-0 (>= 0.25), libcanberra0 (>= 0.2), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.21.5), libgtop-2.0-11 (>= 2.22.3), libice6 (>= 1:1.0.0), libmate-panel-applet-4-1 (>= 1.18), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libsm6, libudisks2-0 (>= 2.0.0), libx11-6, libxext6, zlib1g (>= 1:1.1.4)
+ Provides: mate-utils (= 1.24.0-1), libmatedict6 (= 1.24.0-1)
+ Conflicts: mate-utils, libmatedict6
+ Replaces: mate-utils, libmatedict6
+ Breaks: mate-utils (<< 1.8.0)
+ Homepage: http://www.mate-desktop.org/
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: MATE desktop utilities
+  MATE Utilities 1.24.0-1 — official Ubuntu
+  20.04 arm64, KEMI repack of mate-utils,
+  bundling official libmatedict6. Official
+  mate-utils-common stays Depends (range,
+  not bundled). glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
