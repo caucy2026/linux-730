@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 85492 bytes: control archive=1328 bytes.
+    1136 bytes,    18 lines      control
+    1073 bytes,    30 lines   *  postinst             #!/bin/sh
+     465 bytes,    12 lines   *  prerm                #!/bin/sh
+ Package: kemi-software-properties-gtk
+ Version: 0.99.9.12kemi1
+ Section: admin
+ Priority: optional
+ Architecture: all
+ Installed-Size: 477
+ Depends: ubuntu-advantage-desktop-daemon, ubuntu-advantage-tools (>= 27.11~), gir1.2-gtk-3.0, libgtk3-perl, python3, python3-dateutil, python3-distro-info, python3-gi, python3-requests-unixsocket, software-properties-common, ubuntu-drivers-common (>= 1:0.2.75), dconf-gsettings-backend | gsettings-backend, python3:any, gpg, iso-codes, lsb-release, python3-apt (>= 0.6.20ubuntu16)
+ Recommends: gnome-keyring, gnome-session-bin | xfce4-session | mate-session-manager, unattended-upgrades
+ Replaces: software-properties-gtk, python3-software-properties
+ Conflicts: software-properties-gtk, python3-software-properties
+ Provides: software-properties-gtk (= 0.99.9.12), python3-software-properties (= 0.99.9.12)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: manage the repositories that you install software from (gtk)
+  Software & Updates 0.99.9.12 — official Ubuntu
+  20.04 all, KEMI repack. Bundles official
+  python3-software-properties.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
