@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 4024056 bytes: control archive=800 bytes.
+     828 bytes,    18 lines      control
+     148 bytes,     6 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+ Package: kemi-luckybackup
+ Version: 0.5.0-3build1kemi1
+ Section: utils
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 13296
+ Depends: libc6 (>= 2.17), libgcc-s1 (>= 3.0), libqt5core5a (>= 5.5.0), libqt5gui5 (>= 5.0.2) | libqt5gui5-gles (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 5.2), rsync
+ Replaces: luckybackup, luckybackup-data
+ Conflicts: luckybackup, luckybackup-data
+ Provides: luckybackup (= 0.5.0-3build1), luckybackup-data (= 0.5.0-3build1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://luckybackup.sourceforge.net/
+ Description: rsync-based GUI data backup utility (arm64)
+  luckyBackup 0.5.0-3build1 — official Ubuntu 20.04 arm64,
+  KEMI repack, with bundled luckybackup-data.
+  Backup and synchronize directories with rsync (Qt5).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
