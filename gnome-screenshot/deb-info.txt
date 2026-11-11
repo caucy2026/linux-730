@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 53108 bytes: control archive=936 bytes.
+     770 bytes,    17 lines      control
+     648 bytes,    16 lines   *  postinst             #!/bin/sh
+     511 bytes,    14 lines   *  postrm               #!/bin/sh
+ Package: kemi-gnome-screenshot
+ Version: 3.36.0-1ubuntu1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 161
+ Depends: libc6 (>= 2.29), libcairo2 (>= 1.10.0), libcanberra-gtk3-0 (>= 0.25), libcanberra0 (>= 0.2), libgdk-pixbuf2.0-0 (>= 2.23.0), libglib2.0-0 (>= 2.39.90), libgtk-3-0 (>= 3.11.5), libx11-6, libxext6, dconf-gsettings-backend | gsettings-backend
+ Replaces: gnome-screenshot
+ Conflicts: gnome-screenshot
+ Provides: gnome-screenshot (= 3.36.0-1ubuntu1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Attic/GnomeUtils
+ Description: screenshot application for GNOME
+  GNOME Screenshot 3.36.0-1ubuntu1 — official Ubuntu 20.04
+  arm64, KEMI repack.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
