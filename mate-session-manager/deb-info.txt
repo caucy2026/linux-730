@@ -1,0 +1,30 @@
+ new Debian package, version 2.0.
+ size 323112 bytes: control archive=5220 bytes.
+      42 bytes,     1 lines      conffiles
+    1332 bytes,    22 lines      control
+   15359 bytes,   169 lines      md5sums
+     737 bytes,    23 lines   *  postinst             #!/bin/sh
+     527 bytes,    15 lines   *  postrm               #!/bin/sh
+     123 bytes,     9 lines   *  prerm                #!/bin/sh
+ Package: kemi-mate-session-manager
+ Version: 1.24.0-2ubuntu1kemi1
+ Section: misc
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 3312
+ Depends: dbus-x11, mate-desktop-common (>= 1.24), mint-mate-default-settings | ubuntu-mate-default-settings | debian-mate-default-settings (>= 1.24.0-2ubuntu1), dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.17), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.88), libegl1, libepoxy0 (>= 1.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.4), libgtk-3-0 (>= 3.21.4), libice6 (>= 1:1.0.0), libsm6, libsystemd0, libx11-6, libxau6, libxcomposite1 (>= 1:0.3-1), libxext6, libxrender1, libxtst6
+ Recommends: caja, marco, mate-panel, mate-polkit, mate-settings-daemon
+ Provides: x-session-manager, mate-session-manager (= 1.24.0-2ubuntu1)
+ Conflicts: mate-session-manager
+ Replaces: mate-session-manager
+ Breaks: mate-settings-daemon (<< 1.11.0)
+ Homepage: http://www.mate-desktop.org/
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: Session manager of the MATE desktop environment
+  MATE Session Manager 1.24.0-2ubuntu1 —
+  official Ubuntu 20.04 arm64, KEMI
+  repack of mate-session-manager. No
+  exact-version same-source hard Depends
+  to bundle. Official ELF stays under
+  /usr. glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
