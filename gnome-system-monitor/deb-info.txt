@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 153240 bytes: control archive=932 bytes.
+    1009 bytes,    18 lines      control
+     426 bytes,    12 lines   *  postinst             #!/bin/sh
+     426 bytes,    12 lines   *  postrm               #!/bin/sh
+ Package: kemi-gnome-system-monitor
+ Version: 3.36.1-0ubuntu0.20.04.1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 636
+ Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.29), libcairo2 (>= 1.2.4), libgcc-s1 (>= 3.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.56.0), libglibmm-2.4-1v5 (>= 2.54.0), libgtk-3-0 (>= 3.22.0), libgtkmm-3.0-1v5 (>= 3.24.0), libgtop-2.0-11 (>= 2.37.90), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), librsvg2-2 (>= 2.35.0), libsigc++-2.0-0v5 (>= 2.2.0), libstdc++6 (>= 5.2), libsystemd0
+ Recommends: gvfs
+ Conflicts: gnome-system-monitor
+ Replaces: gnome-system-monitor
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/SystemMonitor
+ Description: Process viewer and system resource monitor for GNOME (arm64)
+  GNOME System Monitor 3.36.1 — official Ubuntu 20.04 arm64,
+  KEMI repack.
+  Process viewer and system resource monitor.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
