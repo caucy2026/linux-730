@@ -1,0 +1,9 @@
+# Vinagre
+
+短描述：官方 Ubuntu 20.04 Vinagre 远程桌面查看器（focal-updates / focal-security，arm64）
+
+长描述：Vinagre 3.22.0-7ubuntu0.20.04.1，官方 Ubuntu 20.04（focal-updates / focal-security universe）arm64 软件包的 KEMI 重打包。新于 focal Release 3.22.0-7。同源源码在 focal 各口袋仅此一个二进制包，无 -data/-common 或精确版本库可捆绑。官方 /usr/bin/vinagre 为 aarch64 ELF，留在官方路径；/opt/vinagre 下仅为符号链接。另有 /usr/bin/kemi-vinagre → vinagre。不同源依赖（avahi、libc6 (>= 2.17)、cairo、FreeRDP、gdk-pixbuf、glib、GTK、gtk-vnc、libsecret、spice-client、vte、libxml2、dconf-gsettings-backend | gsettings-backend）保持为 Depends。官方控制文件无 Recommends、无 Suggests。无 Debian 纪元，无波浪号。探针：1 个独立包装 ELF，requiredGlibc 2.17（1 个有版本需求，0 个空值，不发明最大值），无 GLIBCXX（0 个有版本需求，1 个空值，空值不作为最大值），无 RUNPATH，符合 Ubuntu 20.04 / KEMI 101（glibc ≤2.31 / GLIBCXX ≤3.4.28）。官方带 76 个 .mo（含 zh_CN / zh_HK / zh_TW），全部保留，不发明语言包。官方软件包不提供应用图标（桌面 Icon 为主题名 preferences-desktop-remote-desktop）；商城 CREATE 使用从官方 Ubuntu 20.04 humanity-icon-theme 0.6.15 全彩 SVG 栅格化的 128×128 证据 PNG，不打进 deb。官方帮助中的 48×48 preferences-desktop-remote-desktop.png 与其他帮助/应用内资源保持官方，不用作发明的商城图标。官方桌面 Name=Remote Desktop Viewer；商城 app_name=Vinagre（官方软件包说明、README 与 wiki.gnome.org/Apps/Vinagre 使用的常用上游名称）。官方桌面 Exec 已改写为 /usr/bin/vinagre，并添加 TryExec。官方 changelog 为真实文件，已用 cp -L 复制。本包提供版本化 Provides: vinagre (= 3.22.0-7ubuntu0.20.04.1)。官方来源为 Ubuntu 20.04 focal-updates / focal-security universe vinagre 3.22.0-7ubuntu0.20.04.1（arm64）；官方 SHA 与大小已与 ports.ubuntu.com 池文件及 Packages stanza 核对一致。本轮无 librarian URL。安全更新说明：兼容 FreeRDP 2.1.1 安全更新，上传于 2020-05-26 08:46:07 -0400（2020-05-26 20:46:07 Asia/Shanghai）。
+
+发布说明：首次上架官方 Ubuntu 20.04 vinagre 3.22.0-7ubuntu0.20.04.1（focal-updates / focal-security universe arm64）。无同源捆绑。官方 ELF 留在 /usr；/opt 仅为符号链接。官方桌面 Name=Remote Desktop Viewer 保持；商城 app_name=Vinagre。官方桌面 Exec 已改写为绝对路径。官方软件包无应用图标；从官方 U20 Humanity SVG 栅格化的 128×128 证据 PNG 用于商城图标，未打进 deb。探测 1 ELF，glibc 2.17，无 GLIBCXX。合主线：gork.bot协助开发。
+
+合主线：gork.bot协助开发
