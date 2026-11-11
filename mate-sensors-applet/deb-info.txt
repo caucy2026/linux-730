@@ -1,0 +1,32 @@
+ new Debian package, version 2.0.
+ size 213092 bytes: control archive=8888 bytes.
+    1311 bytes,    23 lines      control
+   37344 bytes,   417 lines      md5sums
+     399 bytes,    13 lines   *  postinst             #!/bin/sh
+     462 bytes,    15 lines   *  postrm               #!/bin/sh
+      75 bytes,     1 lines      shlibs
+     385 bytes,     7 lines      symbols
+      72 bytes,     2 lines      triggers
+ Package: kemi-mate-sensors-applet
+ Version: 1.24.0-1kemi1
+ Section: misc
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 7628
+ Depends: libc6 (>= 2.17), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.35.9), libgtk-3-0 (>= 3.21.4), libmate-panel-applet-4-1 (>= 1.18), libnotify4 (>= 0.7.0), libsensors5 (>= 1:3.5.0), dconf-gsettings-backend | gsettings-backend
+ Recommends: hddtemp
+ Suggests: mate-sensors-applet-nvidia
+ Provides: mate-sensors-applet (= 1.24.0-1), mate-sensors-applet-common (= 1.24.0-1), libmate-sensors-applet-plugin0 (= 1.24.0-1)
+ Conflicts: mate-sensors-applet, mate-sensors-applet-common, libmate-sensors-applet-plugin0
+ Replaces: mate-sensors-applet, mate-sensors-applet-common, libmate-sensors-applet-plugin0, mate-sensors-applet (<< 1.9.0), libmatesensorsappletplugin
+ Breaks: mate-sensors-applet (<< 1.9.0), libmatesensorsappletplugin
+ Homepage: http://www.mate-desktop.org/
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: Display readings from hardware sensors in your MATE panel
+  MATE Sensors Applet 1.24.0-1 — official
+  Ubuntu 20.04 arm64, KEMI repack of
+  mate-sensors-applet, bundling official
+  mate-sensors-applet-common and
+  libmate-sensors-applet-plugin0. Official
+  ELF stays under /usr. glibc≤2.31
+  (Ubuntu 20.04). gork.bot协助开发.
