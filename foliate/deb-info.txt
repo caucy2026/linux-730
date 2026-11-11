@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 913136 bytes: control archive=832 bytes.
+     680 bytes,    16 lines      control
+     416 bytes,    12 lines   *  postinst             #!/bin/sh
+     416 bytes,    12 lines   *  postrm               #!/bin/sh
+ Package: kemi-foliate
+ Version: 2.6.4-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: all
+ Installed-Size: 5311
+ Depends: dconf-gsettings-backend | gsettings-backend, gjs (>= 1.52), gir1.2-webkit2-4.0, python3
+ Recommends: gir1.2-gspell-1, gir1.2-handy-0.0, iso-codes (>= 3.67)
+ Conflicts: com.github.johnfactotum.foliate, foliate
+ Replaces: com.github.johnfactotum.foliate, foliate
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://johnfactotum.github.io/foliate/
+ Description: Foliate eBook viewer (GTK3)
+  Foliate 2.6.4 — official GTK3 all.deb, KEMI repack.
+  Simple modern GTK eBook viewer (GJS + Epub.js). glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
