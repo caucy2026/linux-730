@@ -1,0 +1,9 @@
+# GNOME Terminal
+
+短描述：官方 Ubuntu 20.04 GNOME Terminal 终端（focal-updates，arm64）
+
+长描述：GNOME Terminal 3.36.2-1ubuntu1~20.04，官方 Ubuntu 20.04（focal-updates main）arm64 软件包的 KEMI 重打包。新于 focal Release 3.36.1.1-1ubuntu1。同源 official arch:all gnome-terminal-data 3.36.2-1ubuntu1~20.04 已捆绑（GUI 硬依赖为同一系列范围 >= 3.36 << 3.37，捆绑与 GUI 相同的官方版本）。官方同源 nautilus-extension-gnome-terminal 仅为 Recommends，已检查且不打包，保持为 Recommends。官方 /usr/bin/gnome-terminal 为 Python 启动器、.wrapper 为 Perl 助手，均非 ELF；官方 gnome-terminal.real 与 gnome-terminal-server 为 aarch64 ELF，留在官方路径；/opt/gnome-terminal 下仅为符号链接。另有 /usr/bin/kemi-gnome-terminal → gnome-terminal。不同源依赖保持为 Depends。官方 Recommends（gvfs、nautilus-extension-gnome-terminal、yelp）保持为 Recommends。无 Debian 纪元；官方波浪号保留在商城 version_name 与 deb 文件名中。探针：2 个独立包装 ELF，requiredGlibc 2.17（2 个有版本需求，0 个空值，不发明最大值），无 GLIBCXX（0 个有版本需求，2 个空值，空值不作为最大值），无 RUNPATH，符合 Ubuntu 20.04 / KEMI 101（glibc ≤2.31 / GLIBCXX ≤3.4.28）。官方无 .mo（language-pack 拆分，官方 help-langpack 符号链接保留，不发明语言包）。官方应用图标仅为 SVG；商城 CREATE 使用从官方 scalable SVG 栅格化的 128×128 证据 PNG，不打进 deb。官方桌面 Name=Terminal；商城 app_name=GNOME Terminal。官方桌面 Exec/TryExec 已改写为 /usr/bin/gnome-terminal。官方 changelog 为真实文件，已用 cp -L 复制。官方 update-alternatives 指向官方 /usr/bin/gnome-terminal.wrapper，已保留。本包提供版本化 Provides: gnome-terminal / gnome-terminal-data（= 3.36.2-1ubuntu1~20.04）以及官方 x-terminal-emulator。官方来源为 Ubuntu 20.04 focal-updates main gnome-terminal 3.36.2-1ubuntu1~20.04（arm64）；官方 SHA 与大小已与 ports.ubuntu.com 池文件及 focal-updates main Packages stanza 核对一致。本轮无 librarian URL。
+
+发布说明：首次上架官方 Ubuntu 20.04 gnome-terminal 3.36.2-1ubuntu1~20.04（focal-updates main arm64）。同源 gnome-terminal-data 已捆绑。官方 ELF 留在 /usr；官方 Python/Perl 启动器保持官方路径且不计入 ELF。/opt 仅为符号链接。官方波浪号保留在 version_name。官方桌面 Name=Terminal 保持；商城 app_name=GNOME Terminal。官方桌面 Exec 已改写为绝对路径。从官方 SVG 栅格化的 128×128 证据 PNG 用于商城图标，未打进 deb。探测 2 ELF，glibc 2.17，无 GLIBCXX。合主线：gork.bot协助开发。
+
+合主线：gork.bot协助开发

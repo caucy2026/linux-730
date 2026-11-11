@@ -1,0 +1,25 @@
+ new Debian package, version 2.0.
+ size 186484 bytes: control archive=1176 bytes.
+    1128 bytes,    19 lines      control
+     933 bytes,    27 lines   *  postinst             #!/bin/sh
+     511 bytes,    14 lines   *  postrm               #!/bin/sh
+     136 bytes,    10 lines   *  prerm                #!/bin/sh
+ Package: kemi-gnome-terminal
+ Version: 3.36.2-1ubuntu1~20.04kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 725
+ Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libcairo2 (>= 1.2.4), libdconf1 (>= 0.14.0), libglib2.0-0 (>= 2.50.0), libgtk-3-0 (>= 3.22.27), libpango-1.0-0 (>= 1.14.0), libuuid1 (>= 2.16), libvte-2.91-0 (>= 0.60.2), libx11-6, dconf-gsettings-backend | gsettings-backend, default-dbus-session-bus | dbus-session-bus, python3, python3-gi, gir1.2-glib-2.0, gsettings-desktop-schemas (>= 0.1.0)
+ Recommends: gvfs, nautilus-extension-gnome-terminal, yelp
+ Replaces: gnome-terminal, gnome-terminal-data
+ Conflicts: gnome-terminal, gnome-terminal-data
+ Provides: x-terminal-emulator, gnome-terminal (= 3.36.2-1ubuntu1~20.04), gnome-terminal-data (= 3.36.2-1ubuntu1~20.04)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Terminal
+ Description: GNOME terminal emulator application
+  GNOME Terminal 3.36.2-1ubuntu1~20.04 — official Ubuntu
+  20.04 arm64, KEMI repack. Bundles official
+  gnome-terminal-data.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
