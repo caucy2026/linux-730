@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 190396 bytes: control archive=888 bytes.
+     684 bytes,    19 lines      control
+     511 bytes,    13 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+ Package: kemi-glade
+ Version: 3.22.2-1kemi1
+ Section: devel
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 364
+ Depends: libc6 (>= 2.17), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libgladeui-2-6 (>= 3.22.0), libglib2.0-0 (>= 2.53.2), libgtk-3-0 (>= 3.21.5), libpango-1.0-0 (>= 1.18.0)
+ Recommends: libgtk-3-dev, devhelp
+ Replaces: glade
+ Conflicts: glade
+ Provides: glade (= 3.22.2-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://glade.gnome.org/
+ Description: GTK+ User Interface Builder
+  Glade 3.22.2-1 — official Ubuntu 20.04
+  Architecture: arm64, KEMI repack.
+  GTK3 UI designer (RAD / XML).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
