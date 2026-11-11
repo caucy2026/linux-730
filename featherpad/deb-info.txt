@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 359192 bytes: control archive=856 bytes.
+     844 bytes,    16 lines      control
+     281 bytes,     9 lines   *  postinst             #!/bin/sh
+     281 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-featherpad
+ Version: 0.12.1-1kemi1
+ Section: editors
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1279
+ Depends: libc6 (>= 2.17), libgcc-s1 (>= 3.0), libhunspell-1.7-0, libqt5core5a (>= 5.12.2), libqt5gui5 (>= 5.12.2) | libqt5gui5-gles (>= 5.12.2), libqt5network5 (>= 5.0.2), libqt5printsupport5 (>= 5.0.2), libqt5svg5 (>= 5.6.0~beta), libqt5widgets5 (>= 5.11.0~rc1), libqt5x11extras5 (>= 5.6.0), libstdc++6 (>= 5.2), libx11-6
+ Recommends: featherpad-l10n, libglib2.0-bin
+ Conflicts: featherpad
+ Replaces: featherpad
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://github.com/tsujan/FeatherPad
+ Description: FeatherPad lightweight Qt5 text editor (arm64)
+  FeatherPad 0.12.1 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight Qt5 plain-text editor. glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
