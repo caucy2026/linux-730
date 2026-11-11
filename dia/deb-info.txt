@@ -1,0 +1,28 @@
+ new Debian package, version 2.0.
+ size 7965588 bytes: control archive=1312 bytes.
+    1110 bytes,    21 lines      control
+    1316 bytes,    21 lines   *  postinst             #!/bin/sh
+     467 bytes,    14 lines   *  postrm               #!/bin/sh
+     355 bytes,     9 lines   *  preinst              #!/bin/sh
+     817 bytes,    13 lines   *  prerm                #!/bin/sh
+ Package: kemi-dia
+ Version: 0.97.3+git20160930-9kemi1
+ Section: graphics
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 25222
+ Depends: libart-2.0-2 (>= 2.3.19), libc6 (>= 2.29), libcairo2 (>= 1.12.0), libfreetype6 (>= 2.2.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk2.0-0 (>= 2.24.0), libpango-1.0-0 (>= 1.18.0), libpangocairo-1.0-0 (>= 1.14.0), libpangoft2-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4), xml-core (>= 0.14)
+ Recommends: gsfonts-x11, dia-shapes
+ Breaks: dia-libs (<< 0.97.3+git20160904-1~)
+ Replaces: dia, dia-common, dia-libs (<< 0.97.3+git20160904-1~)
+ Conflicts: dia, dia-common
+ Provides: dia (= 0.97.3+git20160930-9), dia-common (= 0.97.3+git20160930-9)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Dia/
+ Description: Diagram editor (arm64)
+  Dia 0.97.3+git20160930 — official Ubuntu 20.04 arm64,
+  KEMI repack, with bundled dia-common.
+  Editor for diagrams, graphs and charts (UML, ER,
+  network and more).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
