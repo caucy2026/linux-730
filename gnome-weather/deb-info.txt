@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 5159424 bytes: control archive=936 bytes.
+     877 bytes,    19 lines      control
+     511 bytes,    13 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+ Package: kemi-gnome-weather
+ Version: 3.36.1-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: all
+ Installed-Size: 5670
+ Depends: geoclue-2.0 (>= 2.3.1), gir1.2-gdkpixbuf-2.0, gir1.2-geoclue-2.0 (>= 2.3.1), gir1.2-geocodeglib-1.0, gir1.2-glib-2.0 (>= 1.35.9), gir1.2-gnomedesktop-3.0, gir1.2-gtk-3.0 (>= 3.11.4), gir1.2-gweather-3.0 (>= 3.17.2), gjs (>= 1.49.4), libglib2.0-bin (>= 2.40), dconf-gsettings-backend | gsettings-backend
+ Replaces: gnome-weather
+ Conflicts: gnome-weather
+ Provides: gnome-weather (= 3.36.1-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Weather
+ Description: access current conditions and forecasts
+  GNOME Weather 3.36.1-1 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Current conditions and forecasts for a city
+  (GTK3, GJS typelib GUI).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
