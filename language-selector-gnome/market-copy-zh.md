@@ -1,0 +1,9 @@
+# Language Support
+
+短描述：官方 Ubuntu 20.04 Language Support 语言与语言包配置工具（focal-updates main，Architecture: all）
+
+长描述：Language Support（官方软件包名 language-selector-gnome，官方启动器 /usr/bin/gnome-language-selector）0.204.2，官方 Ubuntu 20.04（focal-updates main）Architecture: all 软件包的 KEMI 重打包，新于 focal Release 0.204。捆绑官方同源精确版本硬依赖 language-selector-common (= 0.204.2)。common 自身在同一 updates 版本上没有同源精确版本硬依赖，不再继续捆绑。官方 /usr/bin/gnome-language-selector 为 Python 3 包装器（非 ELF），留在官方路径；捆绑的 /usr/bin/check-language-support 同留官方路径。/opt/language-selector-gnome 下仅为符号链接。另有 /usr/bin/kemi-language-selector-gnome → gnome-language-selector。不同源依赖保持为 Depends。官方 Recommends yelp 保持为 Recommends。官方控制文件无 Suggests。探针：0 个独立包装 ELF（Architecture: all，官方启动器为 Python），对 101 作空通过（None-safe，不从空值发明最大值），符合 Ubuntu 20.04 / KEMI 101（glibc ≤2.31）。官方 common 软件包自带 134 个 .mo（含 zh_CN、zh_HK、zh_TW），保持官方，不发明语言包。官方软件包不带应用图标（桌面 Icon 为主题名 preferences-desktop-locale）；官方 32×32 language-selector.png 位图留在官方路径。从官方 Ubuntu 20.04 humanity-icon-theme 0.6.15 的 preferences-desktop-locale.svg（48）栅格化的 128×128 evidence PNG 仅用作商城 CREATE --icon，不打入 deb；不捆绑主题包。官方桌面 Name=Language Support；商城 app_name=Language Support（官方桌面 Name 即日常用户可见标题；本包无 appdata <name>，无 GenericName）。官方桌面 Exec 已为绝对路径并保持；已添加 TryExec。官方 GUI changelog 为指向已捆绑 language-selector-common 的符号链接，捆绑后可解析，并已用 cp -L 复制真实官方 changelog。官方 dh_python3 钩子已改指向 kemi-language-selector-gnome；官方 common 维护脚本与 conffiles 保留。本包提供版本化 Provides: language-selector-gnome / language-selector-common (= 0.204.2)。官方 SHA 与大小已与 ports.ubuntu.com 及 Aliyun ubuntu-ports 池文件及 focal-updates main Packages stanza 核对一致。本轮无 librarian URL。无 Debian 纪元，无波浪号。mall version_name 0.204.2kemi1 长度为 12，已被商城接受，无需缩短。
+
+发布说明：首次上架官方 Ubuntu 20.04 language-selector-gnome 0.204.2（focal-updates main，all）。捆绑官方 language-selector-common。官方 Python 启动器留在 /usr；/opt 仅为符号链接。官方桌面 Name=Language Support 保持；商城 app_name=Language Support。官方无应用图标；128 evidence PNG 仅作 CREATE 图标且不打包。探测 0 ELF，空通过。合主线：gork.bot协助开发。
+
+合主线：gork.bot协助开发
