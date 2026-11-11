@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 421216 bytes: control archive=1124 bytes.
+     611 bytes,    18 lines      control
+     817 bytes,    21 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     438 bytes,    11 lines   *  prerm                #!/bin/sh
+ Package: kemi-bleachbit
+ Version: 3.9.0-1kemi1
+ Section: admin
+ Priority: optional
+ Architecture: all
+ Installed-Size: 2132
+ Depends: gir1.2-gtk-3.0, libgtk-3-0, policykit-1, python3-chardet, python3-gi, python3-requests, python3:any
+ Replaces: bleachbit
+ Conflicts: bleachbit
+ Provides: bleachbit (= 3.9.0-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://www.bleachbit.org/
+ Description: delete unnecessary files from the system
+  BleachBit 3.9.0-1 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Python 3 GTK3 typelib system cleaner.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
