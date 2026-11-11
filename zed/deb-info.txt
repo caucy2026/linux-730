@@ -1,0 +1,11 @@
+Package: kemi-zed
+Version: 1.27.0-1kemi1
+Architecture: arm64
+Upstream: official zed-linux-aarch64.tar.gz v1.27.0
+Layout: /opt/zed.app + /usr/bin/zed (symlink to /opt/zed.app/bin/zed)
+Dropped: none
+Probe: aarch64 requiredGlibc 2.30 PASS vs 101 ≤2.31 (11 ELFs)
+Note: official Linux docs claim aarch64 glibc >= 2.35; this artifact's version-needs are 2.30
+Bytes: 58913784
+SHA256: 41040a55152c2d542ab173fabceaa2990b912bf6881ddbf9b7c2af58cbf3dbd5
+合主线：gork.bot协助开发
