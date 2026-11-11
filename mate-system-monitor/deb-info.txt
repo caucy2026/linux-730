@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 102432 bytes: control archive=1256 bytes.
+    1137 bytes,    20 lines      control
+     739 bytes,     9 lines      md5sums
+     204 bytes,     7 lines   *  postinst             #!/bin/sh
+     261 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-mate-system-monitor
+ Version: 1.24.0-1kemi1
+ Section: misc
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 416
+ Depends: mate-system-monitor-common (>= 1.24.0-1), libc6 (>= 2.29), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.2.4), libgcc-s1 (>= 3.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.45.3), libglibmm-2.4-1v5 (>= 2.54.0), libgtk-3-0 (>= 3.21.5), libgtkmm-3.0-1v5 (>= 3.24.0), libgtop-2.0-11 (>= 2.37.90), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), librsvg2-2 (>= 2.14.4), libsigc++-2.0-0v5 (>= 2.2.0), libstdc++6 (>= 5.2), libsystemd0, libwnck-3-0 (>= 2.91.6), libxml2 (>= 2.7.4)
+ Recommends: gvfs
+ Provides: mate-system-monitor (= 1.24.0-1)
+ Conflicts: mate-system-monitor
+ Replaces: mate-system-monitor
+ Homepage: http://www.mate-desktop.org/
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: Process viewer and system resource monitor for MATE
+  MATE System Monitor 1.24.0-1 — official
+  Ubuntu 20.04 arm64, KEMI repack of
+  mate-system-monitor. Official
+  mate-system-monitor-common stays Depends
+  (range, not bundled). glibc≤2.31
+  (Ubuntu 20.04). gork.bot协助开发.
