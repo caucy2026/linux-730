@@ -1,0 +1,25 @@
+ new Debian package, version 2.0.
+ size 858124 bytes: control archive=3116 bytes.
+   11692 bytes,   256 lines      conffiles
+     610 bytes,    18 lines      control
+     768 bytes,    23 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     393 bytes,    12 lines   *  prerm                #!/bin/sh
+ Package: kemi-gufw
+ Version: 20.04.1-1ubuntu1kemi1
+ Section: admin
+ Priority: optional
+ Architecture: all
+ Installed-Size: 2994
+ Depends: gir1.2-gtk-3.0, gir1.2-webkit2-4.0, policykit-1, python3-gi, ufw (>= 0.34~rc), python3:any
+ Replaces: gufw
+ Conflicts: gufw
+ Provides: gufw (= 20.04.1-1ubuntu1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://costales.github.io/projects/gufw/
+ Description: graphical user interface for ufw
+  Gufw 20.04.1-1ubuntu1 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Python 3 GTK3 typelib ufw front end.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
