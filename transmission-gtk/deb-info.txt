@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 523880 bytes: control archive=900 bytes.
+     916 bytes,    17 lines      control
+     354 bytes,    12 lines   *  postinst             #!/bin/sh
+     354 bytes,    12 lines   *  postrm               #!/bin/sh
+ Package: kemi-transmission-gtk
+ Version: 2.94-2ubuntu3kemi1
+ Section: net
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1551
+ Depends: libappindicator3-1 (>= 0.4.90), libc6 (>= 2.29), libcurl4 (>= 7.18.0), libevent-2.1-7 (>= 2.1.8-stable), libgdk-pixbuf2.0-0 (>= 2.25.2), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.3.16), libminiupnpc17 (>= 1.9.20140610), libnatpmp1 (>= 20150609), libpango-1.0-0 (>= 1.14.0), libssl1.1 (>= 1.1.0), zlib1g (>= 1:1.1.4)
+ Recommends: xdg-utils
+ Conflicts: transmission-gtk, transmission-common
+ Replaces: transmission-gtk, transmission-common
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://transmissionbt.com/
+ Description: lightweight BitTorrent client (GTK+ interface, arm64)
+  Transmission 2.94 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3 BitTorrent client (transmission-common bundled).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
