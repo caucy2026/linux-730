@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 119584 bytes: control archive=888 bytes.
+     726 bytes,    19 lines      control
+     511 bytes,    13 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+ Package: kemi-gnome-logs
+ Version: 3.34.0-1ubuntu1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 358
+ Depends: libc6 (>= 2.17), libglib2.0-0 (>= 2.43.90), libgtk-3-0 (>= 3.22.0), libpango-1.0-0 (>= 1.14.0), libsystemd0, dconf-gsettings-backend | gsettings-backend, gsettings-desktop-schemas
+ Replaces: gnome-logs
+ Conflicts: gnome-logs
+ Provides: gnome-logs (= 3.34.0-1ubuntu1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Logs
+ Description: viewer for the systemd journal
+  GNOME Logs 3.34.0-1ubuntu1 — official Ubuntu 20.04
+  Architecture: arm64, KEMI repack.
+  View systemd journal event logs
+  (GTK3 GUI).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
