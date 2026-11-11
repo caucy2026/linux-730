@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 168380 bytes: control archive=1036 bytes.
+    1056 bytes,    17 lines      control
+     648 bytes,    16 lines   *  postinst             #!/bin/sh
+     511 bytes,    14 lines   *  postrm               #!/bin/sh
+ Package: kemi-gnome-contacts
+ Version: 3.36.1-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 649
+ Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libcairo2 (>= 1.10.0), libcheese-gtk25 (>= 3.18.0), libcheese8 (>= 3.18.0), libedataserver-1.2-24 (>= 3.17), libedataserverui-1.2-2 (>= 3.16.2), libfolks-eds25 (>= 0.11.4), libfolks25 (>= 0.11.4), libgdk-pixbuf2.0-0 (>= 2.23.0), libgee-0.8-2 (>= 0.20.0), libglib2.0-0 (>= 2.51.2), libgnome-desktop-3-19 (>= 3.33), libgoa-1.0-0b (>= 3.5.90), libgtk-3-0 (>= 3.22.0), libhandy-0.0-0 (>= 0.0.12), libpango-1.0-0 (>= 1.37.5), libpangocairo-1.0-0 (>= 1.14.0), libwayland-server0 (>= 1.0.2), dconf-gsettings-backend | gsettings-backend
+ Replaces: gnome-contacts
+ Conflicts: gnome-contacts
+ Provides: gnome-contacts (= 3.36.1-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Contacts
+ Description: Contacts manager for GNOME
+  GNOME Contacts 3.36.1-1 — official Ubuntu 20.04
+  arm64, KEMI repack.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
