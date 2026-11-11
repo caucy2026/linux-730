@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 136504 bytes: control archive=808 bytes.
+     617 bytes,    19 lines      control
+     503 bytes,    14 lines   *  postinst             #!/bin/sh
+     503 bytes,    14 lines   *  postrm               #!/bin/sh
+ Package: kemi-grsync
+ Version: 1.2.6-2kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 528
+ Depends: libc6 (>= 2.17), libglib2.0-0 (>= 2.35.9), libgtk2.0-0 (>= 2.12.0), libpango-1.0-0 (>= 1.14.0), rsync
+ Recommends: ssh-askpass
+ Replaces: grsync
+ Conflicts: grsync
+ Provides: grsync (= 1.2.6-2)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.opbyte.it/grsync/
+ Description: GTK+ frontend for rsync (arm64)
+  Grsync 1.2.6-2 — official Ubuntu 20.04 arm64,
+  KEMI repack.
+  Simple GTK2 GUI for rsync directory synchronization.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
