@@ -1,0 +1,29 @@
+ new Debian package, version 2.0.
+ size 330040 bytes: control archive=1120 bytes.
+     957 bytes,    22 lines      control
+     511 bytes,    13 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     104 bytes,     2 lines      shlibs
+      72 bytes,     2 lines      triggers
+ Package: kemi-gnome-calculator
+ Version: 1:3.36.0-1ubuntu1kemi1
+ Section: math
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1799
+ Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libgee-0.8-2 (>= 0.20), libglib2.0-0 (>= 2.43.92), libgtk-3-0 (>= 3.19.12), libgtksourceview-4-0 (>= 2.91.4), libmpc3, libmpfr6 (>= 3.1.3), libsoup2.4-1 (>= 2.42), libxml2 (>= 2.7.4), dconf-gsettings-backend | gsettings-backend
+ Recommends: yelp, gvfs
+ Breaks: gcalctool (<< 6.7)
+ Replaces: gnome-calculator, gcalctool (<< 6.7)
+ Conflicts: gnome-calculator
+ Provides: gnome-calculator (= 1:3.36.0-1ubuntu1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Calculator
+ Description: GNOME desktop calculator
+  GNOME Calculator 1:3.36.0-1ubuntu1 — official Ubuntu 20.04
+  Architecture: arm64, KEMI repack.
+  Graphical calculator with financial,
+  logical and scientific modes
+  (GTK3 GUI).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
