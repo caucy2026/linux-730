@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 94576 bytes: control archive=876 bytes.
+      49 bytes,     1 lines      conffiles
+     787 bytes,    16 lines      control
+     291 bytes,     9 lines   *  postinst             #!/bin/sh
+     291 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-xfce4-notes
+ Version: 1.8.1-3kemi1
+ Section: xfce
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 385
+ Depends: libc6 (>= 2.29), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.24.0), libgtk2.0-0 (>= 2.24.0), libpango-1.0-0 (>= 1.14.0), libunique-1.0-0 (>= 1.0.0), libx11-6, libxfce4ui-1-0 (>= 4.8.0), libxfce4util7 (>= 4.9.0), libxfconf-0-3 (>= 4.6.0)
+ Conflicts: xfce4-notes
+ Replaces: xfce4-notes
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin
+ Description: Notes application for the Xfce4 desktop (arm64)
+  XFCE Notes 1.8.1 — official Ubuntu 20.04 arm64, KEMI repack.
+  Sticky-note GTK2 applet for quick notes.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
