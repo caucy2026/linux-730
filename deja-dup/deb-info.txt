@@ -1,0 +1,28 @@
+ new Debian package, version 2.0.
+ size 250380 bytes: control archive=1216 bytes.
+      53 bytes,     1 lines      conffiles
+    1024 bytes,    20 lines      control
+     747 bytes,    16 lines   *  postinst             #!/bin/sh
+     613 bytes,    14 lines   *  postrm               #!/bin/sh
+     253 bytes,     5 lines   *  preinst              #!/bin/sh
+     253 bytes,     5 lines   *  prerm                #!/bin/sh
+ Package: kemi-deja-dup
+ Version: 40.7-0ubuntu2kemi1
+ Section: utils
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 867
+ Depends: duplicity (>= 0.7.14), dconf-gsettings-backend | gsettings-backend, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libglib2.0-0 (>= 2.56), libgoa-1.0-0b (>= 3.8.0), libgpg-error0 (>= 1.14), libgtk-3-0 (>= 3.22), libjson-glib-1.0-0 (>= 1.2.0), libnautilus-extension1a (>= 3.21.92-3~), libpackagekit-glib2-18 (>= 1.1.0), libpango-1.0-0 (>= 1.14.0), libsecret-1-0 (>= 0.18.6), libsoup2.4-1 (>= 2.48)
+ Recommends: gvfs-backends, packagekit, policykit-1
+ Suggests: python3-boto (>= 0.9d), python3-swiftclient, python3-pydrive
+ Replaces: deja-dup
+ Conflicts: deja-dup
+ Provides: deja-dup (= 40.7-0ubuntu2)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://launchpad.net/deja-dup
+ Description: Backup utility
+  Déjà Dup 40.7-0ubuntu2 — official Ubuntu 20.04
+  Architecture: arm64, KEMI repack.
+  GTK3 backup utility (duplicity backend).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
