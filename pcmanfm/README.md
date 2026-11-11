@@ -1,0 +1,17 @@
+# PCManFM (KEMI Linux)
+
+PCMan File Manager — extremely fast and lightweight GTK+ 2 file manager with tabbed browsing — packaged for KEMI mall (arm64, Ubuntu 20.04 / 101).
+
+| field | value |
+|---|---|
+| app_id | **367** |
+| package_name | `com.kemi.pcmanfm` |
+| dpkg | `kemi-pcmanfm` |
+| version | `1.3.1-1kemi1` / code **131** |
+| bytes | 265384 |
+| sha256 | `c843a189e3a2425f41723e10e2c08555f8e466971115e55dbe968cb900a90381` |
+| CDN | https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794403160319_b3ad7d07_kemi-pcmanfm_1_3_1-1kemi1_arm64.deb |
+
+Notes: official Ubuntu 20.04 (focal universe) `pcmanfm_1.3.1-1_arm64.deb` v1.3.1 (267124 B, sha256 `2a8f7fb398f73ecbf4f7355f1f2266669b90bc1f0c585a876be50de2c67092c1`). Official file SHA + size matched official `https://ports.ubuntu.com/ubuntu-ports/pool/universe/p/pcmanfm/` pool files and the Ubuntu 20.04 focal universe arm64 Packages stanzas (streamed; Aliyun ubuntu-ports mirror used for the fetch). There is no newer package in focal-updates. No librarian URL and no `.buildinfo` is recorded this run (pool `.buildinfo` 404). Changelog: 1.3.1-1 uploaded Mon, 17 Dec 2018 23:19:11 +0200 (2018-12-18 05:19:11 Asia/Shanghai). There is no pcmanfm-common / data or typelib package; this is a single official binary package (source pcmanfm). Official same-source `pcmanfm-dbg` is a debug package and is not bundled. `pcmanfm-qt` is a different source and is not this package. `libfm-gtk4`, `libfm4`, GTK2 and `shared-mime-info` are different-source system Depends and are not bundled. Official Recommends (`gvfs-backends`, `gvfs-fuse`, `lxpolkit | polkit-1-auth-agent | policykit-1-gnome`, icon themes) stay Recommends and are not bundled. Official binary is `/usr/bin/pcmanfm`. The official ELF embeds compiled `/usr/share/locale`, `/usr/lib/aarch64-linux-gnu/pcmanfm` and `/usr/share/pcmanfm/ui/*.ui`, so the official ELF stays at `/usr/bin`; `/opt/pcmanfm/*` are only symlinks (HardInfo/Xpad/qpdfview/Pluma/Gedit/XFCE Notes/Xfburn/Parole/GNOME Disks/GNOME System Monitor/GParted/Seahorse/Remmina/dconf-editor/xfce4-terminal/thunar layout). Also `/usr/bin/kemi-pcmanfm` → `pcmanfm`. The official empty plugin directory `/usr/lib/aarch64-linux-gnu/pcmanfm` is kept (compiled path). Official language-pack split does not apply here: this deb ships 54 `.mo` including zh_CN (keep the official tree; language packs not invented/bundled). No help directory and no icons in this official deb (do not invent UI or icons). Desktop, man, official UI and conffile `/etc/xdg/pcmanfm/default/pcmanfm.conf` stay on standard paths. Official desktop `Icon=system-file-manager` and `Icon=user-desktop` (theme icons). KEMI desktop Exec/TryExec rewritten to `/usr/bin/pcmanfm` (including `--desktop-pref`). Official apport hook was a dangling symlink to `source_libfm.py` and is not shipped. Probe: aarch64 · 1 ELF (`/usr/bin/pcmanfm`) · requiredGlibc **2.17** · no GLIBCXX. Runtime Depends match official Ubuntu 20.04 (GTK2, libfm-gtk4, libfm4, libc6 ≥ 2.17). Conflicts/Replaces pcmanfm. The KEMI version string `1.3.1-1kemi1` is 12 characters and is under the mall `version_name` limit that rejected Remmina's 33-character string (sibling `3.36.1-0ubuntu0.20.04.1kemi1` at 28 characters succeeded). Recipe-only; no `.deb` in git. L1–L4 PASS (CREATE 创建并已上架（免审）; L3 hit on page 1). CDN filename was not truncated. 101 lean smoke: **not attempted** (SKIP_TRANSPORT; prior connect at 2026-11-11 15:42 Asia/Shanghai was transport_timeout; no user retry auth).
+
+合主线：gork.bot协助开发
