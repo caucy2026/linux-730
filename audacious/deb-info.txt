@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 307496 bytes: control archive=976 bytes.
+     848 bytes,    19 lines      control
+     345 bytes,    12 lines   *  postinst             #!/bin/sh
+     364 bytes,    12 lines   *  postrm               #!/bin/sh
+      28 bytes,     1 lines      shlibs
+      26 bytes,     1 lines      triggers
+ Package: kemi-audacious
+ Version: 3.10.1-1build1kemi1
+ Section: sound
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1438
+ Depends: audacious-plugins (>= 3.10.1), dbus, default-dbus-session-bus | dbus-session-bus | dbus-x11, gtk2-engines-pixbuf, libc6 (>= 2.17), libgcc-s1 (>= 3.0), libglib2.0-0 (>= 2.37.3), libstdc++6 (>= 4.1.1)
+ Recommends: unzip
+ Provides: audacious, libaudcore5
+ Conflicts: audacious, libaudcore5
+ Replaces: audacious, libaudcore5
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.audacious-media-player.org/
+ Description: small and fast audio player which supports lots of formats (arm64)
+  Audacious 3.10.1 — official Ubuntu 20.04 arm64, KEMI
+  repack, with bundled official libaudcore5.
+  A small and fast audio player which supports lots of formats.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
