@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 438160 bytes: control archive=788 bytes.
+     635 bytes,    16 lines      control
+     354 bytes,    12 lines   *  postinst             #!/bin/sh
+     354 bytes,    12 lines   *  postrm               #!/bin/sh
+ Package: kemi-xarchiver
+ Version: 0.5.4.14-1kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1381
+ Depends: libc6 (>= 2.17), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.35.9), libgtk-3-0 (>= 3.0.0)
+ Recommends: bzip2, p7zip-full, unzip, xdg-utils, xz-utils
+ Conflicts: xarchiver
+ Replaces: xarchiver
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://github.com/ib/xarchiver
+ Description: Xarchiver lightweight GTK+ archive manager (arm64)
+  Xarchiver 0.5.4.14 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3 archive manager. glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
