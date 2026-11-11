@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 471488 bytes: control archive=860 bytes.
+     761 bytes,    16 lines      control
+     404 bytes,    12 lines   *  postinst             #!/bin/sh
+     281 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-mtpaint
+ Version: 3.40-3kemi1
+ Section: graphics
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 1616
+ Depends: libc6 (>= 2.17), libfreetype6 (>= 2.2.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libgif7 (>= 5.1), libglib2.0-0 (>= 2.31.8), libgtk2.0-0 (>= 2.24.0), libjpeg8 (>= 8c), libpango-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), libtiff5 (>= 4.0.3), libx11-6, zlib1g (>= 1:1.2.0), gtklp
+ Conflicts: mtpaint
+ Replaces: mtpaint
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://mtpaint.sourceforge.net/
+ Description: mtPaint pixel-art and photo editor (arm64)
+  mtPaint 3.40 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK2 painting program for pixel art and photos.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
