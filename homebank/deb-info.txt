@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 1671100 bytes: control archive=864 bytes.
+     843 bytes,    19 lines      control
+     380 bytes,    11 lines   *  postinst             #!/bin/sh
+     380 bytes,    11 lines   *  postrm               #!/bin/sh
+ Package: kemi-homebank
+ Version: 5.3.2-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 3730
+ Depends: libc6 (>= 2.29), libcairo2 (>= 1.4.10), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.51.0), libgtk-3-0 (>= 3.21.5), libofx7 (>= 0.9.14), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libsoup2.4-1 (>= 2.41.90)
+ Recommends: librsvg2-common
+ Replaces: homebank, homebank-data
+ Conflicts: homebank, homebank-data
+ Provides: homebank (= 5.3.2-1), homebank-data (= 5.3.2-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://homebank.free.fr/
+ Description: Manage your personal accounts at home (arm64)
+  HomeBank 5.3.2 — official Ubuntu 20.04 arm64,
+  KEMI repack, with bundled homebank-data.
+  Fast, simple personal accounting (GTK3).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
