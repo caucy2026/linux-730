@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 593348 bytes: control archive=1436 bytes.
+    1574 bytes,    21 lines      control
+     702 bytes,    21 lines   *  postinst             #!/bin/sh
+     447 bytes,    12 lines   *  prerm                #!/bin/sh
+ Package: kemi-update-manager
+ Version: 1:20.04.10.24kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: all
+ Installed-Size: 935
+ Depends: python3:any (>= 3.2~), dconf-gsettings-backend | gsettings-backend, libgtk3-perl, python3-aptdaemon.gtk3widgets (>= 1.1.1+bzr982-0ubuntu13) | synaptic, policykit-1, python3-dbus, python3-gi (>= 3.8), python3-yaml, gir1.2-gtk-3.0, gir1.2-snapd-1, ubuntu-release-upgrader-gtk, update-notifier, gnome-shell | policykit-1-gnome | polkit-kde-agent-1 | lxpolkit | lxqt-policykit | mate-polkit | polkit-1-auth-agent, python3-distro-info, distro-info-data, lsb-release, ubuntu-release-upgrader-core (>= 1:18.04.9), ubuntu-advantage-tools (>= 30~), python3-apt (>= 0.8.5~), python3-distupgrade
+ Recommends: software-properties-gtk (>= 0.71.2), python3-launchpadlib, libpam-modules (>= 1.0.1-9ubuntu3)
+ Suggests: gir1.2-dbusmenu-glib-0.4, gir1.2-unity-5.0
+ Breaks: update-notifier (<< 3.177), computer-janitor (<= 1.11-0ubuntu1), python3-distupgrade (<< 1:16.10.10)
+ Replaces: update-manager, update-manager-core, python3-update-manager
+ Conflicts: update-manager, update-manager-core, python3-update-manager
+ Provides: update-manager (= 1:20.04.10.24), update-manager-core (= 1:20.04.10.24), python3-update-manager (= 1:20.04.10.24)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: GNOME application that manages apt updates
+  Software Updater 20.04.10.24 — official Ubuntu
+  20.04 all, KEMI repack of update-manager.
+  Bundles official update-manager-core and
+  python3-update-manager.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
