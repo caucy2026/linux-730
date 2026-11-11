@@ -1,0 +1,25 @@
+ new Debian package, version 2.0.
+ size 516728 bytes: control archive=1044 bytes.
+    1021 bytes,    20 lines      control
+     648 bytes,    16 lines   *  postinst             #!/bin/sh
+     511 bytes,    14 lines   *  postrm               #!/bin/sh
+ Package: kemi-cheese
+ Version: 3.34.0-1ubuntu1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 874
+ Depends: libc6 (>= 2.17), libcanberra-gtk3-0 (>= 0.25), libcheese-gtk25 (>= 3.18.0), libcheese8 (>= 3.18.0), libclutter-1.0-0 (>= 1.16), libclutter-gtk-1.0-0 (>= 0.91.8), libgdk-pixbuf2.0-0 (>= 2.25.2), libglib2.0-0 (>= 2.39.90), libgnome-desktop-3-19 (>= 3.17.92), libgstreamer1.0-0 (>= 1.0.0), libgtk-3-0 (>= 3.21.5), gnome-video-effects, dconf-gsettings-backend | gsettings-backend
+ Recommends: gvfs, yelp
+ Suggests: gnome-video-effects-frei0r
+ Replaces: cheese, cheese-common
+ Conflicts: cheese, cheese-common
+ Provides: cheese (= 3.34.0-1ubuntu1), cheese-common (= 3.34.0-1ubuntu1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Cheese
+ Description: tool to take pictures and videos from your webcam
+  Cheese 3.34.0-1ubuntu1 — official Ubuntu
+  20.04 arm64, KEMI repack. Bundles official
+  cheese-common.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
