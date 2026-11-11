@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 2755532 bytes: control archive=1008 bytes.
+     838 bytes,    19 lines      control
+     471 bytes,    15 lines   *  postinst             #!/bin/sh
+     490 bytes,    15 lines   *  postrm               #!/bin/sh
+      22 bytes,     1 lines      shlibs
+      26 bytes,     1 lines      triggers
+ Package: kemi-geany
+ Version: 1.36-1build1kemi1
+ Section: devel
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 10354
+ Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.27), libcairo2 (>= 1.8.0), libgcc-s1 (>= 3.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.41.1), libgtk-3-0 (>= 3.21.5), libpango-1.0-0 (>= 1.20.0), libpangocairo-1.0-0 (>= 1.14.0), libstdc++6 (>= 5.2)
+ Suggests: libvte9, doc-base
+ Provides: geany, geany-common, geany-abi-18432, geany-api-239
+ Conflicts: geany, geany-common
+ Replaces: geany, geany-common
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.geany.org
+ Description: fast and lightweight IDE (arm64)
+  Geany 1.36 — official Ubuntu 20.04 arm64, KEMI
+  repack, with bundled official geany-common.
+  A small and fast IDE using GTK+.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
