@@ -1,0 +1,17 @@
+# qpdfview (KEMI Linux)
+
+Lightweight Qt5 tabbed document viewer (Poppler PDF, optional DjVu / PostScript plugins) for KEMI mall (arm64, Ubuntu 20.04 / 101).
+
+| field | value |
+|---|---|
+| app_id | **349** |
+| package_name | `com.kemi.qpdfview` |
+| dpkg | `kemi-qpdfview` |
+| version | `0.4.18-1build1kemi1` / code **418** |
+| bytes | 572024 |
+| sha256 | `968e2329ea4066dfe234e62dae040e56491394eb5e322ef7db66e211e57f60ef` |
+| CDN | https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794396123765_e33f5e4a_kemi-qpdfview_0_4_18-1build1kemi1_arm64.deb |
+
+Notes: official Ubuntu 20.04 (focal) Release `qpdfview_0.4.18-1build1_arm64.deb` v0.4.18 (338152 B, sha256 `59f459e6dffc1e9e85be51fe2057f396c9fb73e8af8d0833b84cc548b139e004`) plus official arch:all `qpdfview-translations_0.4.18-1build1_all.deb` (220988 B, sha256 `25382babab7e67d9d1ca4307ade6d3d9ab678c9dbb7d42bd8269725bcb1cff12`) and official arm64 `qpdfview-djvu-plugin_0.4.18-1build1_arm64.deb` (24416 B, sha256 `07219c04f2ffd6f678f9f15c25a8495f5d82d53547dba9aeb6164dba6815beb3`) / `qpdfview-ps-plugin_0.4.18-1build1_arm64.deb` (17152 B, sha256 `093c14e613459657c6d3263f7a65128bffaa81e0572a2b94d1d83d3eb2d60acb`), bundled. Launchpad HTML published `qpdfview 0.4.18-1build1 in focal arm64` (universe, Release, Published 2020-03-23 21:23:14 Asia/Shanghai; "Copied from ubuntu focal-proposed arm64"). Official file SHA + size matched official `https://ports.ubuntu.com/ubuntu-ports/pool/universe/q/qpdfview/qpdfview_0.4.18-1build1_arm64.deb` (and the translations / plugin files) and the Ubuntu 20.04 focal universe arm64 Packages stanzas (streamed; Aliyun ubuntu-ports mirror used for the fetch). Launchpad librarian / `+files` / `.buildinfo` were retried this run but Launchpad returned 503, so no librarian URL is recorded. The arm64 binary is the "arm64 build of qpdfview 0.4.18-1build1 in ubuntu focal PROPOSED" published to focal Release. Official ELF stays at `/usr/bin/qpdfview` because the binary embeds compiled-in prefixes `/usr/lib/qpdfview` (plugins) and `/usr/share/qpdfview` (help + Qt `.qm`). PDF support ships in the official main deb as `libqpdfview_pdf.so` (focal does not split a separate pdf-poppler plugin package). Help, 40 `.qm` (including zh_CN), 31 help HTML (including zh_CN / zh_TW; no zh_TW `.qm` in this deb), hicolor scalable `qpdfview.svg`, desktop, man, metainfo and mime stay on those standard paths. `/opt/qpdfview/qpdfview` is a symlink to `/usr/bin/qpdfview`. Official desktop `Icon=qpdfview` (hicolor svg shipped). KEMI desktop uses `Exec=/usr/bin/qpdfview --unique %F` and `TryExec=/usr/bin/qpdfview`. Probe: aarch64 · 5 ELF · requiredGlibc **2.17** · requiredGlibcxx **3.4.9** (main) / **3.4** (plugins) · Qt5 + CUPS + SyncTeX + Poppler-Qt5. Runtime Depends: `hicolor-icon-theme`, `libqt5sql5-sqlite`, `libqt5svg5`, `libc6 (>= 2.17)`, `libcups2 (>= 1.4.0)`, `libgcc-s1 (>= 3.0)`, `libpoppler-qt5-1 (>= 0.34.0)`, `libqt5concurrent5 (>= 5.6.0~rc)`, `libqt5core5a (>= 5.12.2)`, `libqt5dbus5 (>= 5.0.2)`, `libqt5gui5 (>= 5.7.0) | libqt5gui5-gles (>= 5.7.0)`, `libqt5printsupport5 (>= 5.0.2)`, `libqt5sql5 (>= 5.0.2)`, `libqt5widgets5 (>= 5.11.0~rc1)`, `libqt5xml5 (>= 5.0.2)`, `libstdc++6 (>= 5)`, `libsynctex2` — all in Ubuntu 20.04 focal. Recommends: `libdjvulibre21 (>= 3.5.27.1)`, `libspectre1 (>= 0.2.3)` (plugin-only libs). Recipe-only; no `.deb` in git. L1–L4 PASS (CREATE 创建并已上架（免审）; L3 hit on page 1). 101 lean smoke: **not attempted** (SKIP_TRANSPORT; prior connect at 2026-11-11 15:42 Asia/Shanghai was transport_timeout; no user retry auth).
+
+合主线：gork.bot协助开发
