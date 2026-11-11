@@ -1,0 +1,31 @@
+ new Debian package, version 2.0.
+ size 195160 bytes: control archive=1436 bytes.
+     199 bytes,     4 lines      conffiles
+    1427 bytes,    23 lines      control
+     900 bytes,    21 lines   *  postinst             #!/bin/sh
+     475 bytes,     6 lines   *  postrm               #!/bin/sh
+     475 bytes,     6 lines   *  preinst              #!/bin/sh
+     913 bytes,    16 lines   *  prerm                #!/bin/sh
+ Package: kemi-system-config-printer
+ Version: 1.5.12-0ubuntu1.1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: all
+ Installed-Size: 1678
+ Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-notify-0.7, gir1.2-packagekitglib-1.0, gir1.2-pango-1.0, gir1.2-polkit-1.0, python3-cups (>= 1.9.60), python3-dbus, python3-gi, python3:any, python3-cairo, python3-requests
+ Recommends: system-config-printer-udev, avahi-utils, cups-pk-helper, gir1.2-secret-1
+ Suggests: gnome-software (>= 3.16.5-2), python3-smbc
+ Conflicts: system-config-printer, system-config-printer-common, python3-cupshelpers
+ Replaces: system-config-printer, system-config-printer-common, python3-cupshelpers, system-config-printer-gnome (<< 1.5.7+20160812-0ubuntu3~), python-cupshelpers (<= 1.5)
+ Breaks: system-config-printer-gnome (<< 1.5.7+20160812-0ubuntu3~), python-cupshelpers (<= 1.5)
+ Provides: system-config-printer (= 1.5.12-0ubuntu1.1), system-config-printer-common (= 1.5.12-0ubuntu1.1), python3-cupshelpers (= 1.5.12-0ubuntu1.1)
+ Homepage: https://github.com/zdohnal/system-config-printer
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: graphical interface to configure the printing system
+  Print Settings 1.5.12-0ubuntu1.1 — official Ubuntu
+  20.04 all, KEMI repack of
+  system-config-printer. Bundles official
+  system-config-printer-common and
+  python3-cupshelpers.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
