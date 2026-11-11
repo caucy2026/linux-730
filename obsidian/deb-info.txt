@@ -1,0 +1,11 @@
+Package: kemi-obsidian
+Version: 1.15.0-1kemi1
+Architecture: arm64
+Upstream: official obsidian-1.15.0-arm64.tar.gz
+Layout: /opt/Obsidian + /usr/bin/obsidian (--no-sandbox)
+Dropped: obsidian-cli (GLIBC_2.34); wrong-arch x86_64 btime/get-fonts binding.node
+  (upstream already try/catches both requires)
+Probe: aarch64 requiredGlibc ≤2.25 PASS vs 101 ≤2.31 (8 ELFs after drop)
+Bytes: 93098852
+SHA256: 3a8abd18bb1797d5b87d72a30cea13447195e8df751389c09d6050b7bff796fe
+合主线：gork.bot协助开发
