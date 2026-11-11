@@ -1,0 +1,23 @@
+ new Debian package, version 2.0.
+ size 1028028 bytes: control archive=880 bytes.
+     869 bytes,    18 lines      control
+     281 bytes,     9 lines   *  postinst             #!/bin/sh
+     281 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-hexchat
+ Version: 2.14.3-3ubuntu0.20.04.2kemi1
+ Section: net
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 4913
+ Depends: libc6 (>= 2.28), libcanberra0 (>= 0.2), libdbus-glib-1-2 (>= 0.88), libgdk-pixbuf2.0-0 (>= 2.25.2), libglib2.0-0 (>= 2.51.0), libgtk2.0-0 (>= 2.24.0), libnotify4 (>= 0.7.0), libpango-1.0-0 (>= 1.44.3), libproxy1v5 (>= 0.4.14), libssl1.1 (>= 1.1.0), libx11-6
+ Recommends: hexchat-perl, hexchat-plugins, hexchat-python3, libglib2.0-bin
+ Conflicts: hexchat, hexchat-common
+ Replaces: hexchat, hexchat-common
+ Provides: irc
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://hexchat.github.io
+ Description: IRC client for X based on X-Chat 2 (arm64)
+  HexChat 2.14.3 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK2 IRC client (hexchat-common bundled).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
