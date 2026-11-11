@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 138672 bytes: control archive=732 bytes.
+     589 bytes,    17 lines      control
+     148 bytes,     6 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+ Package: kemi-gigolo
+ Version: 0.5.1-1kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 689
+ Depends: libc6 (>= 2.17), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.21.5), libx11-6
+ Recommends: libglib2.0-bin
+ Conflicts: gigolo
+ Replaces: gigolo
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://www.uvena.de/gigolo/
+ Description: GIO/GVfs remote filesystem frontend (arm64)
+  Gigolo 0.5.1 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3 frontend to mount remote filesystems via GIO/GVfs.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
