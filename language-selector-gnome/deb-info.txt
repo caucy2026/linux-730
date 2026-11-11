@@ -1,0 +1,28 @@
+ new Debian package, version 2.0.
+ size 235512 bytes: control archive=2560 bytes.
+     611 bytes,    12 lines      conffiles
+     968 bytes,    20 lines      control
+    3158 bytes,    95 lines   *  postinst             #!/bin/sh
+     798 bytes,    10 lines   *  postrm               #!/bin/sh
+    1849 bytes,    42 lines   *  preinst              #!/bin/sh
+    1212 bytes,    20 lines   *  prerm                #!/bin/sh
+ Package: kemi-language-selector-gnome
+ Version: 0.204.2kemi1
+ Section: admin
+ Priority: optional
+ Architecture: all
+ Pre-Depends: dpkg (>= 1.15.7.2)
+ Installed-Size: 1352
+ Depends: python3:any, python3-gi, gir1.2-gtk-3.0, python3-apt (>= 0.7.12.0), aptdaemon (>= 0.40+bzr527), python3-aptdaemon.gtk3widgets, im-config (>= 0.29-1ubuntu10~), iso-codes, python3-dbus, dbus, accountsservice (>= 0.6.29-1ubuntu6)
+ Recommends: yelp
+ Conflicts: language-selector (<< 0.17), language-selector-gnome, language-selector-common
+ Replaces: language-selector (<< 0.17), language-selector-gnome, language-selector-common
+ Provides: language-selector-gnome (= 0.204.2), language-selector-common (= 0.204.2)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: Language selector for Ubuntu
+  Language Support 0.204.2 — official Ubuntu
+  20.04 all, KEMI repack of
+  language-selector-gnome. Bundles official
+  language-selector-common.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
