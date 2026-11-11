@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 147500 bytes: control archive=1136 bytes.
+     687 bytes,    18 lines      control
+     748 bytes,    23 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+     403 bytes,    12 lines   *  prerm                #!/bin/sh
+ Package: kemi-menulibre
+ Version: 2.2.1-1kemi1
+ Section: utils
+ Priority: optional
+ Architecture: all
+ Installed-Size: 1308
+ Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gmenu-3.0 (>= 3.5.3), gir1.2-gtk-3.0, gnome-menus (>= 3.5.3), python3-gi (>= 3.0), python3-psutil, xdg-utils, python3:any
+ Replaces: menulibre
+ Conflicts: menulibre
+ Provides: menulibre (= 2.2.1-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://launchpad.net/menulibre
+ Description: advanced FreeDesktop.org compliant menu editor
+  MenuLibre 2.2.1-1 — official Ubuntu 20.04
+  Architecture: all, KEMI repack.
+  Python 3 GTK3 typelib menu editor.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
