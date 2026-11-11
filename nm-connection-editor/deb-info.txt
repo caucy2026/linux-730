@@ -1,0 +1,30 @@
+ new Debian package, version 2.0.
+ size 365616 bytes: control archive=2016 bytes.
+      37 bytes,     1 lines      conffiles
+    1543 bytes,    21 lines      control
+     482 bytes,    14 lines   *  postinst             #!/bin/sh
+      83 bytes,     5 lines   *  postrm               #!/bin/sh
+      29 bytes,     1 lines      shlibs
+    5476 bytes,   102 lines      symbols
+      73 bytes,     2 lines      triggers
+ Package: kemi-network-manager-gnome
+ Version: 1.8.24-1ubuntu3kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 2007
+ Depends: libappindicator3-1 (>= 0.4.90), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.43.2), libgtk-3-0 (>= 3.10), libjansson4 (>= 2.0.1), libmm-glib0 (>= 0.7.991), libnm0 (>= 1.11.3), libnotify4 (>= 0.7.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libsecret-1-0 (>= 0.7), libselinux1 (>= 2.1.9), dconf-gsettings-backend | gsettings-backend, network-manager (>= 1.8), gnome-shell | policykit-1-gnome | polkit-1-auth-agent, default-dbus-session-bus | dbus-session-bus, libgck-1-0 (>= 3.3.90), libgcr-base-3-1 (>= 3.14)
+ Recommends: gnome-shell | notification-daemon, gnome-keyring, mobile-broadband-provider-info, iso-codes
+ Suggests: network-manager-openconnect-gnome, network-manager-openvpn-gnome, network-manager-vpnc-gnome, network-manager-pptp-gnome
+ Conflicts: network-manager-gnome, libnma0
+ Replaces: network-manager-gnome, libnma0
+ Provides: network-manager-gnome (= 1.8.24-1ubuntu3), libnma0 (= 1.8.24-1ubuntu3)
+ Homepage: https://www.gnome.org/projects/NetworkManager/
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: network management framework (GNOME frontend)
+  Advanced Network Configuration 1.8.24-1ubuntu3 —
+  official Ubuntu 20.04 arm64, KEMI repack of
+  network-manager-gnome (ships
+  nm-connection-editor). Bundles official
+  libnma0. glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
