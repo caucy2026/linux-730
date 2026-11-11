@@ -1,0 +1,21 @@
+ new Debian package, version 2.0.
+ size 86076 bytes: control archive=760 bytes.
+     600 bytes,    16 lines      control
+     281 bytes,     9 lines   *  postinst             #!/bin/sh
+     281 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-lxterminal
+ Version: 0.3.2-1kemi1
+ Section: x11
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 386
+ Depends: libc6 (>= 2.17), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.28.0), libgtk-3-0 (>= 3.3.16), libpango-1.0-0 (>= 1.14.0), libvte-2.91-0
+ Conflicts: lxterminal
+ Replaces: lxterminal
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.lxde.org/
+ Description: LXDE terminal emulator (arm64)
+  LXTerminal 0.3.2 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight VTE-based GTK3 terminal emulator.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
