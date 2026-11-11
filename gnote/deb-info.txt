@@ -1,0 +1,26 @@
+ new Debian package, version 2.0.
+ size 3120680 bytes: control archive=1128 bytes.
+     996 bytes,    19 lines      control
+     511 bytes,    13 lines   *  postinst             #!/bin/sh
+     377 bytes,    11 lines   *  postrm               #!/bin/sh
+      39 bytes,     1 lines      shlibs
+      73 bytes,     2 lines      triggers
+ Package: kemi-gnote
+ Version: 3.36.0-1kemi1
+ Section: gnome
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 9820
+ Depends: dconf-gsettings-backend | gsettings-backend, libatkmm-1.6-1v5 (>= 2.24.0), libc6 (>= 2.29), libgcc-s1 (>= 3.0), libglib2.0-0 (>= 2.28.0), libglibmm-2.4-1v5 (>= 2.54.0), libgspell-1-2 (>= 1.8.2), libgtk-3-0 (>= 3.21.4), libgtkmm-3.0-1v5 (>= 3.24.0), libpango-1.0-0 (>= 1.14.0), libpangomm-1.4-1v5 (>= 2.42.0), libsecret-1-0 (>= 0.8), libsigc++-2.0-0v5 (>= 2.8.0), libstdc++6 (>= 5.2), libuuid1 (>= 2.16), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25)
+ Replaces: gnote
+ Conflicts: gnote
+ Provides: gnote (= 3.36.0-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://wiki.gnome.org/Apps/Gnote
+ Description: desktop note taking program using Wiki style links
+  Gnote 3.36.0-1 — official Ubuntu 20.04
+  Architecture: arm64, KEMI repack.
+  Desktop note-taking with Wiki-style
+  links (GTK3 C++ GUI; Tomboy port).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
