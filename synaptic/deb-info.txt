@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 588124 bytes: control archive=1464 bytes.
+     883 bytes,    19 lines      control
+     727 bytes,    18 lines   *  postinst             #!/bin/sh
+    1530 bytes,    53 lines   *  postrm               #!/bin/sh
+ Package: kemi-synaptic
+ Version: 0.84.6ubuntu5kemi1
+ Section: admin
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 2396
+ Depends: libapt-pkg6.0 (>= 1.9.0), libc6 (>= 2.17), libept1.6.0, libgcc-s1 (>= 3.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.14.0), libgtk-3-0 (>= 3.11.7), libpango-1.0-0 (>= 1.14.0), libstdc++6 (>= 5.2), libvte-2.91-0, libxapian30 (>= 1.4.14~), hicolor-icon-theme, policykit-1
+ Recommends: libgtk3-perl, xdg-utils
+ Suggests: dwww, menu, deborphan, apt-xapian-index, tasksel, software-properties-gtk
+ Conflicts: synaptic, menu (<< 2.1.11)
+ Replaces: synaptic
+ Provides: synaptic (= 0.84.6ubuntu5)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://www.nongnu.org/synaptic/
+ Description: Graphical package manager
+  Synaptic 0.84.6ubuntu5 — official Ubuntu 20.04
+  arm64, KEMI repack.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
