@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 91640 bytes: control archive=884 bytes.
+     726 bytes,    17 lines      control
+     416 bytes,    12 lines   *  postinst             #!/bin/sh
+     416 bytes,    12 lines   *  postrm               #!/bin/sh
+ Package: kemi-gtkhash
+ Version: 1.2-1build1kemi1
+ Section: utils
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 242
+ Depends: libb2-1 (>= 0.98.1), libc6 (>= 2.17), libgcrypt20 (>= 1.8.0), libglib2.0-0 (>= 2.35.8), libgtk-3-0 (>= 3.21.5), libnettle7, zlib1g (>= 1:1.1.4), dconf-gsettings-backend | gsettings-backend
+ Conflicts: gtkhash
+ Replaces: gtkhash
+ Breaks: gtkhash-common (<< 1.0-1)
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: http://gtkhash.sourceforge.net
+ Description: GTK+ checksum / message-digest utility (arm64)
+  GtkHash 1.2 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3 utility to compute MD5, SHA1, SHA256, SHA512 and more.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
