@@ -1,0 +1,24 @@
+ new Debian package, version 2.0.
+ size 572024 bytes: control archive=988 bytes.
+    1241 bytes,    19 lines      control
+     269 bytes,     9 lines   *  postinst             #!/bin/sh
+     269 bytes,     9 lines   *  postrm               #!/bin/sh
+ Package: kemi-qpdfview
+ Version: 0.4.18-1build1kemi1
+ Section: graphics
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 3418
+ Depends: hicolor-icon-theme, libqt5sql5-sqlite, libqt5svg5, libc6 (>= 2.17), libcups2 (>= 1.4.0), libgcc-s1 (>= 3.0), libpoppler-qt5-1 (>= 0.34.0), libqt5concurrent5 (>= 5.6.0~rc), libqt5core5a (>= 5.12.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.7.0) | libqt5gui5-gles (>= 5.7.0), libqt5printsupport5 (>= 5.0.2), libqt5sql5 (>= 5.0.2), libqt5widgets5 (>= 5.11.0~rc1), libqt5xml5 (>= 5.0.2), libstdc++6 (>= 5), libsynctex2
+ Recommends: libdjvulibre21 (>= 3.5.27.1), libspectre1 (>= 0.2.3)
+ Provides: pdf-viewer, djvu-viewer, postscript-viewer
+ Conflicts: qpdfview, qpdfview-translations, qpdfview-djvu-plugin, qpdfview-ps-plugin, qpdfview-languages
+ Replaces: qpdfview, qpdfview-translations, qpdfview-djvu-plugin, qpdfview-ps-plugin, qpdfview-languages
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://launchpad.net/qpdfview
+ Description: tabbed document viewer (arm64)
+  qpdfview 0.4.18-1build1 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight Qt5 tabbed PDF / document viewer (Poppler).
+  Translations and DjVu / PS plugins bundled.
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
