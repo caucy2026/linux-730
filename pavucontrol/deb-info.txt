@@ -1,0 +1,22 @@
+ new Debian package, version 2.0.
+ size 127964 bytes: control archive=824 bytes.
+     873 bytes,    17 lines      control
+     148 bytes,     6 lines   *  postinst             #!/bin/sh
+     148 bytes,     6 lines   *  postrm               #!/bin/sh
+ Package: kemi-pavucontrol
+ Version: 4.0-1build1kemi1
+ Section: sound
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 915
+ Depends: libatkmm-1.6-1v5 (>= 2.24.0), libc6 (>= 2.17), libcanberra-gtk3-0 (>= 0.25), libcanberra0 (>= 0.16), libgcc-s1 (>= 3.0), libglib2.0-0 (>= 2.16.0), libglibmm-2.4-1v5 (>= 2.54.0), libgtk-3-0 (>= 3.0.0), libgtkmm-3.0-1v5 (>= 3.24.0), libpulse-mainloop-glib0 (>= 0.99.1), libpulse0 (>= 4.0), libsigc++-2.0-0v5 (>= 2.2.0), libstdc++6 (>= 5.2)
+ Recommends: pulseaudio
+ Conflicts: pavucontrol
+ Replaces: pavucontrol
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Homepage: https://freedesktop.org/software/pulseaudio/pavucontrol/
+ Description: PulseAudio Volume Control (arm64)
+  Pavucontrol 4.0 — official Ubuntu 20.04 arm64, KEMI repack.
+  Lightweight GTK3 PulseAudio volume control (mixer).
+  glibc≤2.31 (Ubuntu 20.04).
+  gork.bot协助开发.
