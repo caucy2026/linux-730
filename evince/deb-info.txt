@@ -1,0 +1,31 @@
+Package: kemi-evince
+Version: 3.36.10-0ubuntu1kemi1
+Architecture: arm64
+package_name: com.kemi.evince
+mall_app_name: Evince Document Viewer
+version_name: 3.36.10-0ubuntu1kemi1
+version_name_len: 21
+version_code: 33610
+app_id: 454
+bytes: 502548
+sha256: 49db9e9fcdfdf3c0930e1ee55b7dc199d2252e624a11c59854ab305e8a0da5dc
+official_package: evince
+official_version: 3.36.10-0ubuntu1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal-updates main (newer than focal Release 3.36.0-2; not present in focal-security index)
+official_filename: pool/main/e/evince/evince_3.36.10-0ubuntu1_arm64.deb
+official_size: 237124
+official_sha256: 261d15e612e739f63d258a10bc0b02c490875d8e0bf8d653f8fbeb45015c0a89
+official_source: absent (not defaulted; siblings list Source: evince, not copied onto kemi)
+official_homepage: https://wiki.gnome.org/Apps/Evince (copied exactly)
+bundled: libevdocument3-4 (= 3.36.10-0ubuntu1) arm64, 183440 B, sha256 cc1690d77196442f89be3474b674b847862d09860e046ec48615dfb9ce0fb9e6; libevview3-3 (= 3.36.10-0ubuntu1) arm64, 112928 B, sha256 8d43e7e0651f2ec5ec34a03f23695c932571b588c855d35dc4cc4fd01d53c3e9 (same-source exact-version hard Depends). Bundled-lib different-source Depends merged; libglib2.0-0 tightened 2.41.2→2.51.5.
+not_bundled: evince-common (>= 3.36, << 3.37) is a range Depends; stays Depends; inventoried only, 128824 B, sha256 39171c854ff6af807de9068024591fd655a9a4624cf224c05e6bde5ee38f6f36. gir1.2-evince-3.0 and libevince-dev inspected, not packaged.
+official_recommends: default-dbus-session-bus | dbus-session-bus (kept)
+official_suggests: gvfs, nautilus-sendto, poppler-data, unrar (kept)
+official_enhances: nautilus (kept)
+official_conflicts_breaks_replaces_provides: official GUI Breaks/Replaces libevdocument3-4 (<< 3.29.91-2~), Provides djvu-viewer, pdf-viewer, postscript-viewer kept; kemi also Conflicts/Replaces/Provides official evince, libevdocument3-4, libevview3-3
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794477359615_ac43a9b6_kemi-evince_3_36_10-0ubuntu1kemi1_arm64.deb
+cdn_truncated: no
+probe: 14 unique aarch64 ELFs; requiredGlibc=2.29 (14 versioned, 0 null; values 2.17 and 2.29); requiredGlibcxx=None (0 versioned, 14 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
