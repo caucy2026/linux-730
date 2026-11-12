@@ -1,0 +1,29 @@
+Package: kemi-variety
+Version: 0.8.3-1kemi1
+Architecture: all
+package_name: com.kemi.variety
+mall_app_name: Variety
+version_name: 0.8.3-1kemi1
+version_name_len: 12
+version_code: 83
+app_id: 446
+bytes: 525240
+sha256: a911f1efd7adcce176f795c1d9706b0f487d36e70da56b5db693b17f79a7aa51
+official_package: variety
+official_version: 0.8.3-1
+official_epoch: none
+official_architecture: all
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/v/variety/variety_0.8.3-1_all.deb
+official_size: 525192
+official_sha256: 9b011392927f31bbffa9f6f5ee0cc961a222a17c9c8f98c3f2d008bd28e1cc02
+official_source: absent (not defaulted)
+official_homepage: http://peterlevi.com/variety/ (http, scheme not upgraded)
+bundled: none (no exact-version same-source hard Depends; 16-index pin found no same-source siblings; official Depends stay Depends)
+official_recommends: gir1.2-ayatanaappindicator3-0.1 | gir1.2-appindicator3-0.1, python3-httplib2, fortune-mod (kept)
+official_suggests: feh | nitrogen, gnome-shell-extension-appindicator (kept)
+official_replaces: none in official stanza (kemi Conflicts/Replaces/Provides official variety)
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794444524703_28161d1c_kemi-variety_0_8_3-1kemi1_all.deb
+cdn_truncated: no
+probe: vacuous 0-ELF PASS; requiredGlibc=None (0 versioned, 0 null); requiredGlibcxx=None (0 versioned, 0 null)
+合主线：gork.bot协助开发
