@@ -1,0 +1,31 @@
+Package: kemi-gnome-system-tools
+Version: 3.0.0-9ubuntu1kemi1
+Architecture: arm64
+package_name: com.kemi.gnome-system-tools
+mall_app_name: GNOME System Tools
+version_name: 3.0.0-9ubuntu1kemi1
+version_name_len: 19
+version_code: 300
+app_id: 449
+bytes: 3594788
+sha256: 3a325229e99b43a1b0efd795d6af7cd6dea2e645e7f03e5db696c406d1ad2c62
+official_package: gnome-system-tools
+official_version: 3.0.0-9ubuntu1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/g/gnome-system-tools/gnome-system-tools_3.0.0-9ubuntu1_arm64.deb
+official_size: 3593536
+official_sha256: d4fbe0a408345b8bef392aefc5c3fd676e78c259c4cdd8dc7c74d758e19ff9a1
+official_source: absent (not defaulted)
+official_homepage: https://github.com/LStranger/gnome-system-tools
+bundled: none (no exact-version same-source hard Depends; official Depends stay Depends, including different-source range liboobs-1-5 (>= 3.0.0) and alternatives policykit-1-gnome | mate-polkit)
+official_recommends: packagekit, xdg-utils (kept)
+official_suggests: ntp (kept)
+official_conflicts: gnome-network-admin (kept; kemi also Conflicts gnome-system-tools)
+official_replaces: gnome-network-admin, ximian-setup-tools (kept; kemi also Replaces gnome-system-tools)
+official_provides: gnome-network-admin (kept; kemi also Provides gnome-system-tools (= 3.0.0-9ubuntu1))
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794472591600_bc6cda65_kemi-gnome-system-tools_3_0_0-9ubuntu1ke.deb
+cdn_truncated: yes
+probe: 3 unique aarch64 ELFs; requiredGlibc=2.29 (3 versioned, 0 null); requiredGlibcxx=None (0 versioned, 3 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
