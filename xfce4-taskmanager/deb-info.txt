@@ -1,0 +1,29 @@
+Package: kemi-xfce4-taskmanager
+Version: 1.2.3-0ubuntu1kemi1
+Architecture: arm64
+package_name: com.kemi.xfce4-taskmanager
+mall_app_name: Xfce Task Manager
+version_name: 1.2.3-0ubuntu1kemi1
+version_name_len: 19
+version_code: 123
+app_id: 451
+bytes: 100892
+sha256: c4b28c22e9aeb4387251f560c67483df0525e3c6ebfb5c646a1bbd2b0232d751
+official_package: xfce4-taskmanager
+official_version: 1.2.3-0ubuntu1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/x/xfce4-taskmanager/xfce4-taskmanager_1.2.3-0ubuntu1_arm64.deb
+official_size: 100088
+official_sha256: ccc5b4503c50155856357a0abe97741353b236d6c8645a4de49e362b93176496
+official_source: absent (not defaulted)
+official_homepage: https://goodies.xfce.org/projects/applications/xfce4-taskmanager (copied exactly)
+bundled: none (16-index found only this official binary; official Depends are all different-source ranges; no exact-version same-source hard Depends)
+official_recommends: none
+official_suggests: none
+official_conflicts_breaks_replaces_provides: none in official GUI stanza (kemi Conflicts/Replaces/Provides official xfce4-taskmanager)
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794474738614_16790f23_kemi-xfce4-taskmanager_1_2_3-0ubuntu1kem.deb
+cdn_truncated: yes (dots sanitized to underscores; exact stored URL ends _1_2_3-0ubuntu1kem.deb, cutting the kemi1_arm64 tail; do not invent a complete URL)
+probe: 1 unique aarch64 ELF; requiredGlibc=2.17 (1 versioned, 0 null); requiredGlibcxx=None (0 versioned, 1 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
