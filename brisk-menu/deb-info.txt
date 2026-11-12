@@ -1,0 +1,29 @@
+Package: kemi-mate-applet-brisk-menu
+Version: 0.6.0-1ubuntu1kemi1
+Architecture: arm64
+package_name: com.kemi.mate-applet-brisk-menu
+mall_app_name: Brisk Menu
+version_name: 0.6.0-1ubuntu1kemi1
+version_name_len: 19
+version_code: 60
+app_id: 445
+bytes: 59700
+sha256: 4ed2cfa6d7b0f388b519186a521ff306dc1ebd99c8c28f47eb7bf41e636b9db3
+official_package: mate-applet-brisk-menu
+official_version: 0.6.0-1ubuntu1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/b/brisk-menu/mate-applet-brisk-menu_0.6.0-1ubuntu1_arm64.deb
+official_size: 59392
+official_sha256: e34ea29334b583041687396f0cc82688095ba038830b40d31e902e44f600d3f7
+official_source: brisk-menu (copied exactly)
+official_homepage: http://www.mate-desktop.org/ (http, scheme not upgraded)
+bundled: none (no exact-version same-source hard Depends; 16-index pin found no same-source siblings; official Depends stay Depends)
+official_recommends: none
+official_suggests: none
+official_replaces: none in official stanza (kemi Conflicts/Replaces/Provides official mate-applet-brisk-menu)
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794443964956_42656a8e_kemi-mate-applet-brisk-menu_0_6_0-1ubunt.deb
+cdn_truncated: yes
+probe: 1 unique aarch64 ELF; requiredGlibc=2.17 (1 versioned, 0 null); requiredGlibcxx=None (0 versioned, 1 null)
+合主线：gork.bot协助开发
