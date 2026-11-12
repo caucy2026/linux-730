@@ -1,0 +1,30 @@
+Package: kemi-guake
+Version: 3.6.3-2kemi1
+Architecture: all
+package_name: com.kemi.guake
+mall_app_name: Guake
+version_name: 3.6.3-2kemi1
+version_name_len: 12
+version_code: 363
+app_id: 447
+bytes: 783948
+sha256: 99c0ee9f2ce110f448bd328e9a4a533d33d55f52517406c53c8ceb818729feb6
+official_package: guake
+official_version: 3.6.3-2
+official_epoch: none
+official_architecture: all
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/g/guake/guake_3.6.3-2_all.deb
+official_size: 783620
+official_sha256: d3f1e8217511d812a762d23a7a9ec80339066084560c0f927b6acaacff7e7f3c
+official_source: absent (not defaulted)
+official_homepage: http://guake-project.org (http, scheme not upgraded)
+bundled: none (no exact-version same-source hard Depends; official Depends stay Depends)
+official_recommends: none
+official_suggests: numix-gtk-theme (kept; theme not bundled)
+inspected_not_packaged: guake-indicator 1.4-1build1 (different product)
+official_replaces: none in official stanza (kemi Conflicts/Replaces/Provides official guake)
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794445051193_d555d5a4_kemi-guake_3_6_3-2kemi1_all.deb
+cdn_truncated: no
+probe: vacuous 0-ELF PASS; requiredGlibc=None (0 versioned, 0 null); requiredGlibcxx=None (0 versioned, 0 null)
+合主线：gork.bot协助开发
