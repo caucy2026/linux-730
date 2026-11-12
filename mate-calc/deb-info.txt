@@ -1,0 +1,29 @@
+Package: kemi-mate-calc
+Version: 1.24.0-1kemi1
+Architecture: arm64
+package_name: com.kemi.mate-calc
+mall_app_name: MATE Calculator
+version_name: 1.24.0-1kemi1
+version_name_len: 13
+version_code: 1240
+app_id: 450
+bytes: 130656
+sha256: 473e2dca547eebfff697c46dc44ec490b6c2ab4bf307dbb64b2b1f40e418839b
+official_package: mate-calc
+official_version: 1.24.0-1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/m/mate-calc/mate-calc_1.24.0-1_arm64.deb
+official_size: 130208
+official_sha256: 2da1d9b2b35c859a31fdb406aaac88cdfcaaf2876ee4f4deed3e6bf928787938
+official_source: absent (not defaulted)
+official_homepage: http://www.mate-desktop.org/ (http, scheme not upgraded)
+bundled: none (same-source mate-calc-common is a range Depends (>= 1.24.0-1, << 1.24.0-1.1~), not an exact-version hard Depends; stays Depends; inspected, not packaged)
+official_recommends: none
+official_suggests: none
+official_conflicts_breaks_replaces_provides: none in official GUI stanza (kemi Conflicts/Replaces/Provides official mate-calc)
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794473824756_5fb39bed_kemi-mate-calc_1_24_0-1kemi1_arm64.deb
+cdn_truncated: no
+probe: 2 unique aarch64 ELFs; requiredGlibc=2.29 (2 versioned, 0 null); requiredGlibcxx=None (0 versioned, 2 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
