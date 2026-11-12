@@ -1,0 +1,29 @@
+Package: kemi-mate-menu
+Version: 20.04.3-0ubuntu1kemi1
+Architecture: all
+package_name: com.kemi.mate-menu
+mall_app_name: MATE Menu
+version_name: 20.04.3-0ubuntu1kemi1
+version_name_len: 21
+version_code: 20043
+app_id: 443
+bytes: 181452
+sha256: f40b862075154cb71812c773596b74ce94cac10d37c57095b7e6ef8a374e040a
+official_package: mate-menu
+official_version: 20.04.3-0ubuntu1
+official_epoch: none
+official_architecture: all
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/m/mate-menu/mate-menu_20.04.3-0ubuntu1_all.deb
+official_size: 181000
+official_sha256: 19696c3b61a5188cba4af7437a52173452dadb9261d7fb37c7bad7bc5783c782
+official_source: absent (not defaulted; Source: mate-menus from different-source siblings was not copied)
+official_homepage: https://github.com/ubuntu-mate/mate-menu/
+bundled: none (no exact-version same-source hard Depends; gir1.2-matemenu-2.0 (>= 1.22) is different-source range and stays Depends; mozo | menulibre alternatives stay Depends)
+official_recommends: none
+official_suggests: software-center, synaptic (kept)
+official_replaces: matemenu (kept; kemi also Conflicts/Replaces/Provides official mate-menu)
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794442820108_22c36368_kemi-mate-menu_20_04_3-0ubuntu1kemi1_all.deb
+cdn_truncated: no
+probe: vacuous 0-ELF PASS; requiredGlibc=None (0 versioned, 0 null); requiredGlibcxx=None (0 versioned, 0 null)
+合主线：gork.bot协助开发
