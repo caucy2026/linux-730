@@ -1,0 +1,30 @@
+Package: kemi-file-roller
+Version: 3.36.3-0ubuntu1.1kemi1
+Architecture: arm64
+package_name: com.kemi.file-roller
+mall_app_name: File Roller
+version_name: 3.36.3-0ubuntu1.1kemi1
+version_name_len: 22
+version_code: 33631
+app_id: 455
+bytes: 234712
+sha256: 0d70a43c68f4b256b081b117ec93201fc41c106923206166c31011d962250ee5
+official_package: file-roller
+official_version: 3.36.3-0ubuntu1.1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal-updates main and focal-security main (same SHA; newer than focal Release 3.36.1-1)
+official_filename: pool/main/f/file-roller/file-roller_3.36.3-0ubuntu1.1_arm64.deb
+official_size: 234404
+official_sha256: b02ac6f1e8a56abd672bd97aac7065a8ebd152e516d66e6f96d8ed27737da9c6
+official_source: absent (not defaulted)
+official_homepage: https://wiki.gnome.org/Apps/FileRoller (copied exactly)
+bundled: none (no same-source exact-version hard Depends; 16-index found no file-roller-common or other same-source siblings in focal-updates main)
+not_bundled: all official Depends stay Depends (bzip2, unzip, zip, dconf-gsettings-backend | gsettings-backend, and ranged libs). Inventoried only. No gir/-dev same-source packages found to inspect-and-skip.
+official_recommends: gvfs, yelp (kept)
+official_suggests: p7zip-full, arj, lha, lzip, lzma, lzop, ncompress, rpm2cpio, rzip, sharutils, squashfs-tools, unace, unalz, unar, xz-utils, zoo (kept)
+official_conflicts_breaks_replaces_provides: official had none; kemi Provides/Conflicts/Replaces file-roller
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794478041938_732caaf9_kemi-file-roller_3_36_3-0ubuntu1_1kemi1_.deb
+cdn_truncated: yes (exact stored URL ends `_3_36_3-0ubuntu1_1kemi1_.deb`; `arm64` tail cut; do not invent a complete URL)
+probe: 3 unique aarch64 ELFs; requiredGlibc=2.17 (3 versioned, 0 null); requiredGlibcxx=None (0 versioned, 3 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
