@@ -1,0 +1,29 @@
+ new Debian package, version 2.0.
+ size 37624 bytes: control archive=1892 bytes.
+     803 bytes,    22 lines      control
+    1754 bytes,    20 lines      md5sums
+    1021 bytes,    29 lines   *  postinst             #!/bin/sh
+     772 bytes,    20 lines   *  postrm               #!/bin/sh
+     409 bytes,    12 lines   *  prerm                #!/bin/sh
+ Package: kemi-redshift-gtk
+ Source: redshift
+ Version: 1.12-2kemi01
+ Section: misc
+ Priority: optional
+ Architecture: all
+ Installed-Size: 588
+ Depends: redshift (>= 1.12-2), python3:any, python3-xdg, gir1.2-appindicator3-0.1, python3-gi
+ Recommends: at-spi2-core
+ Provides: redshift-gtk (= 1.12-2)
+ Conflicts: redshift-gtk
+ Replaces: redshift-gtk, gtk-redshift (<< 1.10-2~)
+ Breaks: gtk-redshift (<< 1.10-2~)
+ Homepage: http://jonls.dk/redshift/
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: Adjusts the color temperature of your screen with GTK+ integration
+  Redshift 1.12-2 — official Ubuntu 20.04
+  Architecture: all, KEMI repack of
+  redshift-gtk. Official same-source range
+  Depends redshift (>= 1.12-2) stays
+  Depends and is not bundled. Official
+  files stay under /usr. gork.bot协助开发.
