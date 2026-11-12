@@ -1,0 +1,30 @@
+Package: kemi-eom
+Version: 1.24.0-1kemi1
+Architecture: arm64
+package_name: com.kemi.eom
+mall_app_name: Eye of MATE Image Viewer
+version_name: 1.24.0-1kemi1
+version_name_len: 13
+version_code: 1240
+app_id: 456
+bytes: 1646224
+sha256: d9de6d59c59cf2297598f3da92d6c8227f4aca11c3153668d2423855b9382b56
+official_package: eom
+official_version: 1.24.0-1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal universe (not present in focal-updates or focal-security indexes)
+official_filename: pool/universe/e/eom/eom_1.24.0-1_arm64.deb
+official_size: 179024
+official_sha256: 2e2b32acb8f35cf69eff62faeab6dd1db1da735249ea46fc7efea7dac20c0374
+official_source: absent (not defaulted; eom-common lists Source: eom, not copied onto kemi)
+official_homepage: http://www.mate-desktop.org/ (copied exactly; http not upgraded to https)
+bundled: eom-common (= 1.24.0-1) all, 1477280 B, sha256 c2fc1f148b1331baf569d705d196a20a32998c6c914d9b9b1bd29b1a09e672f4 (same-source exact-version hard Depends). eom-common has no Depends of its own to merge.
+not_bundled: gir1.2-eom-1.0 is an unversioned gir Depends (15076 B, sha256 2b7476da960757ec2d793cb9d680126568f48c12a56bc989df63a40e27647149), inspected not packaged, stays Depends. eom-dev (31760 B, sha256 4faa37ffbd9347eec9669232da47c7be16ff8efa3568b11964ab44c2544e048e) and transitional gir1.2-eom inspected, not packaged.
+official_recommends: none
+official_suggests: none
+official_conflicts_breaks_replaces_provides: official GUI Breaks/Replaces mate-image-viewer (<= 1.0.0-1) kept; bundled common Breaks eom (<= 1.6.1-1), mate-image-viewer (<= 1.0.0-1) merged. kemi also Conflicts/Replaces/Provides official eom and eom-common.
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794478588687_9d38a57c_kemi-eom_1_24_0-1kemi1_arm64.deb
+cdn_truncated: no (dots sanitized to underscores; exact stored URL ends _1_24_0-1kemi1_arm64.deb)
+probe: 4 unique aarch64 ELFs; requiredGlibc=2.29 (4 versioned, 0 null; values 2.17 and 2.29); requiredGlibcxx=None (0 versioned, 4 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
