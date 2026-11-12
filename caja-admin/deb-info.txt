@@ -1,0 +1,29 @@
+Package: kemi-caja-admin
+Version: 0.0.1-3build1kemi1
+Architecture: all
+package_name: com.kemi.caja-admin
+mall_app_name: Caja Admin
+version_name: 0.0.1-3build1kemi1
+version_name_len: 18
+version_code: 1
+app_id: 444
+bytes: 12376
+sha256: 0b8ed6c5dbe2414e86d6d144858b25f33eb73066c136710adc4b6c4151bc8323
+official_package: caja-admin
+official_version: 0.0.1-3build1
+official_epoch: none
+official_architecture: all
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/c/caja-admin/caja-admin_0.0.1-3build1_all.deb
+official_size: 12356
+official_sha256: ae5232ed4da0a37da9ee93cce25fc551c931e63efb9abbe5fa235297f093b083
+official_source: absent (not defaulted)
+official_homepage: https://github.com/infirit/caja-admin/
+bundled: none (no exact-version same-source hard Depends; python3-caja (>= 1.23.0) is different-source range from source python-caja and stays Depends)
+official_recommends: pluma, mate-terminal (kept)
+official_suggests: none
+official_replaces: none in official stanza (kemi Conflicts/Replaces/Provides official caja-admin)
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794443492513_4698c221_kemi-caja-admin_0_0_1-3build1kemi1_all.deb
+cdn_truncated: no
+probe: vacuous 0-ELF PASS; requiredGlibc=None (0 versioned, 0 null); requiredGlibcxx=None (0 versioned, 0 null)
+合主线：gork.bot协助开发
