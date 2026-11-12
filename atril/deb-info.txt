@@ -1,0 +1,30 @@
+Package: kemi-atril
+Version: 1.24.0-1ubuntu0.2kemi1
+Architecture: arm64
+package_name: com.kemi.atril
+mall_app_name: Atril Document Viewer
+version_name: 1.24.0-1ubuntu0.2kemi1
+version_name_len: 22
+version_code: 1240
+app_id: 453
+bytes: 402468
+sha256: fdbae5444e3fba14b245bd431cd47da168e55906ac924d645c82e1333d6563da
+official_package: atril
+official_version: 1.24.0-1ubuntu0.2
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal-updates universe (same SHA in focal-security; prefer updates when newer; not Release-only)
+official_filename: pool/universe/a/atril/atril_1.24.0-1ubuntu0.2_arm64.deb
+official_size: 163920
+official_sha256: b51a37b4ee92c10269b4f07ba46dc971e73bec7d2dcd05b0843189ce6d4bc258
+official_source: absent (not defaulted; sibling atril-common / libatrildocument3 / libatrilview3 list Source: atril, not copied onto kemi)
+official_homepage: https://mate-desktop.org/ (https, copied exactly, no trailing path invented)
+bundled: same-source exact-version hard Depends libatrildocument3 (= 1.24.0-1ubuntu0.2) arm64, 165728 B, sha256 5c4efb6d21e572265b2e208eab9db1f0b7e77248d4453ef637bce1cfd8c1d68b; and libatrilview3 (= 1.24.0-1ubuntu0.2) arm64, 103748 B, sha256 928a834a7571e23c206e208de26685e6d832807721e949dda11fd2fb30f45114. Bundled-lib different-source Depends merged; libc6 tightened 2.17→2.29; libcairo2 tightened to ≥1.14.0. libatrilview3's exact Depends on libatrildocument3 is already bundled, not a kemi Depends.
+not_bundled: same-source range Depends atril-common (>= 1.24.0-1ubuntu0.2) stays Depends (inventoried only: 852252 B, sha256 0fe1fbd8a9646c591d63101ea8520f950e6528eb857289d4dbdbda96fc451556); gir/-dev inspected, not packaged
+official_recommends: default-dbus-session-bus | dbus-session-bus, gvfs (kept)
+official_suggests: caja, poppler-data, unrar (kept)
+official_conflicts_breaks_replaces_provides: official GUI Breaks libatrildocument3 (<< 1.13.0) and Replaces libatrildocument3 (<< 1.13.0) plus official Provides djvu-viewer, pdf-viewer, postscript-viewer kept; bundled lib Breaks/Replaces libatril (<< 1.9.0) kept; kemi also Provides/Conflicts/Replaces atril, libatrildocument3, and libatrilview3
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794476303752_9a078ca6_kemi-atril_1_24_0-1ubuntu0_2kemi1_arm64.deb
+cdn_truncated: no (dots sanitized, including 0.2→0_2; tail complete)
+probe: 16 unique aarch64 ELFs; requiredGlibc=2.29 (16 versioned, 0 null; values 2.17 and 2.29); requiredGlibcxx=None (0 versioned, 16 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
