@@ -1,0 +1,29 @@
+Package: kemi-engrampa
+Version: 1.24.0-2kemi1
+Architecture: arm64
+package_name: com.kemi.engrampa
+mall_app_name: Engrampa Archive Manager
+version_name: 1.24.0-2kemi1
+version_name_len: 13
+version_code: 1240
+app_id: 452
+bytes: 1045352
+sha256: df0f07e354631974d8002b8024c596eee3c2e5bb01c4fa14acb0bfa7eaae07ef
+official_package: engrampa
+official_version: 1.24.0-2
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal universe Release (not in updates/security/backports)
+official_filename: pool/universe/e/engrampa/engrampa_1.24.0-2_arm64.deb
+official_size: 199904
+official_sha256: 74cca6ce770c8b0c8c51ea801410ce54369f06938ec7ae797e2a8bf865632371
+official_source: absent (not defaulted; sibling engrampa-common lists Source: engrampa, not copied onto kemi)
+official_homepage: http://www.mate-desktop.org/ (http, scheme not upgraded)
+bundled: engrampa-common (= 1.24.0-2) all, 852320 B, sha256 01b85c3b9d1e0844b2fc6b246d0f3942e8b785eef7d338657726cdede12f55c4 (same-source exact-version hard Depends; common alternatives Depends dconf-gsettings-backend | gsettings-backend merged into kemi Depends)
+official_recommends: gvfs, unzip, xz-utils, zip (kept)
+official_suggests: arj, binutils, cpio, lha, lzip, lzma, lzop, ncompress, rar, rpm2cpio, rzip, sharutils, unace, unalz, unar | unrar | p7zip-rar, zoo (kept)
+official_conflicts_breaks_replaces_provides: official GUI Breaks engrampa-common (<< 1.8.0); bundled common Breaks engrampa (<= 1.0.3-1), parchives (<< 1.1.5-1~) and Replaces parchives (<< 1.1.5-1~) kept; kemi also Conflicts/Replaces/Provides official engrampa and engrampa-common
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794475458322_24daf012_kemi-engrampa_1_24_0-2kemi1_arm64.deb
+cdn_truncated: no
+probe: 3 unique aarch64 ELFs; requiredGlibc=2.17 (3 versioned, 0 null); requiredGlibcxx=None (0 versioned, 3 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
