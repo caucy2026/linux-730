@@ -1,0 +1,28 @@
+ new Debian package, version 2.0.
+ size 355056 bytes: control archive=3592 bytes.
+      46 bytes,     1 lines      conffiles
+    1141 bytes,    19 lines      control
+    7434 bytes,    94 lines      md5sums
+     522 bytes,    16 lines   *  postinst             #!/bin/sh
+     588 bytes,    18 lines   *  postrm               #!/bin/sh
+      33 bytes,     1 lines      shlibs
+      72 bytes,     2 lines      triggers
+ Package: kemi-plank
+ Version: 0.11.89-1kemi1
+ Section: misc
+ Priority: optional
+ Architecture: arm64
+ Installed-Size: 2276
+ Depends: libc6 (>= 2.29), libcairo2 (>= 1.14.0), libgee-0.8-2 (>= 0.8.3), libglib2.0-0 (>= 2.40.0), libgnome-menu-3-0 (>= 3.2.0.1), libgtk-3-0 (>= 3.19.12), libpango-1.0-0 (>= 1.18.0), libpangocairo-1.0-0 (>= 1.14.0), libwnck-3-0 (>= 2.91.6), libbamf3-2 (>= 0.4.0), libdbusmenu-glib4 (>= 0.4.2), libdbusmenu-gtk3-4 (>= 0.4.2), libgdk-pixbuf2.0-0 (>= 2.26.0), libx11-6 (>= 2:1.2.99.901), libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.6.99.1), bamfdaemon, dconf-gsettings-backend | gsettings-backend
+ Suggests: libplank-doc
+ Provides: plank (= 0.11.89-1), libplank1 (= 0.11.89-1), libplank-common (= 0.11.89-1)
+ Conflicts: plank, libplank1, libplank-common
+ Replaces: plank, libplank1, libplank-common
+ Homepage: https://launchpad.net/plank
+ Maintainer: KEMI / gork.bot <noreply@kemi.local>
+ Description: Elegant, simple, clean dock
+  Plank 0.11.89-1 — official Ubuntu 20.04
+  arm64, KEMI repack of plank, bundling
+  official libplank1 and libplank-common.
+  Official ELF stays under /usr. glibc≤2.31
+  (Ubuntu 20.04). gork.bot协助开发.
