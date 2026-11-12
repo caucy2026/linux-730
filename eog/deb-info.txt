@@ -1,0 +1,30 @@
+Package: kemi-eog
+Version: 3.36.3-0ubuntu1kemi1
+Architecture: arm64
+package_name: com.kemi.eog
+mall_app_name: Eye of GNOME Image Viewer
+version_name: 3.36.3-0ubuntu1kemi1
+version_name_len: 20
+version_code: 33630
+app_id: 457
+bytes: 409636
+sha256: 16bbbb915f904f7e92ee8be3d12c198065786f4554bde43e68547e838cc96b01
+official_package: eog
+official_version: 3.36.3-0ubuntu1
+official_epoch: none
+official_architecture: arm64
+official_pocket: focal-updates main (newer than focal Release 3.36.1-1; not present in focal-security index)
+official_filename: pool/main/e/eog/eog_3.36.3-0ubuntu1_arm64.deb
+official_size: 409600
+official_sha256: 1e6c1dcf7f6778178bb9a1ec531be3ad1509f2100f913b883e65fbbbe1aaf60b
+official_source: absent (not defaulted; eog-dev lists Source: eog, not copied onto kemi)
+official_homepage: https://wiki.gnome.org/Apps/EyeOfGnome (copied exactly)
+bundled: none (no eog-common on U20; no same-source exact-version hard Depends)
+not_bundled: eog-dev (74280 B, sha256 a0ebfa9aed3f35a9910bcdcf84dd3c1e203ae6e924ceb86891f23afdd6edcc62) inspected, not packaged. Official gir Depends gir1.2-gtk-3.0 (>= 3.22.0) and gir1.2-peas-1.0 are different-source and stay Depends. eog-plugins is a Suggests / Breaks from different source, not bundled.
+official_recommends: librsvg2-common, yelp (kept)
+official_suggests: eog-plugins (kept)
+official_conflicts_breaks_replaces_provides: official Breaks eog-plugins (<< 3.16.4-2~) kept; official had no Conflicts/Replaces/Provides. kemi also Conflicts/Replaces/Provides official eog.
+cdn: https://cdn.newlink-sz.com/kemiAppStore/linuxpkg/2026/11/1794479101565_75230864_kemi-eog_3_36_3-0ubuntu1kemi1_arm64.deb
+cdn_truncated: no (dots sanitized to underscores; exact stored URL ends _3_36_3-0ubuntu1kemi1_arm64.deb)
+probe: 5 unique aarch64 ELFs; requiredGlibc=2.29 (5 versioned, 0 null; values 2.17 and 2.29); requiredGlibcxx=None (0 versioned, 5 null, not ranked as a max); configuredLimitsSatisfied true
+合主线：gork.bot协助开发
