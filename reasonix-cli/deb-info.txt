@@ -1,0 +1,11 @@
+deb: kemi-reasonix_2.61.0-1kemi1_arm64.deb
+bytes: 31056040
+sha256: 4129a969da3864e7966d3dab24821f13fc19d63f723d0fea9365d977e4412526
+package_name: com.kemi.reasonix
+dpkg: kemi-reasonix
+version_name: 2.61.0-1kemi1
+version_code: 26100
+install: /opt/reasonix/reasonix + /opt/reasonix/frontend-next + /usr/bin/reasonix
+arch: arm64 static (no glibc NEEDED)
+smoke: SKIP_TRANSPORT / billing-blocked; no 101 connect
+CREATE: blocked — /home/box/.kemi-publish missing
