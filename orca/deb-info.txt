@@ -1,0 +1,12 @@
+dpkg: kemi-orca
+package_name: com.kemi.orca
+version: 1.4.277-1kemi1
+version_code: 14277
+arch: arm64
+bytes: 178645428
+sha256: da56591a64cc27171e60511c9cc7a9b1383c20aab0e71fd365014d531e5080f1
+upstream: orca-ide_1.4.277_arm64.deb (abc65fe8f7f3f7b7be69f1ca0ec45b2cc6c622b7e8422e3e5c1811e7aa844e54 / 211887948)
+probe: aarch64-only after strip; MAX_GLIBC=2.28 MAX_GLIBCXX=3.4.22
+launcher: /usr/bin/orca-ide -> /opt/Orca/orca-ide (not /usr/bin/orca)
+mall: NOT published this turn (credentials missing)
+101 smoke: SKIP_TRANSPORT / billing-blocked (not connected)
