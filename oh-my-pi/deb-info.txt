@@ -1,0 +1,11 @@
+deb: kemi-oh-my-pi_19.2.1-1kemi1_arm64.deb
+bytes: 110589156
+sha256: 85b91c69a4ebb42892f74c87fd9e963a7dea00f065cfcbd9f7e5925be6afc82c
+package_name: com.kemi.oh-my-pi
+dpkg: kemi-oh-my-pi
+version_name: 19.2.1-1kemi1
+version_code: 19021
+install: /opt/oh-my-pi/omp + /usr/bin/omp + /usr/bin/oh-my-pi
+arch: arm64 gnu, MAX_GLIBC 2.17
+smoke: SKIP_TRANSPORT / billing-blocked; no 101 connect
+CREATE: blocked — /home/box/.kemi-publish missing
