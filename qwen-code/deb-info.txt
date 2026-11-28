@@ -1,0 +1,11 @@
+deb: kemi-qwen-code_0.28.7-1kemi1_arm64.deb
+bytes: 50792256
+sha256: 94240b805c372dbb6d48405b61411ccadbb6be2d1aa6ab9941043b3cec64c943
+package_name: com.kemi.qwen-code
+dpkg: kemi-qwen-code
+version_name: 0.28.7-1kemi1
+version_code: 28007
+install: /opt/qwen-code + /usr/bin/qwen
+arch: arm64; bundled node MAX_GLIBC 2.28 after strip
+smoke: SKIP_TRANSPORT / billing-blocked; no 101 connect
+CREATE: blocked — /home/box/.kemi-publish missing
