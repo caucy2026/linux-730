@@ -1,0 +1,11 @@
+deb: kemi-openresearch_0.2.30-1kemi1_arm64.deb
+bytes: 22399956
+sha256: 919a184ab88c91039b7db37152a23109c797ac2bb0dffb647d30022a85f9af1d
+package_name: com.kemi.openresearch
+dpkg: kemi-openresearch
+version_name: 0.2.30-1kemi1
+version_code: 2030
+install: /opt/openresearch/orx + /usr/bin/orx + /usr/bin/openresearch
+arch: arm64 static musl (no glibc NEEDED)
+smoke: SKIP_TRANSPORT / billing-blocked; no 101 connect
+CREATE: pending this wave
