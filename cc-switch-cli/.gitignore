@@ -1,0 +1,4 @@
+*.deb
+!*.deb.sha256
+debs/
+dl/

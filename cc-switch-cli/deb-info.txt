@@ -1,0 +1,11 @@
+deb: kemi-cc-switch-cli_5.11.4-1kemi1_arm64.deb
+bytes: 5692320
+sha256: 969dcc4d15c5e0b487bb0da9a4613eae97630343561a0a3cdebf77a2176ee366
+package_name: com.kemi.cc-switch-cli
+dpkg: kemi-cc-switch-cli
+version_name: 5.11.4-1kemi1
+version_code: 51104
+install: /opt/cc-switch-cli/cc-switch + /usr/bin/cc-switch + /usr/bin/cc-switch-cli
+arch: arm64 static musl (no glibc NEEDED)
+smoke: SKIP_TRANSPORT / billing-blocked; no 101 connect
+CREATE: blocked — /home/box/.kemi-publish missing
