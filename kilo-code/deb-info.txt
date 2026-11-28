@@ -1,0 +1,11 @@
+deb: kemi-kilo-code_7.8.40-1kemi1_arm64.deb
+bytes: 57446560
+sha256: bd02d520324e2e8b57f7185f9b90c868569c9973666101ddb51d80d489da82ad
+package_name: com.kemi.kilo-code
+dpkg: kemi-kilo-code
+version_name: 7.8.40-1kemi1
+version_code: 70840
+install: /opt/kilo-code + /usr/bin/kilo + /usr/bin/kilo-code
+arch: arm64 gnu MAX_GLIBC 2.17
+smoke: SKIP_TRANSPORT / billing-blocked; no 101 connect
+CREATE: pending this wave
