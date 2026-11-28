@@ -1,0 +1,11 @@
+deb: kemi-codewhale_0.10.4-1kemi1_arm64.deb
+bytes: 38662700
+sha256: 923c56ea5ea86b7f44b126dc4963a99cafd2b3e7ba7d237936f03a60ec5755a2
+package_name: com.kemi.codewhale
+dpkg: kemi-codewhale
+version_name: 0.10.4-1kemi1
+version_code: 10004
+install: /opt/codewhale/codewhale + /usr/bin/codewhale + /usr/bin/codew
+arch: arm64 static (no glibc NEEDED)
+smoke: SKIP_TRANSPORT / billing-blocked; no 101 connect
+CREATE: blocked — /home/box/.kemi-publish missing
